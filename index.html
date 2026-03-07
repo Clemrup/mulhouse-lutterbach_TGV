@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gare Mulhouse-Lutterbach TGV</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            width: 35%;
+            background: white;
+            overflow-y: auto;
+            padding: 40px;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+        }
+
+        .map-container {
+            flex: 1;
+            position: relative;
+            background: #e0e0e0;
+        }
+
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+
+        h1 {
+            color: #d32f2f;
+            margin-bottom: 20px;
+            font-size: 28px;
+            border-bottom: 3px solid #d32f2f;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #1976d2;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+            text-align: justify;
+            font-size: 14px;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            line-height: 1.6;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .benefits {
+            background: #f0f7ff;
+            padding: 15px;
+            border-left: 4px solid #1976d2;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+
+        .benefits ul {
+            margin: 0;
+            margin-left: 20px;
+        }
+
+        .map-info {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            font-size: 12px;
+            max-width: 200px;
+            z-index: 400;
+        }
+
+        .map-info strong {
+            display: block;
+            color: #d32f2f;
+            margin-bottom: 5px;
+        }
+
+        /* CSS pour contrôle Leaflet personnalisé */
+        .leaflet-control-layers {
+            width: auto !important;
+        }
+
+        .leaflet-control-layers-list {
+            padding: 5px 0;
+        }
+
+        .leaflet-control-layers-list label {
+            display: flex;
+            align-items: center;
+            margin: 8px 10px;
+            font-size: 13px;
+            font-weight: normal;
+        }
+
+        .leaflet-control-layers-list input[type="radio"],
+        .leaflet-control-layers-list input[type="checkbox"] {
+            margin-right: 8px;
+        }
+
+        .layers-divider {
+            height: 1px;
+            background: #ddd;
+            margin: 10px 0;
+        }
+
+        .opacity-section {
+            padding: 5px 10px;
+            max-height: 100px;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .opacity-section.hidden {
+            display: none;
+        }
+
+        .opacity-section label {
+            display: block;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .opacity-section input[type="range"] {
+            width: 180px;
+            margin-bottom: 0;
+        }
+
+        /* Scrollbar styling */
+        .sidebar::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .sidebar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        .sidebar::-webkit-scrollbar-thumb {
+            background: #d32f2f;
+            border-radius: 4px;
+        }
+
+        .sidebar::-webkit-scrollbar-thumb:hover {
+            background: #b71c1c;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: 40%;
+            }
+
+            .map-container {
+                height: 60%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h1>🚆 Gare Mulhouse-Lutterbach TGV</h1>
+            
+            <h2>Objectif du projet</h2>
+            <p>
+                Ce projet propose la création d'une nouvelle gare Mulhouse-Lutterbach TGV, connectée directement à la LGV Rhin-Rhône. 
+                L'objectif est de :
+            </p>
+            <ul>
+                <li>Améliorer l'accès au réseau TGV pour l'agglomération mulhousienne et son bassin de vie</li>
+                <li>Éviter le passage systématique des TGV par la gare de Mulhouse-Ville</li>
+                <li>Réduire la saturation de la ligne Mulhouse – Belfort, très chargée</li>
+                <li>Permettre le développement de nouvelles dessertes TGV</li>
+                <li>Créer une interconnexion directe avec les réseaux tram-train et TER</li>
+            </ul>
+
+            <h2>La gare Mulhouse-Lutterbach TGV</h2>
+            <p>
+                La gare serait située à l'ouest de Lutterbach, à proximité de l'actuelle ligne Mulhouse – Kruth. 
+                Elle comprendrait des quais TGV sur la LGV Rhin-Rhône, des quais bas pour la ligne Mulhouse – Kruth, 
+                et des quais hauts pour une nouvelle ligne Mulhouse – Guebwiller.
+            </p>
+
+            <h2>Connexion à la LGV Rhin-Rhône</h2>
+            <p>
+                Deux raccordements à la LGV seraient réalisés : un raccordement nord pour les trains en provenance de Strasbourg, 
+                et un raccordement sud pour les trains en provenance de Mulhouse-Ville et de la Suisse.
+            </p>
+
+            <h2>Ligne tram-train Mulhouse – Guebwiller</h2>
+            <p>
+                Le projet prévoit la création d'une ligne tram-train reliant Mulhouse à Guebwiller, 
+                permettant de reconnecter la vallée au réseau ferroviaire. Une grande partie du tracé réutiliserait 
+                l'ancienne ligne ferroviaire abandonnée.
+            </p>
+
+            <div class="benefits">
+                <strong>Bénéfices du projet</strong>
+                <ul>
+                    <li>Meilleure connexion au réseau TGV</li>
+                    <li>Désaturation de la ligne Mulhouse – Belfort</li>
+                    <li>Réouverture de la vallée de Guebwiller</li>
+                    <li>Forte intermodalité TGV/TER/tram-train</li>
+                    <li>Nouvelles liaisons transversales</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="map-container">
+            <div id="map"></div>
+            <div class="map-info">
+                <strong>Carte interactive</strong>
+                Zoomez, déplacez-vous et explorez le tracé du projet
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <script src="https://mapbox.github.io/togeojson/togeojson.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
