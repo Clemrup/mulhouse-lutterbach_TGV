@@ -22,6 +22,18 @@ const darkLayer = L.tileLayer('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjU2IiB
 // Ajouter la couche satellite par défaut
 satellite.addTo(map);
 
+function applyBaseLayerZoomLimits(baseLayer) {
+    const maxZoom = baseLayer?.options?.maxZoom ?? 18;
+    map.setMaxZoom(maxZoom);
+
+    if (map.getZoom() > maxZoom) {
+        map.setZoom(maxZoom);
+    }
+}
+
+// Appliquer la limite correspondant au fond initial
+applyBaseLayerZoomLimits(satellite);
+
 // Contrôle des couches personnalisé avec opacité
 const baseLayers = {
     'Satellite': satellite,
@@ -97,6 +109,14 @@ layerControl.addTo(map);
 // Ajouter le fond sombre par défaut
 darkLayer.addTo(map);
 darkLayer.setOpacity(0.5);
+
+// Garder le voile sombre au-dessus du fond choisi (sinon le slider semble ne plus marcher)
+map.on('baselayerchange', function(event) {
+    applyBaseLayerZoomLimits(event.layer);
+    if (map.hasLayer(darkLayer)) {
+        darkLayer.bringToFront();
+    }
+});
 
 // Créer un Pane pour les marqueurs (au-dessus du KML)
 map.createPane('markerPane').style.zIndex = 650;
