@@ -19,8 +19,9 @@
             
             /* Fonds */
             --paper: #f4f7fa;
-            --bg-body-light: #12324a;
-            --bg-body-dark: #213344;
+            --card: #ffffff;
+            --bg-body-light: #e8f0f8;
+            --bg-body-dark: #dee8f5;
             --bg-map: #e0e0e0;
             --bg-benefits-light: #f3f8fd;
             --bg-benefits-dark: #edf4fb;
@@ -56,7 +57,7 @@
 
         .sidebar {
             width: 39%;
-            background: linear-gradient(180deg, var(--bg-body-light) 0%, var(--bg-body-dark) 100%);
+            background: var(--white);
             overflow-y: auto;
             padding: clamp(22px, 3vw, 36px);
             box-shadow: 2px 0 16px rgba(18, 50, 74, 0.1);
@@ -80,7 +81,7 @@
 
         h1 {
             font-family: 'IBM Plex Sans', sans-serif;
-            color: var(--blue);
+            color: var(--navy);
             margin-bottom: 18px;
             font-size: clamp(1.6rem, 2.2vw, 2rem);
             line-height: 1.2;
@@ -128,7 +129,7 @@
         .benefits {
             background: linear-gradient(135deg, var(--bg-benefits-light) 0%, var(--bg-benefits-dark) 100%);
             padding: 16px;
-            border-left: 4px solid var(--accent-red);
+            border-left: 4px solid var(--blue);
             border-radius: 10px;
             margin: 18px 0 20px;
             box-shadow: 0 6px 14px rgba(18, 50, 74, 0.08);
