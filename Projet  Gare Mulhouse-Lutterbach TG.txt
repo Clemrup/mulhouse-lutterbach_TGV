@@ -1,4 +1,7 @@
 Projet : Gare Mulhouse-Lutterbach TGV et tram-train Mulhouse – Guebwiller
+Note de l'auteur
+Ce projet est une proposition personnelle portée par un étudiant en informatique, qui souhaite partager ses idées d’aménagement et d’exploitation ferroviaire à partir de ses recherches et de ses études. C’est aussi le travail d’un passionné de ferroviaire, animé par l’envie de contribuer au débat sur les mobilités de demain.
+
 1. Objectif du projet
 Ce projet propose la création d’une nouvelle gare Mulhouse-Lutterbach TGV, connectée directement à la LGV Rhin-Rhône.
 L’objectif est de :
@@ -156,6 +159,8 @@ ________________________________________
 Le projet permettrait :
 •	une meilleure connexion de Mulhouse et de son agglomération au réseau TGV ;
 •	une désaturation de la ligne Mulhouse – Belfort, aujourd’hui utilisée à la fois par les TGV, les TER et le fret ; 
+•	une forte désaturation de la gare de Bollwiller : même après une extension récente du parking, celui-ci est souvent complet dès 8h du matin ;
+•	une amélioration majeure de l’accès au rail pour Guebwiller, la plus grande ville du Grand Est non desservie par le train ;
 •	la réouverture ferroviaire de la vallée de Guebwiller, aujourd’hui privée de desserte ferroviaire ;
 •	une intermodalité forte entre TGV, TER et tram-train ;
 •	de nouvelles liaisons transversales entre vallées, notamment Thann – Guebwiller ;

@@ -6,7 +6,9 @@ Un site web présentant le projet ferroviaire avec une carte interactive.
 
 - **index.html** - Page principale avec description du projet et carte
 - **script.js** - Code JavaScript pour la carte interactive
-- **Croquis.kml** - Données GPS du tracé (créé depuis QGIS)
+- **LGV.kml** - Tracé de la ligne à grande vitesse
+- **tram-train.kml** - Tracé de la ligne tram-train projetée
+- **rail_actuel.kml** - Réseau ferroviaire actuel
 - **README.md** - Ce fichier
 
 ## 🚀 Comment l'utiliser
@@ -35,7 +37,7 @@ Puis ouvrez `http://localhost:8000` dans votre navigateur.
 
 ✅ **Carte interactive** - Zoom et déplacement comme Google Maps  
 ✅ **Fond satellite** - Vue satellite par défaut (bascule vers plan disponible)  
-✅ **Tracé KML** - Votre projet QGIS affiché en rouge  
+✅ **Couches KML filtrables** - LGV, Tram-train et Rail actuel activables/désactivables  
 ✅ **Marqueurs** - Gares principales identifiées (Mulhouse, Lutterbach, Guebwiller)  
 ✅ **Popups** - Cliquez sur les éléments pour plus d'infos  
 ✅ **Description complète** - Texte détaillé du projet sur la gauche  

@@ -102,8 +102,29 @@ darkLayer.setOpacity(0.5);
 map.createPane('markerPane').style.zIndex = 650;
 
 // Variables globales
-let geojsonLayer = null;
+const kmlLayers = new Map();
 const colorCache = new Map();  // Cache pour les couleurs KML converties
+
+const kmlSources = [
+    {
+        key: 'lgv',
+        label: 'LGV',
+        file: 'LGV.kml',
+        defaultStyle: { color: '#f57c00', weight: 4, opacity: 0.95 }
+    },
+    {
+        key: 'tramTrain',
+        label: 'Tram-train',
+        file: 'tram-train.kml',
+        defaultStyle: { color: '#00897b', weight: 3, opacity: 0.95 }
+    },
+    {
+        key: 'railActuel',
+        label: 'Rail actuel',
+        file: 'rail_actuel.kml',
+        defaultStyle: { color: '#5d4037', weight: 2, opacity: 0.9 }
+    }
+];
 
 // Fonction pour convertir couleur KML (AABBGGRR) en couleur Leaflet (RRGGBB hex + opacity)
 function convertKMLColor(kmlColor) {
@@ -146,101 +167,91 @@ function convertKMLColor(kmlColor) {
     return result;
 }
 
-// Charger le KML en utilisant fetch et togeojson
-function loadKML() {
-    // Configurer un timeout de 5 secondes
+// Charger un fichier KML en utilisant fetch et togeojson
+function loadKMLLayer(source) {
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 5000);
-    
-    fetch('Croquis.kml', { signal: controller.signal })
+
+    return fetch(source.file, { signal: controller.signal })
         .then(response => {
             clearTimeout(timeoutId);
             if (!response.ok) {
-                throw new Error('Erreur ' + response.status + ': ' + response.statusText);
+                throw new Error(source.file + ' - Erreur ' + response.status + ': ' + response.statusText);
             }
             return response.text();
         })
         .then(kmlText => {
-            console.log('KML chargé, conversion en cours...');
-            
-            // Convertir KML en GeoJSON
             const parser = new DOMParser();
             const kmlDom = parser.parseFromString(kmlText, 'text/xml');
-            
-            // Vérifier s'il y a une erreur de parsing (parsererror pour Firefox/Chrome)
+
             if (kmlDom.documentElement.nodeName === 'parsererror') {
-                throw new Error('Erreur de parsing XML');
+                throw new Error(source.file + ' - Erreur de parsing XML');
             }
-            
-            console.log('XML parsé correctement');
-            
+
             const geojson = toGeoJSON.kml(kmlDom);
-            console.log('GeoJSON créé avec', geojson.features.length, 'features');
-            
-            // FILTRER : garder seulement les LineStrings et Polygons (pas les Points)
-            const filteredFeatures = geojson.features.filter(feature => 
-                feature.geometry.type === 'LineString' || feature.geometry.type === 'Polygon'
-            );
-            console.log('Features filtrées (sans Points):', filteredFeatures.length);
-            
+
+            // Garder seulement les tracés/surfaces (pas les points de repère)
+            const filteredFeatures = geojson.features.filter(feature => {
+                const geometryType = feature?.geometry?.type;
+                return geometryType === 'LineString' ||
+                    geometryType === 'MultiLineString' ||
+                    geometryType === 'Polygon' ||
+                    geometryType === 'MultiPolygon';
+            });
+
+            if (!filteredFeatures.length) {
+                throw new Error(source.file + ' - Aucun tracé trouvé');
+            }
+
             const filteredGeoJSON = {
                 type: 'FeatureCollection',
                 features: filteredFeatures
             };
-            
-            if (!filteredGeoJSON.features || filteredGeoJSON.features.length === 0) {
-                throw new Error('Aucun tracé trouvé dans le KML');
-            }
 
-            // Extraire les styles des Placemarks du KML original (LineStyle ET PolyStyle)
             const placemarks = kmlDom.querySelectorAll('Placemark');
             const styleMap = new Map();
-            
+
             placemarks.forEach((placemark, index) => {
                 const styleObj = {};
-                
-                // Extraire LineStyle
+
                 const lineStyle = placemark.querySelector('LineStyle');
                 if (lineStyle) {
                     const colorEl = lineStyle.querySelector('color');
                     const widthEl = lineStyle.querySelector('width');
-                    
-                    const colorData = colorEl ? convertKMLColor(colorEl.textContent) : { color: '#502a00', opacity: 1 };
+                    const colorData = colorEl ? convertKMLColor(colorEl.textContent) : { color: source.defaultStyle.color, opacity: 1 };
+
                     styleObj.lineStyle = {
                         color: colorData.color,
-                        weight: widthEl ? parseInt(widthEl.textContent) : 3,
-                        opacity: 1
+                        weight: widthEl ? parseInt(widthEl.textContent, 10) : source.defaultStyle.weight,
+                        opacity: source.defaultStyle.opacity
                     };
                 }
-                
-                // Extraire PolyStyle (remplissage des polygones)
+
                 const polyStyle = placemark.querySelector('PolyStyle');
                 if (polyStyle) {
                     const colorEl = polyStyle.querySelector('color');
-                    
-                    const colorData = colorEl ? convertKMLColor(colorEl.textContent) : { color: '#502a00', opacity: 0.5 };
+                    const colorData = colorEl ? convertKMLColor(colorEl.textContent) : { color: source.defaultStyle.color, opacity: 0.5 };
+
                     styleObj.polyStyle = {
                         color: colorData.color,
                         fillColor: colorData.color,
                         weight: 1,
-                        opacity: 1,
+                        opacity: source.defaultStyle.opacity,
                         fillOpacity: colorData.opacity
                     };
                 }
-                
+
                 if (Object.keys(styleObj).length > 0) {
                     styleMap.set(index, styleObj);
                 }
             });
 
-            // ✅ OPTIMISATION : Créer un cache d'index AVANT le geoJSON
-            // Ceci remplace la boucle O(n*m) par un O(1) lookup
             const featureStyleMap = new Map();
             let featureIndex = 0;
-            
+
             placemarks.forEach((placemark, pmIndex) => {
-                const geometry = placemark.querySelector('LineString, Polygon');
-                
+                const geometry = placemark.querySelector('LineString, MultiGeometry, Polygon');
+
                 if (geometry) {
                     if (styleMap.has(pmIndex)) {
                         featureStyleMap.set(featureIndex, styleMap.get(pmIndex));
@@ -249,68 +260,112 @@ function loadKML() {
                 }
             });
 
-            // Ajouter les features du KML FILTRÉES avec Leaflet GeoJSON
             let currentFeatureIndex = 0;
-            
-            geojsonLayer = L.geoJSON(filteredGeoJSON, {
+
+            const layer = L.geoJSON(filteredGeoJSON, {
                 style: function(feature) {
-                    // ✅ OPTIMISATION : Lookup O(1) au lieu de boucle O(n)
                     const styleData = featureStyleMap.get(currentFeatureIndex);
                     currentFeatureIndex++;
-                    
+
+                    const isPolygon = feature.geometry.type === 'Polygon' || feature.geometry.type === 'MultiPolygon';
+
                     if (styleData) {
-                        // Utiliser le bon style selon le type de géométrie
-                        if (feature.geometry.type === 'Polygon' && styleData.polyStyle) {
-                            console.log('Feature', currentFeatureIndex - 1, '-> PolyStyle:', styleData.polyStyle);
+                        if (isPolygon && styleData.polyStyle) {
                             return styleData.polyStyle;
-                        } else if (feature.geometry.type === 'LineString' && styleData.lineStyle) {
-                            console.log('Feature', currentFeatureIndex - 1, '-> LineStyle:', styleData.lineStyle);
+                        }
+                        if (!isPolygon && styleData.lineStyle) {
                             return styleData.lineStyle;
                         }
                     }
-                    
-                    // Style par défaut
-                    if (feature.geometry.type === 'Polygon') {
+
+                    if (isPolygon) {
                         return {
-                            color: '#502a00',
-                            fillColor: '#502a00',
+                            color: source.defaultStyle.color,
+                            fillColor: source.defaultStyle.color,
                             weight: 1,
-                            opacity: 1,
-                            fillOpacity: 0.5
-                        };
-                    } else {
-                        return {
-                            color: '#502a00',
-                            weight: 3,
-                            opacity: 1
+                            opacity: source.defaultStyle.opacity,
+                            fillOpacity: 0.35
                         };
                     }
-                },
-                onEachFeature: function(feature, layer) {
-                    // Pas de popup ni d'interaction
-                }
-            }).addTo(map);
 
-            // Centrer la carte sur le KML
-            const bounds = geojsonLayer.getBounds();
-            map.fitBounds(bounds.pad(0.1));
-            
-            console.log('✅ KML chargé avec succès !');
+                    return {
+                        color: source.defaultStyle.color,
+                        weight: source.defaultStyle.weight,
+                        opacity: source.defaultStyle.opacity
+                    };
+                }
+            });
+
+            return { source, layer };
         })
         .catch(error => {
             clearTimeout(timeoutId);
-            console.error('❌ Erreur lors du chargement du KML:', error);
-            
-            // Afficher un message d'erreur sur la carte
-            const mapInfo = document.querySelector('.map-info');
-            if (mapInfo) {
-                mapInfo.innerHTML = `<strong style="color: #d32f2f;">⚠️ Erreur KML</strong><br>` + error.message + `<br><br>Assurez-vous que:<br>• Croquis.kml est dans le dossier<br>• Vous utilisez un serveur local`;
-            }
+            throw error;
         });
 }
 
-// Charger le KML au démarrage
-loadKML();
+function showMapError(message) {
+    const mapInfo = document.querySelector('.map-info');
+    if (mapInfo) {
+        mapInfo.innerHTML = `<strong style="color: #d32f2f;">⚠️ Erreur KML</strong><br>${message}<br><br>Assurez-vous que :<br>• Les fichiers KML sont dans le dossier<br>• Vous utilisez un serveur local`;
+    }
+}
+
+function updateMapInfo() {
+    const mapInfo = document.querySelector('.map-info');
+    if (mapInfo) {
+        mapInfo.innerHTML = '<strong>Carte interactive</strong>Activez/désactivez LGV, Tram-train et Rail actuel via le filtre en haut à droite.';
+    }
+}
+
+function loadAllKMLLayers() {
+    Promise.allSettled(kmlSources.map(loadKMLLayer))
+        .then(results => {
+            const loadedLayers = [];
+            const errors = [];
+
+            results.forEach(result => {
+                if (result.status === 'fulfilled') {
+                    loadedLayers.push(result.value);
+                } else {
+                    errors.push(result.reason.message || String(result.reason));
+                }
+            });
+
+            if (!loadedLayers.length) {
+                throw new Error(errors.length ? errors.join('<br>') : 'Aucune couche KML chargée');
+            }
+
+            const groupForBounds = L.featureGroup();
+
+            loadedLayers.forEach(({ source, layer }) => {
+                kmlLayers.set(source.key, layer);
+                layer.addTo(map);
+                groupForBounds.addLayer(layer);
+                layerControl.addOverlay(layer, source.label);
+            });
+
+            const bounds = groupForBounds.getBounds();
+            if (bounds.isValid()) {
+                map.fitBounds(bounds.pad(0.1));
+            }
+
+            updateMapInfo();
+
+            if (errors.length) {
+                console.warn('Certaines couches KML n\'ont pas pu être chargées :', errors);
+            }
+
+            console.log('✅ Couches KML chargées :', loadedLayers.map(item => item.source.file));
+        })
+        .catch(error => {
+            console.error('❌ Erreur lors du chargement des KML:', error);
+            showMapError(error.message || String(error));
+        });
+}
+
+// Charger les couches KML au démarrage
+loadAllKMLLayers();
 
 // Créer des marqueurs pour les gares avec les coordonnées EXACTES du KML
 // Toutes les gares extraites directement du fichier KML de QGIS
