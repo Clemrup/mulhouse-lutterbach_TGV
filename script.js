@@ -66,7 +66,7 @@ L.Control.LayersWithOpacity = L.Control.Layers.extend({
         slider.value = '50';
         
         slider.addEventListener('input', function() {
-            const opacity = this.value / 100;
+            const opacity = 1 - (this.value / 100);
             darkLayer.setOpacity(opacity);
         });
         
