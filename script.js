@@ -122,7 +122,6 @@ map.on('baselayerchange', function(event) {
 map.createPane('markerPane').style.zIndex = 650;
 
 // Variables globales
-const kmlLayers = new Map();
 const colorCache = new Map();  // Cache pour les couleurs KML converties
 
 const kmlSources = [
@@ -359,7 +358,6 @@ function loadAllKMLLayers() {
             const groupForBounds = L.featureGroup();
 
             loadedLayers.forEach(({ source, layer }) => {
-                kmlLayers.set(source.key, layer);
                 layer.addTo(map);
                 groupForBounds.addLayer(layer);
                 layerControl.addOverlay(layer, source.label);

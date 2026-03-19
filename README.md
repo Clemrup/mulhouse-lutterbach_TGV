@@ -5,17 +5,19 @@ Un site web présentant le projet ferroviaire avec une carte interactive.
 ## 📁 Fichiers inclus
 
 - **index.html** - Page principale avec description du projet et carte
+- **style.css** - Feuille de style de l'interface
 - **script.js** - Code JavaScript pour la carte interactive
 - **LGV.kml** - Tracé de la ligne à grande vitesse
 - **tram-train.kml** - Tracé de la ligne tram-train projetée
 - **rail_actuel.kml** - Réseau ferroviaire actuel
+- **docs/** - Documents de travail non exécutés par le site
 - **README.md** - Ce fichier
 
 ## 🚀 Comment l'utiliser
 
 ### Option 1 : Ouvrir directement (Simple)
 1. Double-cliquez sur `index.html` pour l'ouvrir dans votre navigateur
-2. La carte s'affichera avec le tracé du projet
+2. Selon le navigateur, les fichiers KML peuvent être bloqués (CORS)
 3. Vous pouvez zoomer, vous déplacer, et basculer entre les vues
 
 ### Option 2 : Utiliser un serveur local (Recommandé)
@@ -46,13 +48,16 @@ Puis ouvrez `http://localhost:8000` dans votre navigateur.
 ## 🎨 Personnaliser
 
 ### Changer les couleurs du tracé
-Dans `script.js`, modifiez la section `kmlStyle` :
+Dans `script.js`, modifiez `defaultStyle` dans `kmlSources` :
 ```javascript
-const kmlStyle = {
-    color: '#d32f2f',  // Changez cette couleur
-    weight: 4,         // Épaisseur de la ligne
-    opacity: 0.9       // Transparence
-};
+const kmlSources = [
+    {
+        key: 'lgv',
+        label: 'LGV',
+        file: 'LGV.kml',
+        defaultStyle: { color: '#f57c00', weight: 4, opacity: 0.95 }
+    }
+];
 ```
 
 ### Ajouter d'autres marqueurs
@@ -74,7 +79,7 @@ Remplacez la source du tile layer Esri par :
 ## 🔧 Technologies utilisées
 
 - **Leaflet.js** - Bibliothèque de cartographie interactive open-source
-- **Leaflet Omnivore** - Plugin pour charger des fichiers KML/GeoJSON
+- **toGeoJSON** - Conversion KML vers GeoJSON côté navigateur
 - **OpenStreetMap / Esri** - Fond de carte gratuit
 - **CSS responsive** - Design adaptatif
 - **JavaScript vanilla** - Sans framework
