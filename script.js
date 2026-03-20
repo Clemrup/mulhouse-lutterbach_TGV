@@ -106,6 +106,56 @@ L.Control.LayersWithOpacity = L.Control.Layers.extend({
 const layerControl = new L.Control.LayersWithOpacity(baseLayers);
 layerControl.addTo(map);
 
+const mobileMapToggle = document.querySelector('.mobile-map-toggle');
+const mobileViewport = window.matchMedia('(max-width: 768px)');
+
+function updateMobileMapToggleLabel() {
+    if (!mobileMapToggle) {
+        return;
+    }
+
+    const isExpanded = document.body.classList.contains('map-expanded');
+    mobileMapToggle.setAttribute('aria-expanded', String(isExpanded));
+    mobileMapToggle.textContent = isExpanded ? 'Masquer la carte' : 'Afficher la carte';
+}
+
+function setMobileMapExpanded(isExpanded) {
+    if (!mobileViewport.matches) {
+        document.body.classList.remove('map-expanded');
+        updateMobileMapToggleLabel();
+        return;
+    }
+
+    document.body.classList.toggle('map-expanded', isExpanded);
+    updateMobileMapToggleLabel();
+
+    if (isExpanded) {
+        // Leaflet doit recalculer la taille après l'animation du panneau mobile.
+        setTimeout(() => map.invalidateSize(), 260);
+    }
+}
+
+if (mobileMapToggle) {
+    updateMobileMapToggleLabel();
+
+    mobileMapToggle.addEventListener('click', () => {
+        const willExpand = !document.body.classList.contains('map-expanded');
+        setMobileMapExpanded(willExpand);
+    });
+
+    mobileViewport.addEventListener('change', () => {
+        if (!mobileViewport.matches) {
+            document.body.classList.remove('map-expanded');
+            updateMobileMapToggleLabel();
+            map.invalidateSize();
+            return;
+        }
+
+        updateMobileMapToggleLabel();
+        map.invalidateSize();
+    });
+}
+
 // Ajouter le fond sombre par défaut
 darkLayer.addTo(map);
 darkLayer.setOpacity(0.5);

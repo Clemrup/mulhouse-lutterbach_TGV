@@ -279,6 +279,10 @@ li ul {
     margin-bottom: 5px;
 }
 
+.mobile-map-toggle {
+    display: none;
+}
+
 /* CSS pour controle Leaflet personnalise */
 .leaflet-control-layers {
     width: auto !important;
@@ -350,13 +354,14 @@ li ul {
 
 @media (max-width: 768px) {
     .container {
-        flex-direction: column;
+        display: block;
+        height: 100dvh;
     }
 
     .sidebar {
         width: 100%;
-        height: 48%;
-        padding: 0 18px 18px;
+        height: 100dvh;
+        padding: 0 18px 88px;
     }
 
     .sidebar-inner {
@@ -364,7 +369,62 @@ li ul {
     }
 
     .map-container {
-        height: 52%;
+        position: fixed;
+        left: 12px;
+        right: 12px;
+        bottom: 72px;
+        height: min(65dvh, 520px);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 20px 36px rgba(0, 0, 0, 0.55);
+        opacity: 0;
+        transform: translateY(16px);
+        pointer-events: none;
+        transition: opacity 0.24s ease, transform 0.24s ease;
+        z-index: 800;
+    }
+
+    body.map-expanded .map-container {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    .mobile-map-toggle {
+        display: inline-flex;
+        position: fixed;
+        right: 12px;
+        bottom: 14px;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding: 0 14px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: #162130;
+        color: var(--ink);
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-size: 0.84rem;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        cursor: pointer;
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
+        z-index: 900;
+    }
+
+    .mobile-map-toggle:hover,
+    .mobile-map-toggle:focus-visible {
+        background: var(--blue);
+        color: var(--white);
+        border-color: var(--blue);
+    }
+
+    .map-info {
+        max-width: 170px;
+        padding: 10px;
+        left: 12px;
+        bottom: 12px;
     }
 
     h1 {
