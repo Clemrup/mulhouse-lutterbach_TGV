@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta name="google-site-verification" content="sqOo6egQ1fznP9qZ7RdW3mcnQu7WPFl0BigWct7C44Y" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projet de gare Mulhouse-Lutterbach TGV et de ligne tram-train Mulhouse-Guebwiller : carte interactive, tracés ferroviaires, objectifs, bénéfices et limites du projet pour le sud Alsace.">
+    <link rel="canonical" href="https://mulhouse-lutterbach-tgv.vercel.app/">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Mulhouse-Lutterbach TGV">
+    <meta property="og:title" content="Gare Mulhouse-Lutterbach TGV">
+    <meta property="og:description" content="Projet de gare Mulhouse-Lutterbach TGV et de ligne tram-train Mulhouse-Guebwiller : carte interactive, tracés ferroviaires, objectifs, bénéfices et limites du projet pour le sud Alsace.">
+    <meta property="og:url" content="https://mulhouse-lutterbach-tgv.vercel.app/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Gare Mulhouse-Lutterbach TGV">
+    <meta name="twitter:description" content="Projet de gare Mulhouse-Lutterbach TGV et de ligne tram-train Mulhouse-Guebwiller : carte interactive, tracés ferroviaires, objectifs, bénéfices et limites du projet pour le sud Alsace.">
+    <meta name="twitter:url" content="https://mulhouse-lutterbach-tgv.vercel.app/">
+    <title>Gare Mulhouse-Lutterbach TGV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <nav class="quick-nav" aria-label="Navigation rapide des sections">
+                <button class="quick-nav-toggle" type="button" aria-label="Afficher les sections">
+                    <span class="quick-nav-bar"></span>
+                    <span class="quick-nav-bar"></span>
+                    <span class="quick-nav-bar"></span>
+                </button>
+                <div class="quick-nav-links">
+                    <a href="#section-0">Contexte</a>
+                    <a href="#section-1">Objectif</a>
+                    <a href="#section-2">Gare</a>
+                    <a href="#section-3">LGV</a>
+                    <a href="#section-4">Tram-train</a>
+                    <a href="#section-5">Réseau</a>
+                    <a href="#section-7">Tram 3</a>
+                    <a href="#section-8">Bénéfices</a>
+                    <a href="#section-9">Limites</a>
+                </div>
+            </nav>
+            <div class="sidebar-inner">
+                
+            <h1>🚆 Gare Mulhouse-Lutterbach TGV et tram-train Mulhouse – Guebwiller</h1>
+            <div class="benefits">
+                <p><strong>À propos de l'auteur</strong><br>
+                Ce projet est une proposition personnelle portée par un étudiant en informatique, qui souhaite partager ses idées d'aménagement et d'exploitation ferroviaire à partir de ses recherches et de ses études. C'est aussi le travail d'un passionné de ferroviaire, animé par l'envie de contribuer au débat sur les mobilités de demain.</p>
+            </div>
+            <div class="benefits">
+                <p><strong>Cadre de l'étude</strong><br>
+                Cette présentation correspond à une réflexion personnelle et ne constitue pas un projet officiel. Elle s'appuie sur l'infrastructure actuelle, la réutilisation d'anciennes emprises ferroviaires et l'hypothèse d'un prolongement de la LGV Rhin-Rhône vers Mulhouse, évoquée dans plusieurs études nationales.</p>
+            </div>
+
+            <section class="section-block">
+            <h2 id="section-0">Contexte ferroviaire</h2>
+            <p>Le nœud ferroviaire de Mulhouse est un point stratégique du Grand Est, où se croisent des circulations TER, TGV, fret, tram-train et transfrontalières. Cette concentration limite la capacité disponible, complique l'ajout de nouvelles dessertes et génère des conflits de circulation ; des travaux de modernisation sont d'ailleurs en cours pour améliorer la capacité et la fluidité du réseau.</p>
+            <ul>
+                <li>Ligne Strasbourg – Bâle</li>
+                <li>Ligne Mulhouse – Belfort</li>
+                <li>Ligne Mulhouse – Kruth</li>
+                <li>Ligne Mulhouse – Müllheim (Allemagne)</li>
+                <li>Réseau tram-train Mulhouse – Vallée de la Thur</li>
+            </ul>
+            <p>Le projet propose une évolution du système existant pour améliorer les correspondances, réduire la saturation du nœud mulhousien et offrir une desserte ferroviaire renforcée pour le sud de l'Alsace.</p>
+            </section>
+            
+            <section class="section-block">
+            <h2 id="section-1">1. Objectif du projet</h2>
+            <p>Ce projet propose la création d'une nouvelle gare Mulhouse-Lutterbach TGV, connectée à la LGV Rhin-Rhône dans l’hypothèse de son prolongement vers Mulhouse. L'objectif est de :</p>
+            <ul>
+                <li>Améliorer l'accès au réseau TGV pour l'agglomération mulhousienne et son bassin de vie</li>
+                <li>Éviter le passage systématique des TGV par la gare de Mulhouse-Ville, ce qui réduit les contraintes d'exploitation sur le nœud ferroviaire</li>
+                <li>Réduire la saturation de la ligne Mulhouse – Belfort, qui accueille aujourd'hui un trafic très diversifié (TGV, TER et trains de fret) et pour laquelle l'ajout de nouveaux sillons devient difficile</li>
+                <li>Permettre le développement de nouvelles dessertes TGV, notamment vers les grandes métropoles françaises et européennes</li>
+                <li>Créer une interconnexion directe avec les réseaux tram-train et TER</li>
+            </ul>
+            <p>La gare deviendrait un pôle d'échanges multimodal entre TGV, TER et tram-train, facilitant le rabattement des voyageurs depuis les vallées et les villes du bassin mulhousien vers la grande vitesse.</p>
+            <p>Dans une logique d'aménagement du territoire, ce type de connexion permet également de mieux intégrer les territoires périphériques au réseau à grande vitesse, en favorisant les correspondances efficaces entre les lignes locales et les axes nationaux.</p>
+            </section>
+
+            <section class="section-block">
+            <h2 id="section-2">2. La gare Mulhouse-Lutterbach TGV</h2>
+            <p>La gare serait située à l'ouest de Lutterbach, à proximité de l'actuelle ligne Mulhouse – Kruth. Elle comprendrait :</p>
+            <ul>
+                <li>Des quais TGV sur la LGV Rhin-Rhône</li>
+                <li>Des quais bas pour la ligne Mulhouse – Kruth</li>
+                <li>Des quais hauts pour une nouvelle ligne Mulhouse – Guebwiller</li>
+            </ul>
+            <p>Cette configuration permettrait de créer une véritable plateforme d'échanges ferroviaires, facilitant les correspondances entre trains régionaux, tram-trains et TGV.</p>
+            <p>La gare serait construite surélevée, car la LGV franchirait :</p>
+            <ul>
+                <li>La ligne Mulhouse – Kruth</li>
+                <li>La voie rapide D1066</li>
+            </ul>
+            <p>Au moyen d'un pont ferroviaire. Cette implantation permettrait d'assurer la continuité du réseau existant tout en limitant les conflits de circulation entre les différentes lignes ferroviaires.</p>
+            </section>
+
+            <section class="section-block">
+            <h2 id="section-3">3. Connexion à la LGV Rhin-Rhône (hypothèse)</h2>
+            <p>Deux raccordements à la LGV seraient réalisés.</p>
+            <p><strong>Raccordement nord</strong><br>
+            Pour les trains en provenance de Strasbourg. Le changement de sens de circulation serait effectué avant l'entrée en gare de Mulhouse-Lutterbach TGV. Cette configuration permettrait de faciliter l'insertion des trains sur la LGV tout en évitant des contraintes supplémentaires dans la gare.</p>
+            <p><strong>Raccordement sud</strong><br>
+            Pour les trains en provenance de Mulhouse-Ville et de la Suisse. La connexion se ferait après la gare, ce qui signifie que ces trains ne desserviraient pas la gare TGV.</p>
+            <p>Ces raccordements permettraient :</p>
+            <ul>
+                <li>D'éviter le passage par la ligne Mulhouse – Belfort, déjà très chargée par la coexistence de circulations rapides, régionales et de fret</li>
+                <li>D'augmenter la capacité globale du réseau ferroviaire dans le secteur</li>
+                <li>D'améliorer la régularité des circulations</li>
+                <li>D'envisager de nouvelles dessertes nationales et internationales, notamment dans le cadre du corridor européen Rhin-Rhône reliant l'Europe du Nord à la Méditerranée</li>
+            </ul>
+            <p>L'achèvement et l'optimisation des connexions à la LGV Rhin-Rhône sont régulièrement présentés comme un levier pour renforcer l'accessibilité du sud de l'Alsace et son intégration dans les réseaux européens de transport.</p>
+            </section>
+
+            <section class="section-block">
+            <h2 id="section-4">4. Nouvelle ligne tram-train Mulhouse – Guebwiller</h2>
+            <p>Le projet prévoit la création d'une ligne tram-train reliant Mulhouse à Guebwiller, permettant de reconnecter la vallée au réseau ferroviaire.</p>
+            <p><strong>Infrastructure</strong><br>
+            Une grande partie du tracé réutiliserait :</p>
+            <ul>
+                <li>L'ancienne ligne ferroviaire abandonnée</li>
+                <li>Située à l'est de la ligne Strasbourg – Bâle entre Richwiller et Bollwiller</li>
+                <li>Déjà existante entre Bollwiller et Guebwiller</li>
+            </ul>
+            <p>La réutilisation de cette infrastructure permettrait de limiter les coûts de construction et de valoriser une plateforme ferroviaire existante.</p>
+            <p>Deux sauts-de-mouton seraient nécessaires :</p>
+            <ul>
+                <li>À la sortie de Mulhouse-Lutterbach TGV</li>
+                <li>Après Bollwiller pour rejoindre la ville de Guebwiller</li>
+            </ul>
+            <p>La ligne franchirait la RD83 entre Bollwiller et Soultz en souterrain, afin de limiter les conflits de circulation et permettant également la traversée pour une piste cyclable parallèle aux voies.</p>
+            <p><strong>Configuration de la ligne</strong></p>
+            <ul>
+                <li>Voie unique</li>
+                <li>Points de croisement prévus :
+                    <ul>
+                        <li>Mulhouse-Lutterbach TGV</li>
+                        <li>Entre Richwiller et Wittelsheim</li>
+                        <li>Wittelsheim</li>
+                        <li>Bollwiller</li>
+                        <li>Soultz Centre</li>
+                        <li>Entre Guebwiller-Storck et Guebwiller Gare</li>
+                        <li>Terminus Guebwiller Heissenstein</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>Ce type d'exploitation est adapté à une ligne de tram-train, permettant une fréquence régulière tout en limitant les coûts d'infrastructure.</p>
+            <p><strong>Arrêts envisagés</strong><br>
+            Anciennes gares réhabilitées :</p>
+            <ul>
+                <li>Richwiller</li>
+                <li>Wittelsheim</li>
+                <li>Guebwiller Gare</li>
+            </ul>
+            <p>Gares existantes réhabilitées :</p>
+            <ul>
+                <li>Staffelfelden</li>
+                <li>Bollwiller</li>
+            </ul>
+            <p>Nouveaux arrêts :</p>
+            <ul>
+                <li>Soultz Nouveau-Monde</li>
+                <li>Soultz Zone Industrielle</li>
+                <li>Soultz Centre</li>
+                <li>Guebwiller – Storck</li>
+                <li>Guebwiller Centre</li>
+                <li>Guebwiller Heissenstein</li>
+            </ul>
+            <p>Cette ligne permettrait de desservir directement plusieurs communes aujourd'hui dépendantes de la voiture, en améliorant leur accès à Mulhouse et au réseau ferroviaire régional.</p>
+            <p>Elle contribuerait aussi à réduire la pression sur les gares de rabattement, notamment à Bollwiller, où le stationnement est fréquemment saturé dès le matin malgré la récente extension de son parking.</p>
+            </section>
+
+            <section class="section-block">
+            <h2 id="section-5">5. Réseaux</h2>
+
+            <h3>Tram-train Mulhouse – Thann</h3>
+            <p>La ligne desservirait une nouvelle station :</p>
+            <p style="margin-left: 20px;"><strong>Mulhouse-Lutterbach TGV</strong> (quais bas)<br>
+            Entre Lutterbach Gare et Graffenwald.</p>
+            <p>Cette nouvelle station permettrait aux habitants de la vallée de la Thur de rejoindre directement la gare TGV par tram-train, sans devoir transiter par Mulhouse-Ville.</p>
+            <p><strong>Nouvelle desserte :</strong></p>
+            <ul>
+                <li>Mulhouse Gare Centrale</li>
+                <li>République</li>
+                <li>Porte Jeune</li>
+                <li>Mairie</li>
+                <li>Porte Haute</li>
+                <li>Tour Nessel</li>
+                <li>Daguerre</li>
+                <li>Zu Rhein</li>
+                <li>Dornach Gare</li>
+                <li>Musées</li>
+                <li>Lutterbach Gare</li>
+                <li>Mulhouse-Lutterbach TGV</li>
+                <li>Graffenwald</li>
+                <li>Cernay</li>
+                <li>Vieux-Thann ZI</li>
+                <li>Vieux-Thann</li>
+                <li>Thann Gare</li>
+                <li>Thann Centre</li>
+                <li>Thann St-Jacques</li>
+            </ul>
+            <p>Les quais bas seraient également utilisés par les trains Mulhouse – Kruth, renforçant le rôle de la gare comme point de correspondance régional.</p>
+
+            <h3>Tram-train Mulhouse – Guebwiller</h3>
+            <ul>
+                <li>Mulhouse Gare Centrale</li>
+                <li>République</li>
+                <li>Porte Jeune</li>
+                <li>Mairie</li>
+                <li>Porte Haute</li>
+                <li>Tour Nessel</li>
+                <li>Daguerre</li>
+                <li>Zu Rhein</li>
+                <li>Dornach Gare</li>
+                <li>Musées</li>
+                <li>Lutterbach Gare</li>
+                <li>Mulhouse-Lutterbach TGV (quais hauts)</li>
+                <li>Richwiller</li>
+                <li>Wittelsheim</li>
+                <li>Staffelfelden</li>
+                <li>Bollwiller</li>
+                <li>Soultz Nouveau-Monde</li>
+                <li>Soultz Centre</li>
+                <li>Soultz ZI</li>
+                <li>Guebwiller – Storck</li>
+                <li>Guebwiller Gare</li>
+                <li>Guebwiller Centre</li>
+                <li>Guebwiller Heissenstein</li>
+            </ul>
+
+            <h3>TER Thann – Guebwiller</h3>
+            <p>Une nouvelle liaison ferroviaire pourrait également être créée :</p>
+            <ul>
+                <li>Thann Gare</li>
+                <li>Vieux-Thann</li>
+                <li>Vieux-Thann ZI</li>
+                <li>Cernay</li>
+                <li>Graffenwald</li>
+                <li>Mulhouse-Lutterbach TGV</li>
+                <li>Richwiller</li>
+                <li>Wittelsheim</li>
+                <li>Staffelfelden</li>
+                <li>Bollwiller</li>
+                <li>Soultz Nouveau-Monde</li>
+                <li>Soultz Centre</li>
+                <li>Soultz ZI</li>
+                <li>Guebwiller – Storck</li>
+                <li>Guebwiller Gare</li>
+                <li>Guebwiller Centre</li>
+                <li>Guebwiller Heissenstein</li>
+            </ul>
+            <p>Cette liaison transversale permettrait de connecter les vallées de la Thur et de la Lauch.</p>
+            </section>
+
+            <section class="section-block">
+            <h2 id="section-7">7. Prolongement possible du tram 3</h2>
+            <p>Le projet permettrait également le prolongement de la ligne 3 du tramway de Mulhouse jusqu’à la gare Mulhouse-Lutterbach TGV, où elle ferait terminus au niveau des quais hauts.</p>
+            <p>Cette extension permettrait une liaison directe entre la gare centrale de Mulhouse et la gare TGV, sans rupture de charge, et renforcerait le rôle de la gare comme pôle multimodal.</p>
+            </section>
+
+            <section class="section-block">
+            <h2 id="section-8">8. Bénéfices du projet</h2>
+            <p>Le projet permettrait :</p>
+            <ul>
+                <li>Une meilleure connexion de Mulhouse et de son agglomération au réseau TGV</li>
+                <li>Une désaturation de la ligne Mulhouse – Belfort, aujourd'hui utilisée à la fois par les TGV, les TER et le fret</li>
+                <li>Une forte désaturation de la gare de Bollwiller : même après une extension récente du parking, celui-ci est souvent complet dès 8h du matin</li>
+                <li>Une amélioration majeure de l'accès au rail pour Guebwiller, la plus grande ville du Grand Est non desservie par le train</li>
+                <li>La réouverture ferroviaire de la vallée de Guebwiller, aujourd'hui privée de desserte ferroviaire</li>
+                <li>Une intermodalité forte entre TGV, TER et tram-train</li>
+                <li>De nouvelles liaisons transversales entre vallées, notamment Thann – Guebwiller</li>
+                <li>Une amélioration de l'accessibilité du sud de l'Alsace dans le corridor ferroviaire européen Rhin-Rhône, renforçant son attractivité économique et sa connexion aux grandes métropoles européennes</li>
+            </ul>
+            <p>Plus largement, ce type de projet s'inscrit dans les objectifs de transition vers des mobilités plus durables, en favorisant le report modal de la voiture vers le train et les transports collectifs.</p>
+            </section>
+
+            <section class="section-block">
+            <h2 id="section-9">9. Limites et précautions</h2>
+            <p class="section-note">Ce projet est une étude personnelle réalisée à titre de réflexion.<br>
+            Il ne prend pas en compte l'ensemble des contraintes techniques, financières et réglementaires d'un projet réel, mais vise à illustrer une évolution possible du réseau ferroviaire autour de Mulhouse en s'appuyant sur des infrastructures existantes et sur des hypothèses évoquées dans plusieurs études nationales.</p>
+            <ul>
+                <li>La connexion LGV repose sur une hypothèse de prolongement à confirmer</li>
+                <li>Les contraintes détaillées (foncier, environnement, coûts, calendrier) nécessitent des études complémentaires</li>
+                <li>La section entre Mulhouse-Ville et Lutterbach pourrait être très saturée</li>
+            </ul>
+            </section>
+
+            <footer class="site-footer">
+                <p>Projet personnel sur la gare Mulhouse-Lutterbach TGV et le tram-train Mulhouse - Guebwiller.</p>
+                <p>Contact : <a href="mailto:clemrup@gmail.com">clemrup@gmail.com</a></p>
+            </footer>
+            </div>
+        </div>
+
+        <button class="mobile-map-toggle" type="button" aria-controls="map-panel" aria-expanded="false">
+            Afficher la carte
+        </button>
+
+        <div class="map-container" id="map-panel">
+            <div id="map"></div>
+            <div class="map-info">
+                <strong>Carte interactive</strong>
+                Zoomez, déplacez-vous et explorez le tracé du projet
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <script src="https://mapbox.github.io/togeojson/togeojson.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

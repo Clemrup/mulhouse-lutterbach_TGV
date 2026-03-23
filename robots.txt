@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mulhouse-lutterbach-tgv.vercel.app/sitemap.xml
