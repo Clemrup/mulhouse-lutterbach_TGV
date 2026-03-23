@@ -108,6 +108,9 @@ layerControl.addTo(map);
 
 const mobileMapToggle = document.querySelector('.mobile-map-toggle');
 const mobileViewport = window.matchMedia('(max-width: 768px)');
+const desktopViewport = window.matchMedia('(min-width: 769px)');
+const container = document.querySelector('.container');
+const desktopResizer = document.querySelector('.desktop-resizer');
 
 function updateMobileMapToggleLabel() {
     if (!mobileMapToggle) {
@@ -155,6 +158,63 @@ if (mobileMapToggle) {
         map.invalidateSize();
     });
 }
+
+let isDesktopResizing = false;
+
+function setSidebarWidthFromPointer(clientX) {
+    if (!container || !desktopViewport.matches) {
+        return;
+    }
+
+    const rect = container.getBoundingClientRect();
+    const minSidebarWidth = 360;
+    const minMapWidth = 420;
+    const desiredWidth = clientX - rect.left;
+    const maxSidebarWidth = Math.max(minSidebarWidth, rect.width - minMapWidth);
+    const clampedWidth = Math.min(Math.max(desiredWidth, minSidebarWidth), maxSidebarWidth);
+    const widthPercent = (clampedWidth / rect.width) * 100;
+
+    container.style.setProperty('--sidebar-width', widthPercent.toFixed(2) + '%');
+    map.invalidateSize();
+}
+
+function stopDesktopResize() {
+    isDesktopResizing = false;
+    document.body.classList.remove('desktop-resizing');
+}
+
+if (desktopResizer) {
+    desktopResizer.addEventListener('pointerdown', (event) => {
+        if (!desktopViewport.matches) {
+            return;
+        }
+
+        isDesktopResizing = true;
+        document.body.classList.add('desktop-resizing');
+        desktopResizer.setPointerCapture(event.pointerId);
+        setSidebarWidthFromPointer(event.clientX);
+    });
+
+    desktopResizer.addEventListener('pointermove', (event) => {
+        if (!isDesktopResizing) {
+            return;
+        }
+
+        setSidebarWidthFromPointer(event.clientX);
+    });
+
+    desktopResizer.addEventListener('pointerup', stopDesktopResize);
+    desktopResizer.addEventListener('pointercancel', stopDesktopResize);
+}
+
+desktopViewport.addEventListener('change', () => {
+    if (!desktopViewport.matches) {
+        stopDesktopResize();
+        return;
+    }
+
+    map.invalidateSize();
+});
 
 // Ajouter le fond sombre par défaut
 darkLayer.addTo(map);

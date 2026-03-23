@@ -42,15 +42,46 @@ body {
 .container {
     display: flex;
     height: 100vh;
+    --sidebar-width: 39%;
 }
 
 .sidebar {
-    width: 39%;
+    width: var(--sidebar-width);
+    flex: 0 0 var(--sidebar-width);
+    min-width: 360px;
+    max-width: calc(100% - 420px);
     background: var(--paper);
     overflow-y: auto;
     scroll-padding-top: 120px;
     padding: 0 clamp(22px, 3vw, 36px) clamp(22px, 3vw, 36px);
     box-shadow: 2px 0 24px rgba(0, 0, 0, 0.45);
+}
+
+.desktop-resizer {
+    width: 12px;
+    flex: 0 0 12px;
+    cursor: col-resize;
+    background: linear-gradient(180deg, #101b2a 0%, #1a2a3b 100%);
+    border-left: 1px solid var(--line);
+    border-right: 1px solid var(--line);
+    position: relative;
+}
+
+.desktop-resizer::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 3px;
+    height: 80px;
+    border-radius: 999px;
+    background: rgba(229, 237, 248, 0.4);
+}
+
+body.desktop-resizing {
+    cursor: col-resize;
+    user-select: none;
 }
 
 .sidebar-inner {
@@ -396,9 +427,16 @@ li ul {
 
     .sidebar {
         width: 100%;
+        min-width: 0;
+        max-width: none;
+        flex: none;
         height: 100dvh;
         scroll-padding-top: 112px;
         padding: 0 18px 88px;
+    }
+
+    .desktop-resizer {
+        display: none;
     }
 
     .sidebar-inner {
