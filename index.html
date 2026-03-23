@@ -283,6 +283,17 @@
             <p>Cette section présente une hypothèse de fonctionnement du réseau après réalisation du projet.</p>
             <p>Les fréquences proposées sont indicatives et ne prennent pas en compte l'ensemble des contraintes techniques réelles (capacité du réseau, matériel roulant, signalisation, exploitation urbaine), mais visent à illustrer le potentiel offert par la nouvelle gare Mulhouse-Lutterbach TGV et par la création de la ligne Mulhouse – Guebwiller.</p>
 
+            <div class="exploitation-gallery" aria-label="Plans d'exploitation">
+                <figure class="exploitation-gallery-item">
+                    <img src="images/plan_tram_actuel.png" alt="Plan du tram actuel sur le secteur Mulhouse-Lutterbach" loading="lazy" decoding="async">
+                    <figcaption>Plan du tram actuel</figcaption>
+                </figure>
+                <figure class="exploitation-gallery-item">
+                    <img src="images/plan mulhouse-lutterbach-tgv.png" alt="Plan de la desserte Mulhouse-Lutterbach TGV" loading="lazy" decoding="async">
+                    <figcaption>Plan Mulhouse-Lutterbach TGV</figcaption>
+                </figure>
+            </div>
+
             <h3>Exploitation du réseau tram et tram-train</h3>
             <p>Aujourd'hui, la section urbaine entre Mulhouse Gare Centrale et Lutterbach Gare constitue le tronc commun entre la ligne 3 du tramway et le tram-train Mulhouse – Thann.<br>
             Le tramway ligne 3 a actuellement son terminus à Lutterbach, tandis que le tram-train poursuit sa circulation vers Cernay, Thann et la vallée de la Thur.</p>
@@ -427,6 +438,19 @@
                 Zoomez, déplacez-vous et explorez le tracé du projet
             </div>
         </div>
+    </div>
+
+    <div class="image-lightbox" id="image-lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Visionneuse des plans">
+        <button class="image-lightbox-close" id="lightbox-close" type="button" aria-label="Fermer">×</button>
+        <button class="image-lightbox-zoom zoom-in" id="lightbox-zoom-in" type="button" aria-label="Zoom avant">+</button>
+        <button class="image-lightbox-zoom zoom-out" id="lightbox-zoom-out" type="button" aria-label="Zoom arrière">−</button>
+        <button class="image-lightbox-zoom zoom-reset" id="lightbox-zoom-reset" type="button" aria-label="Réinitialiser le zoom">100%</button>
+        <button class="image-lightbox-nav prev" id="lightbox-prev" type="button" aria-label="Image précédente">‹</button>
+        <div class="image-lightbox-stage" id="lightbox-stage">
+            <img class="image-lightbox-image" id="lightbox-image" src="" alt="">
+        </div>
+        <button class="image-lightbox-nav next" id="lightbox-next" type="button" aria-label="Image suivante">›</button>
+        <p class="image-lightbox-caption" id="lightbox-caption"></p>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>

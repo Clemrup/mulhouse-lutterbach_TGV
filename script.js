@@ -648,4 +648,131 @@ L.control.scale({
     updateWhenIdle: true
 }).addTo(map);
 
+const galleryImages = Array.from(document.querySelectorAll('.exploitation-gallery-item img'));
+const lightbox = document.getElementById('image-lightbox');
+const lightboxImage = document.getElementById('lightbox-image');
+const lightboxCaption = document.getElementById('lightbox-caption');
+const lightboxStage = document.getElementById('lightbox-stage');
+const lightboxClose = document.getElementById('lightbox-close');
+const lightboxPrev = document.getElementById('lightbox-prev');
+const lightboxNext = document.getElementById('lightbox-next');
+const lightboxZoomIn = document.getElementById('lightbox-zoom-in');
+const lightboxZoomOut = document.getElementById('lightbox-zoom-out');
+const lightboxZoomReset = document.getElementById('lightbox-zoom-reset');
+
+let lightboxIndex = 0;
+let lightboxScale = 1;
+
+function updateLightboxZoom() {
+    if (!lightboxImage) {
+        return;
+    }
+
+    lightboxImage.style.transform = 'scale(' + lightboxScale.toFixed(2) + ')';
+}
+
+function setLightboxScale(nextScale) {
+    lightboxScale = Math.min(5, Math.max(1, nextScale));
+    updateLightboxZoom();
+}
+
+function updateLightboxContent(index) {
+    if (!galleryImages.length || !lightboxImage || !lightboxCaption) {
+        return;
+    }
+
+    const normalizedIndex = (index + galleryImages.length) % galleryImages.length;
+    const image = galleryImages[normalizedIndex];
+    const figure = image.closest('figure');
+    const captionText = figure?.querySelector('figcaption')?.textContent?.trim() || image.alt || '';
+
+    lightboxIndex = normalizedIndex;
+    lightboxImage.src = image.src;
+    lightboxImage.alt = image.alt || captionText;
+    lightboxCaption.textContent = captionText;
+    setLightboxScale(1);
+
+    if (lightboxStage) {
+        lightboxStage.scrollTop = 0;
+        lightboxStage.scrollLeft = 0;
+    }
+}
+
+function openLightbox(index) {
+    if (!lightbox) {
+        return;
+    }
+
+    updateLightboxContent(index);
+    lightbox.classList.add('is-open');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+    if (!lightbox) {
+        return;
+    }
+
+    lightbox.classList.remove('is-open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+}
+
+if (galleryImages.length && lightbox) {
+    galleryImages.forEach((image, index) => {
+        image.addEventListener('click', () => {
+            openLightbox(index);
+        });
+    });
+
+    lightboxClose?.addEventListener('click', closeLightbox);
+    lightboxPrev?.addEventListener('click', () => updateLightboxContent(lightboxIndex - 1));
+    lightboxNext?.addEventListener('click', () => updateLightboxContent(lightboxIndex + 1));
+
+    lightboxZoomIn?.addEventListener('click', () => setLightboxScale(lightboxScale + 0.25));
+    lightboxZoomOut?.addEventListener('click', () => setLightboxScale(lightboxScale - 0.25));
+    lightboxZoomReset?.addEventListener('click', () => setLightboxScale(1));
+
+    lightbox.addEventListener('click', (event) => {
+        if (event.target === lightbox) {
+            closeLightbox();
+        }
+    });
+
+    lightboxImage?.addEventListener('click', () => {
+        if (lightboxScale > 1) {
+            setLightboxScale(1);
+        } else {
+            setLightboxScale(2);
+        }
+    });
+
+    lightboxStage?.addEventListener('wheel', (event) => {
+        event.preventDefault();
+        const delta = event.deltaY > 0 ? -0.2 : 0.2;
+        setLightboxScale(lightboxScale + delta);
+    }, { passive: false });
+
+    window.addEventListener('keydown', (event) => {
+        if (!lightbox.classList.contains('is-open')) {
+            return;
+        }
+
+        if (event.key === 'Escape') {
+            closeLightbox();
+            return;
+        }
+
+        if (event.key === 'ArrowLeft') {
+            updateLightboxContent(lightboxIndex - 1);
+            return;
+        }
+
+        if (event.key === 'ArrowRight') {
+            updateLightboxContent(lightboxIndex + 1);
+        }
+    });
+}
+
 console.log('Script chargé - En attente du KML...');
