@@ -666,7 +666,7 @@ let lightboxBaseWidth = 0;
 let lightboxBaseHeight = 0;
 
 function updateLightboxBaseSize() {
-    if (!lightboxImage || !lightboxStage) {
+    if (!lightboxImage) {
         return;
     }
 
@@ -677,8 +677,11 @@ function updateLightboxBaseSize() {
         return;
     }
 
-    const availableWidth = Math.max(1, lightboxStage.clientWidth);
-    const availableHeight = Math.max(1, lightboxStage.clientHeight);
+    // Reproduit le comportement visuel initial: image ajustee au viewport de la lightbox.
+    // Ne pas utiliser lightboxStage.clientWidth/clientHeight ici, car ces valeurs
+    // peuvent devenir tres petites quand le contenu vient d'etre redimensionne.
+    const availableWidth = Math.max(1, Math.min(1200, Math.round(window.innerWidth * 0.9)) - 2);
+    const availableHeight = Math.max(1, Math.round(window.innerHeight - 140) - 2);
     const fitRatio = Math.min(availableWidth / naturalWidth, availableHeight / naturalHeight, 1);
 
     lightboxBaseWidth = Math.max(1, Math.round(naturalWidth * fitRatio));
