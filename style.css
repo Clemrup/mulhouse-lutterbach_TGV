@@ -364,13 +364,12 @@ li ul {
 
 .image-lightbox-image {
     display: block;
-    max-width: 100%;
-    max-height: calc(100vh - 170px);
+    max-width: none;
+    max-height: none;
     width: auto;
     height: auto;
     margin: 0 auto;
-    transform-origin: center center;
-    transition: transform 0.16s ease;
+    transition: width 0.16s ease, height 0.16s ease;
 }
 
 .image-lightbox-caption {

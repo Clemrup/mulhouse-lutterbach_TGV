@@ -662,13 +662,43 @@ const lightboxZoomReset = document.getElementById('lightbox-zoom-reset');
 
 let lightboxIndex = 0;
 let lightboxScale = 1;
+let lightboxBaseWidth = 0;
+let lightboxBaseHeight = 0;
+
+function updateLightboxBaseSize() {
+    if (!lightboxImage || !lightboxStage) {
+        return;
+    }
+
+    const naturalWidth = lightboxImage.naturalWidth;
+    const naturalHeight = lightboxImage.naturalHeight;
+
+    if (!naturalWidth || !naturalHeight) {
+        return;
+    }
+
+    const availableWidth = Math.max(1, lightboxStage.clientWidth);
+    const availableHeight = Math.max(1, lightboxStage.clientHeight);
+    const fitRatio = Math.min(availableWidth / naturalWidth, availableHeight / naturalHeight, 1);
+
+    lightboxBaseWidth = Math.max(1, Math.round(naturalWidth * fitRatio));
+    lightboxBaseHeight = Math.max(1, Math.round(naturalHeight * fitRatio));
+}
 
 function updateLightboxZoom() {
     if (!lightboxImage) {
         return;
     }
 
-    lightboxImage.style.transform = 'scale(' + lightboxScale.toFixed(2) + ')';
+    if (!lightboxBaseWidth || !lightboxBaseHeight) {
+        updateLightboxBaseSize();
+    }
+
+    const width = Math.max(1, Math.round(lightboxBaseWidth * lightboxScale));
+    const height = Math.max(1, Math.round(lightboxBaseHeight * lightboxScale));
+
+    lightboxImage.style.width = width + 'px';
+    lightboxImage.style.height = height + 'px';
 
     if (lightboxZoomReset) {
         const zoomPercent = Math.round(lightboxScale * 100);
@@ -693,6 +723,8 @@ function updateLightboxContent(index) {
     const captionText = figure?.querySelector('figcaption')?.textContent?.trim() || image.alt || '';
 
     lightboxIndex = normalizedIndex;
+    lightboxBaseWidth = 0;
+    lightboxBaseHeight = 0;
     lightboxImage.src = image.src;
     lightboxImage.alt = image.alt || captionText;
     lightboxCaption.textContent = captionText;
@@ -713,6 +745,11 @@ function openLightbox(index) {
     lightbox.classList.add('is-open');
     lightbox.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
+
+    requestAnimationFrame(() => {
+        updateLightboxBaseSize();
+        updateLightboxZoom();
+    });
 }
 
 function closeLightbox() {
@@ -735,6 +772,11 @@ if (galleryImages.length && lightbox) {
     lightboxClose?.addEventListener('click', closeLightbox);
     lightboxPrev?.addEventListener('click', () => updateLightboxContent(lightboxIndex - 1));
     lightboxNext?.addEventListener('click', () => updateLightboxContent(lightboxIndex + 1));
+
+    lightboxImage?.addEventListener('load', () => {
+        updateLightboxBaseSize();
+        updateLightboxZoom();
+    });
 
     lightboxZoomIn?.addEventListener('click', () => setLightboxScale(lightboxScale + 0.25));
     lightboxZoomOut?.addEventListener('click', () => setLightboxScale(lightboxScale - 0.25));
@@ -778,6 +820,15 @@ if (galleryImages.length && lightbox) {
         if (event.key === 'ArrowRight') {
             updateLightboxContent(lightboxIndex + 1);
         }
+    });
+
+    window.addEventListener('resize', () => {
+        if (!lightbox.classList.contains('is-open')) {
+            return;
+        }
+
+        updateLightboxBaseSize();
+        updateLightboxZoom();
     });
 }
 
