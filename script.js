@@ -111,6 +111,32 @@ const mobileViewport = window.matchMedia('(max-width: 768px)');
 const desktopViewport = window.matchMedia('(min-width: 769px)');
 const container = document.querySelector('.container');
 const desktopResizer = document.querySelector('.desktop-resizer');
+const sidebar = document.querySelector('.sidebar');
+const mapInfo = document.querySelector('.map-info');
+
+function setMapInfoVisible(isVisible) {
+    if (!mapInfo) {
+        return;
+    }
+
+    mapInfo.classList.toggle('is-hidden', !isVisible);
+}
+
+if (mapInfo) {
+    // Masquer l'aide dès que l'utilisateur manipule la carte.
+    map.on('mousedown wheel touchstart dragstart zoomstart movestart', () => {
+        setMapInfoVisible(false);
+    });
+
+    // Réafficher l'aide dès interaction avec la colonne de texte.
+    if (sidebar) {
+        ['pointerdown', 'wheel', 'touchstart', 'scroll', 'keydown'].forEach((eventName) => {
+            sidebar.addEventListener(eventName, () => {
+                setMapInfoVisible(true);
+            }, { passive: true });
+        });
+    }
+}
 
 function updateMobileMapToggleLabel() {
     if (!mobileMapToggle) {
