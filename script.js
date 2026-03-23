@@ -669,6 +669,12 @@ function updateLightboxZoom() {
     }
 
     lightboxImage.style.transform = 'scale(' + lightboxScale.toFixed(2) + ')';
+
+    if (lightboxZoomReset) {
+        const zoomPercent = Math.round(lightboxScale * 100);
+        lightboxZoomReset.textContent = zoomPercent + '%';
+        lightboxZoomReset.setAttribute('aria-label', 'Reinitialiser le zoom (' + zoomPercent + '%)');
+    }
 }
 
 function setLightboxScale(nextScale) {
