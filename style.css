@@ -167,6 +167,7 @@ li ul {
     margin: 0 0 24px;
     padding: 10px 0;
     max-width: 100%;
+    --quick-nav-open-height: 180px;
     scrollbar-width: thin;
     position: sticky;
     top: 0;
@@ -240,7 +241,7 @@ li ul {
 
 .quick-nav:hover .quick-nav-links,
 .quick-nav:focus-within .quick-nav-links {
-    max-height: 180px;
+    max-height: var(--quick-nav-open-height);
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;

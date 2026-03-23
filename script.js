@@ -113,6 +113,21 @@ const container = document.querySelector('.container');
 const desktopResizer = document.querySelector('.desktop-resizer');
 const sidebar = document.querySelector('.sidebar');
 const mapInfo = document.querySelector('.map-info');
+const quickNav = document.querySelector('.quick-nav');
+const quickNavLinks = document.querySelector('.quick-nav-links');
+
+function updateQuickNavHeight() {
+    if (!quickNav || !quickNavLinks) {
+        return;
+    }
+
+    // Mesure la hauteur réelle des liens pour éviter qu'un lien soit coupé.
+    const measuredHeight = quickNavLinks.scrollHeight + 4;
+    quickNav.style.setProperty('--quick-nav-open-height', measuredHeight + 'px');
+}
+
+updateQuickNavHeight();
+window.addEventListener('resize', updateQuickNavHeight);
 
 function setMapInfoVisible(isVisible) {
     if (!mapInfo) {
@@ -201,6 +216,7 @@ function setSidebarWidthFromPointer(clientX) {
     const widthPercent = (clampedWidth / rect.width) * 100;
 
     container.style.setProperty('--sidebar-width', widthPercent.toFixed(2) + '%');
+    updateQuickNavHeight();
     map.invalidateSize();
 }
 
