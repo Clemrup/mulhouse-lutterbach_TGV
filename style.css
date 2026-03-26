@@ -306,48 +306,6 @@ li ul {
     box-shadow: inset 0 0 0 1px rgba(111, 182, 255, 0.16);
 }
 
-.section-lgv-connection .lgv-block {
-    margin-top: 14px;
-}
-
-.section-lgv-connection .lgv-block h3 {
-    margin-top: 0;
-    margin-bottom: 10px;
-    color: inherit;
-    border-left-color: currentColor;
-    background: rgba(18, 33, 49, 0.82);
-}
-
-.section-lgv-connection .lgv-block.north {
-    color: #9ec5ff;
-}
-
-.section-lgv-connection .lgv-block.south {
-    color: #94e6ca;
-}
-
-.section-lgv-connection .lgv-sub-block {
-    color: inherit;
-    margin-bottom: 12px;
-    padding: 10px 12px;
-    border-left: 2px solid currentColor;
-    border-radius: 0 8px 8px 0;
-    background: rgba(11, 21, 33, 0.55);
-}
-
-.section-lgv-connection .lgv-sub-block h4 {
-    color: inherit;
-    border-left-color: currentColor;
-    background: rgba(15, 28, 44, 0.5);
-    box-shadow: inset 0 0 0 1px rgba(158, 197, 255, 0.18);
-    margin-top: 0;
-}
-
-.section-lgv-connection .lgv-sub-block p,
-.section-lgv-connection .lgv-sub-block li {
-    color: inherit;
-}
-
 .section-note {
     background: var(--bg-section-note);
     border-left: 3px solid var(--blue);
