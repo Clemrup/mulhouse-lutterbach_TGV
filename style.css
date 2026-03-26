@@ -285,7 +285,7 @@ li ul {
     text-transform: uppercase;
     color: var(--ink);
     font-size: 0.98rem;
-    margin: 16px 0 8px;
+    margin: 32px 0 8px;
     background: var(--bg-h3);
     border-left: 3px solid var(--blue);
     padding: 6px 10px;
