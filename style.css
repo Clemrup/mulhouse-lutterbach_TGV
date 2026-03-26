@@ -282,6 +282,7 @@ li ul {
 
 .section-block h3 {
     font-family: 'IBM Plex Sans', sans-serif;
+    text-transform: uppercase;
     color: var(--ink);
     font-size: 0.98rem;
     margin: 16px 0 8px;
@@ -297,7 +298,6 @@ li ul {
     font-size: 0.87rem;
     font-weight: 700;
     letter-spacing: 0.02em;
-    text-transform: uppercase;
     margin: 14px 0 8px;
     padding: 6px 10px 6px 12px;
     border-left: 3px solid var(--h4-line);
