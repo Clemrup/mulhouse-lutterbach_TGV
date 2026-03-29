@@ -602,8 +602,8 @@ const stations = [
     },
     {
         name: 'Guebwiller - Storck',
-        lat: 47.91364668529852,
-        lng: 7.20931428843324,
+        lat: 47.90067951249736,
+        lng: 7.224246632152631,
         desc: 'Gare nouvelle'
     },
     {
