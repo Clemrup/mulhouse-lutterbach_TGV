@@ -350,6 +350,26 @@ li ul {
     padding: 8px 10px;
 }
 
+.exploitation-gallery-networks {
+    position: relative;
+}
+
+.exploitation-gallery-networks .legend-overlay {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 30%;
+    width: auto;
+    max-width: 40%;
+    margin: 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.exploitation-gallery-networks .legend-overlay img {
+    height: 100%;
+    object-fit: contain;
+}
+
 .image-lightbox {
     position: fixed;
     inset: 0;
