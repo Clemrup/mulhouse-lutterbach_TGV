@@ -672,33 +672,33 @@ legend.onAdd = function(map) {
             </div>
             <!-- Quais -->
             <div class="legend-item">
-                <span class="legend-rectangle" style="background-color: #006b00; border: 2px solid #002a50; opacity: 0.5;"></span>
+                <span class="legend-rectangle" style="background-color: #006b00; border: 2px solid #002a50; opacity: 0.75;"></span>
                 <span class="legend-label">Nouveaux quais</span>
             </div>
             <div class="legend-item">
-                <span class="legend-rectangle" style="background-color: #6b6b00; border: 2px solid #002a50; opacity: 0.5;"></span>
+                <span class="legend-rectangle" style="background-color: #6b6b00; border: 2px solid #002a50; opacity: 0.75;"></span>
                 <span class="legend-label">Ancien quais réhabilité</span>
             </div>
             <div class="legend-item">
-                <span class="legend-rectangle" style="background-color: #6b0000; border: 2px solid #002a50; opacity: 0.5;"></span>
+                <span class="legend-rectangle" style="background-color: #6b0000; border: 2px solid #002a50; opacity: 0.75;"></span>
                 <span class="legend-label">Ancien quais toujours inutilisés</span>
             </div>
             <div class="legend-item">
-                <span class="legend-rectangle" style="background-color: #00006b; border: 2px solid #002a50; opacity: 0.5;"></span>
+                <span class="legend-rectangle" style="background-color: #00006b; border: 2px solid #002a50; opacity: 0.75;"></span>
                 <span class="legend-label">Ancien quais toujours utilisés</span>
             </div>
 
             <!-- Gares -->
             <div class="legend-item">
-                <span class="legend-rectangle" style="background-color: #006b00; border: 1px solid #000; opacity: 0.2;"></span>
+                <span class="legend-rectangle" style="background-color: #006b00; border: 1px solid #000; opacity: 0.5;"></span>
                 <span class="legend-label">Nouvelles gares</span>
             </div>
             <div class="legend-item">
-                <span class="legend-rectangle" style="background-color: #6b6b00; border: 1px solid #000; opacity: 0.2;"></span>
+                <span class="legend-rectangle" style="background-color: #6b6b00; border: 1px solid #000; opacity: 0.5;"></span>
                 <span class="legend-label">Anciennes gares réhabilit.</span>
             </div>
             <div class="legend-item">
-                <span class="legend-rectangle" style="background-color: #00006b; border: 1px solid #000; opacity: 0.2;"></span>
+                <span class="legend-rectangle" style="background-color: #00006b; border: 1px solid #000; opacity: 0.5;"></span>
                 <span class="legend-label">Anciennes gares toujours utilisées</span>
             </div>
 
