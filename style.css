@@ -671,6 +671,10 @@ li ul {
     font-weight: 500;
 }
 
+.map-legend.is-hidden {
+    display: none;
+}
+
 /* Scrollbar styling */
 .sidebar::-webkit-scrollbar {
     width: 8px;

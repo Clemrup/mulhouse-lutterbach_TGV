@@ -733,6 +733,32 @@ legend.onAdd = function(map) {
 
 legend.addTo(map);
 
+// Gérer la visibilité de la légende comme le mapInfo
+function setLegendVisible(isVisible) {
+    const mapLegend = document.querySelector('.map-legend');
+    if (!mapLegend) {
+        return;
+    }
+    mapLegend.classList.toggle('is-hidden', !isVisible);
+}
+
+const mapLegend = document.querySelector('.map-legend');
+if (mapLegend) {
+    // Masquer la légende dès que l'utilisateur manipule la carte
+    map.on('mousedown wheel touchstart dragstart zoomstart movestart', () => {
+        setLegendVisible(false);
+    });
+
+    // Réafficher la légende dès interaction avec la colonne de texte
+    if (sidebar) {
+        ['pointerdown', 'wheel', 'touchstart', 'scroll', 'keydown'].forEach((eventName) => {
+            sidebar.addEventListener(eventName, () => {
+                setLegendVisible(true);
+            }, { passive: true });
+        });
+    }
+}
+
 const galleryImages = Array.from(document.querySelectorAll('.exploitation-gallery-item img'));
 const lightbox = document.getElementById('image-lightbox');
 const lightboxImage = document.getElementById('lightbox-image');
