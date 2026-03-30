@@ -1,114 +1,119 @@
-# Licence d'utilisation
+# Creative Commons Attribution - NonCommercial - ShareAlike 4.0
 
 ## Étude Multimodale TGV Mulhouse-Lutterbach
 
 **Auteur :** Clemr  
-**Date :** 2024  
+**Date :** 2026  
 **Titre du projet :** Gare Mulhouse-Lutterbach TGV et tram-train Mulhouse – Guebwiller
 
 ---
 
-## © Droits d'auteur
+## � Résumé rapide
 
-© 2024 Clemr. **Tous droits réservés.**
+Vous pouvez utiliser, modifier et partager ce projet librement à condition de :
 
-Ce projet, incluant tous les contenus (textes, images, cartes, diagrammes, données) est protégé par les lois de protection des droits d'auteur et des droits de la propriété intellectuelle.
-
----
-
-## Conditions d'utilisation
-
-### ✅ Permissions
-
-- ✅ **Consultation personnelle** : Vous pouvez consulter ce site à titre informatif personnel
-- ✅ **Partage non-commercial** : Vous pouvez partager le lien vers ce site
-- ✅ **Références académiques** : Vous pouvez référencer ce projet dans des travaux académiques avec attribution
-
-### ❌ Interdictions
-
-- ❌ **Reproduction** : Interdiction de reproduire, copier ou dupliquer le contenu sans autorisation écrite
-- ❌ **Modification** : Interdiction de modifier, adapter ou transformer les contenus
-- ❌ **Utilisation commerciale** : Interdiction d'utiliser ce projet à des fins commerciales
-- ❌ **Republication** : Interdiction de republier ou rediffuser le contenu sur d'autres sites
-- ❌ **Reverse engineering** : Interdiction d'analyser, déconstruire ou se servir des idées du projet pour créer des projets concurrents
-- ❌ **Scraping** : Interdiction d'automatiser l'extraction de données ou de contenu
-- ❌ **Présentation comme propre travail** : Interdiction de prétendre être l'auteur du projet
+- ✅ Créditer l'auteur (Clemr)
+- ✅ Ne pas en faire un usage commercial
+- ✅ Partager sous la même licence
 
 ---
 
-## Attribution obligatoire
+## 📋 Licence CC BY-NC-SA 4.0
 
-Pour toute utilisation autorisée, vous devez citer :
+[![CC BY-NC-SA 4.0](https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr)
 
-**Format :**
+**Creative Commons Attribution - NonCommercial - ShareAlike 4.0 International**
+
+© 2026 Clemr
+
+Cette œuvre est mise à disposition selon les termes de la Licence Creative Commons Attribution - Pas d'Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International.
+
+---
+
+## ✅ Vous êtes libres de :
+
+- **Partager** : copier, distribuer et communiquer le matériel par tous moyens et sous tous formats
+- **Adapter** : remixer, transformer et créer à partir du matériel pour des usages **non commerciaux uniquement**
+- **Modifier et améliorer** : vous pouvez modifier et améliorer ce travail
+- **Utiliser à titre personnel ou académique** : sans restriction particulière
+
+---
+
+## ⚠️ Sous les conditions suivantes :
+
+### 1️⃣ **Attribution (BY)**
+Vous devez créditer l'auteur, intégrer un lien vers la licence et indiquer les changements effectués. Vous devez le faire d'une manière raisonnable, mais pas d'une façon qui suggérerait que l'auteur vous approuve ou approuve l'utilisation que vous en faites.
+
+**Format d'attribution recommandé :**
 ```
-Источник: "Gare Mulhouse-Lutterbach TGV et tram-train Mulhouse – Guebwiller" 
-par Clemr (2024)
+"Gare Mulhouse-Lutterbach TGV et tram-train Mulhouse – Guebwiller" 
+par Clemr (2026), utilisée sous licence CC BY-NC-SA 4.0
 ```
 
----
+### 2️⃣ **Pas d'Utilisation Commerciale (NC)**
+Vous n'êtes pas autorisé à utiliser cette œuvre à des fins commerciales.
 
-## Limitations de responsabilité
+**L'usage commercial inclut :**
+- ❌ Vendre le projet ou ses dérivés
+- ❌ L'utiliser dans un projet payant ou à but lucratif
+- ❌ L'utiliser pour générer des revenus publicitaires
 
-### Le contenu du site est fourni "en l'état"
-
-- **Absence de garantie** : Ce projet est une étude personnelle réalisée à titre de réflexion et ne prend pas en compte l'ensemble des contraintes techniques, financières et réglementaires d'un projet réel.
-- **Pas de garantie d'exactitude** : Les données, hypothèses et prévisions présentées ne constituent pas une analyse officielle confirmée.
-- **Pas d'engagement** : Ce projet ne représente pas une intention réelle de réalisation ni un engagement de quelconque nature.
-- **Statut personnel** : Il s'agit d'une proposition personnelle d'une personne passionnée par le ferroviaire, non d'un projet officiel.
-
-### Exonération de responsabilité
-
-Clemr ne sera pas responsable de :
-- Tout dommage direct ou indirect résultant de l'utilisation du site
-- Toute erreur, omission ou imprécision dans les contenus
-- Toute interruption ou indisponibilité du site
-- Toute perte de données ou d'accès
+### 3️⃣ **Partage dans les Mêmes Conditions (SA)**
+Si vous remixez, transformez ou vous inspirez du matériel, vous devez distribuer votre contribution sous la même licence que l'original.
 
 ---
 
-## Propriété intellectuelle
+## 📚 Cas d'usage autorisés
 
-Tous les éléments du site (layout, design, code, textes, images, cartes, données) sont la propriété intellectuelle exclusive de Clemr, sauf mention spécifique.
+✅ **OUI, vous pouvez :**
+- Étudiants : Utiliser pour des travaux académiques (avec attribution)
+- Chercheurs : Analyser et citer le projet dans vos recherches
+- Développeurs open-source : Améliorer et partager les modifications (CC BY-NC-SA)
+- Journalistes : Couvrir et discuter le projet
+- Réutilisation non-commerciale : Adapter le contenu pour des usages éducatifs, de documentation, etc.
 
-### Attribution des ressources externes
-
-- **OpenStreetMap** : Les données cartographiques utilisées sont sous licence ODbL
-- **Leaflet.js** : Bibliothèque open-source sous licence BSD
-- **Autres frameworks** : Voir le code source pour les licences respectives
-
----
-
-## Droit à l'oubli et suppression de contenu
-
-Pour toute demande concernant :
-- La suppression de contenu personnel
-- La correction d'informations
-- La révocation d'une utilisation autorisée
-
-**Contactez :** clemrup@gmail.com
+*Disclaimer : Ces exemples sont donnés à titre indicatif et n'altèrent pas les termes de la licence. La licence officielle fait seule foi.*
 
 ---
 
-## Modifications de cette licence
+## 💰 Cas d'usage interdits
 
-Clemr se réserve le droit de modifier cette licence à tout moment. Les modifications s'appliqueront à partir de leur date de publication sur ce site.
-
----
-
-## Loi applicable
-
-Cette licence est régie par la loi française. Tout différend sera soumis à la juridiction des tribunaux compétents français.
+❌ **NON, vous ne pouvez pas :**
+- Vendre ou utiliser à des fins commerciales sans accord explicite
+- Supprimer ou modifier les mentions d'attribution
+- Appliquer des conditions légales ou mesures technologiques restrictives supplémentaires
+- Utiliser à des fins commerciales (même si vous attribuez l'auteur)
 
 ---
 
-## Questions ou demandes spéciales
+## 🔗 Lien officiel
 
-Pour toute demande d'utilisation particulière non couverte par cette licence, ou pour obtenir une autorisation spéciale, veuillez contacter :
+Pour consulter le texte complet de la licence :  
+https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr
+
+---
+
+## ⚖️ Restrictions de responsabilité
+
+**Avertissement légal** : Ce projet est une étude personnelle réalisée à titre de réflexion. Il ne prend pas en compte l'ensemble des contraintes techniques, financières et réglementaires d'un projet réel. Les données et hypothèses présentées ne constituent pas une analyse officielle confirmée.
+
+La licence ne couvre que le contenu créatif. Les ressources externes (OpenStreetMap, Leaflet.js, etc.) conservent leurs propres licences.
+
+---
+
+## 📧 Pour toute demande
+
+Pour toute question concernant cette licence ou pour une autorisation spéciale (usage commercial par exemple) :
 
 📧 **Email :** clemrup@gmail.com  
-📍 **Sujet :** [Licence] [Description de votre demande]
+📍 **Sujet :** [Licence CC BY-NC-SA] [Description de votre demande]
 
 ---
 
-**Dernière mise à jour :** 2024
+## 🚀 Utilisation encouragée
+
+Ce projet est une proposition indépendante. Sa réutilisation dans des travaux publics, académiques ou institutionnels est **encouragée**, sous réserve du respect de la licence et de l'attribution.
+
+---
+
+**Dernière mise à jour :** 2026

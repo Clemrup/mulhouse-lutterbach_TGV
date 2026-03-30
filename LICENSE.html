@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Licence - Gare Mulhouse-Lutterbach TGV</title>
+    <meta name="description" content="Licence CC BY-NC-SA 4.0 - Étude Multimodale TGV Mulhouse-Lutterbach">
+    <style>
+        :root {
+            --navy: #9ec5ff;
+            --ink: #c8cad3;
+            --white: #fff;
+            --blue: #1e7bc1;
+            --line: #374151;
+            --bg-dark: #0f1823;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0f1823 0%, #1a2b3c 100%);
+            color: var(--ink);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .license-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .license-header {
+            text-align: center;
+            margin-bottom: 50px;
+            border-bottom: 2px solid var(--line);
+            padding-bottom: 30px;
+        }
+
+        .license-header h1 {
+            font-size: 28px;
+            color: var(--white);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .license-header .subtitle {
+            font-size: 16px;
+            color: var(--navy);
+            margin-bottom: 15px;
+        }
+
+        .license-header .meta {
+            font-size: 13px;
+            color: var(--ink);
+        }
+
+        .license-header .meta span {
+            display: block;
+            margin: 4px 0;
+        }
+
+        .cc-badge {
+            margin: 20px 0;
+        }
+
+        .cc-badge img {
+            height: 31px;
+            margin-right: 10px;
+        }
+
+        .cc-badge a {
+            color: var(--navy);
+            text-decoration: none;
+            border-bottom: 1px dashed rgba(158, 197, 255, 0.5);
+            transition: all 0.2s ease;
+        }
+
+        .cc-badge a:hover {
+            color: var(--white);
+            border-bottom-color: var(--white);
+        }
+
+        .summary-box {
+            background: rgba(30, 123, 193, 0.1);
+            border-left: 4px solid var(--blue);
+            padding: 20px;
+            margin-bottom: 40px;
+            border-radius: 4px;
+        }
+
+        .summary-box h2 {
+            color: var(--white);
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+
+        .summary-box ul {
+            list-style: none;
+        }
+
+        .summary-box li {
+            margin: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .summary-box li:before {
+            content: "✅";
+            position: absolute;
+            left: 0;
+        }
+
+        .license-content {
+            animation: fadeIn 0.4s ease;
+        }
+
+        h2 {
+            font-size: 22px;
+            color: var(--white);
+            margin: 35px 0 15px 0;
+            border-left: 3px solid var(--blue);
+            padding-left: 12px;
+            font-weight: 700;
+        }
+
+        h3 {
+            font-size: 16px;
+            color: var(--navy);
+            margin: 20px 0 10px 0;
+            font-weight: 600;
+        }
+
+        h4 {
+            font-size: 14px;
+            color: var(--white);
+            margin: 15px 0 8px 0;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 12px;
+            color: var(--ink);
+        }
+
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: var(--ink);
+        }
+
+        strong {
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        em {
+            color: var(--navy);
+        }
+
+        .highlight-box {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--line);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        .code-block {
+            background: rgba(0, 0, 0, 0.5);
+            border-left: 3px solid var(--blue);
+            padding: 12px;
+            margin: 15px 0;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            overflow-x: auto;
+            color: var(--navy);
+        }
+
+        .permission-list {
+            margin: 20px 0;
+        }
+
+        .permission-item {
+            margin-bottom: 12px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .permission-item.allowed:before {
+            content: "✅";
+            position: absolute;
+            left: 0;
+            font-size: 16px;
+        }
+
+        .permission-item.forbidden:before {
+            content: "❌";
+            position: absolute;
+            left: 0;
+            font-size: 16px;
+        }
+
+        .permission-item strong {
+            color: var(--white);
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid var(--line);
+            margin: 30px 0;
+        }
+
+        .footer {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid var(--line);
+            text-align: center;
+            font-size: 12px;
+            color: var(--ink);
+        }
+
+        .footer a {
+            color: var(--navy);
+            text-decoration: none;
+            border-bottom: 1px dashed rgba(158, 197, 255, 0.5);
+            transition: all 0.2s ease;
+        }
+
+        .footer a:hover {
+            color: var(--white);
+            border-bottom-color: var(--white);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: var(--navy);
+            text-decoration: none;
+            border-bottom: 1px dashed rgba(158, 197, 255, 0.5);
+            transition: all 0.2s ease;
+            font-size: 14px;
+        }
+
+        .back-link:hover {
+            color: var(--white);
+            border-bottom-color: var(--white);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .license-container {
+                padding: 20px 15px;
+            }
+
+            .license-header h1 {
+                font-size: 22px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+
+            h3 {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="license-container">
+        <a href="/" class="back-link">← Retour au site</a>
+
+        <div class="license-header">
+            <h1>Licence d'utilisation</h1>
+            <p class="subtitle">Creative Commons Attribution - NonCommercial - ShareAlike 4.0</p>
+
+            <div class="meta">
+                <span><strong>Auteur :</strong> Clemr</span>
+                <span><strong>Date :</strong> 2026</span>
+                <span><strong>Projet :</strong> Gare Mulhouse-Lutterbach TGV et tram-train Mulhouse – Guebwiller</span>
+            </div>
+        </div>
+
+        <div class="license-content">
+            <div class="summary-box">
+                <h2>🔥 Résumé rapide</h2>
+                <p>Vous pouvez utiliser, modifier et partager ce projet librement à condition de :</p>
+                <ul>
+                    <li>Créditer l'auteur (Clemr)</li>
+                    <li>Ne pas en faire un usage commercial</li>
+                    <li>Partager sous la même licence</li>
+                </ul>
+            </div>
+
+            <h2>📋 Licence CC BY-NC-SA 4.0</h2>
+            <div class="cc-badge">
+                <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" target="_blank">
+                    <img src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" alt="CC BY-NC-SA 4.0">
+                    Creative Commons Attribution - NonCommercial - ShareAlike 4.0 International
+                </a>
+            </div>
+
+            <p><strong>© 2026 Clemr</strong></p>
+            <p>Cette œuvre est mise à disposition selon les termes de la Licence Creative Commons Attribution - Pas d'Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International.</p>
+
+            <hr>
+
+            <h2>✅ Vous êtes libres de :</h2>
+            <ul>
+                <li><strong>Partager :</strong> copier, distribuer et communiquer le matériel par tous moyens et sous tous formats</li>
+                <li><strong>Adapter :</strong> remixer, transformer et créer à partir du matériel pour des usages <strong>non commerciaux uniquement</strong></li>
+                <li><strong>Modifier et améliorer :</strong> vous pouvez modifier et améliorer ce travail</li>
+                <li><strong>Utiliser à titre personnel ou académique :</strong> sans restriction particulière</li>
+            </ul>
+
+            <hr>
+
+            <h2>⚠️ Sous les conditions suivantes :</h2>
+
+            <h3>1️⃣ Attribution (BY)</h3>
+            <p>Vous devez créditer l'auteur, intégrer un lien vers la licence et indiquer les changements effectués. Vous devez le faire d'une manière raisonnable, mais pas d'une façon qui suggérerait que l'auteur vous approuve ou approuve l'utilisation que vous en faites.</p>
+            <p><strong>Format d'attribution recommandé :</strong></p>
+            <div class="code-block">"Gare Mulhouse-Lutterbach TGV et tram-train Mulhouse – Guebwiller"<br>
+par Clemr (2026), utilisée sous licence CC BY-NC-SA 4.0</div>
+
+            <h3>2️⃣ Pas d'Utilisation Commerciale (NC)</h3>
+            <p>Vous n'êtes pas autorisé à utiliser cette œuvre à des fins commerciales.</p>
+            <p><strong>L'usage commercial inclut :</strong></p>
+            <div class="permission-list">
+                <div class="permission-item forbidden">Vendre le projet ou ses dérivés</div>
+                <div class="permission-item forbidden">L'utiliser dans un projet payant ou à but lucratif</div>
+                <div class="permission-item forbidden">L'utiliser pour générer des revenus publicitaires</div>
+            </div>
+
+            <h3>3️⃣ Partage dans les Mêmes Conditions (SA)</h3>
+            <p>Si vous remixez, transformez ou vous inspirez du matériel, vous devez distribuer votre contribution sous la même licence que l'original.</p>
+
+            <hr>
+
+            <h2>📚 Cas d'usage autorisés</h2>
+            <p><strong>OUI, vous pouvez :</strong></p>
+            <div class="permission-list">
+                <div class="permission-item allowed"><strong>Étudiants :</strong> Utiliser pour des travaux académiques (avec attribution)</div>
+                <div class="permission-item allowed"><strong>Chercheurs :</strong> Analyser et citer le projet dans vos recherches</div>
+                <div class="permission-item allowed"><strong>Développeurs open-source :</strong> Améliorer et partager les modifications (CC BY-NC-SA)</div>
+                <div class="permission-item allowed"><strong>Journalistes :</strong> Couvrir et discuter le projet</div>
+                <div class="permission-item allowed"><strong>Réutilisation non-commerciale :</strong> Adapter le contenu pour des usages éducatifs, de documentation, etc.</div>
+            </div>
+            <div class="highlight-box">
+                <em>Disclaimer :</em> Ces exemples sont donnés à titre indicatif et n'altèrent pas les termes de la licence. La licence officielle fait seule foi.
+            </div>
+
+            <hr>
+
+            <h2>💰 Cas d'usage interdits</h2>
+            <p><strong>NON, vous ne pouvez pas :</strong></p>
+            <div class="permission-list">
+                <div class="permission-item forbidden">Vendre ou utiliser à des fins commerciales sans accord explicite</div>
+                <div class="permission-item forbidden">Supprimer ou modifier les mentions d'attribution</div>
+                <div class="permission-item forbidden">Appliquer des conditions légales ou mesures technologiques restrictives supplémentaires</div>
+                <div class="permission-item forbidden">Utiliser à des fins commerciales (même si vous attribuez l'auteur)</div>
+            </div>
+
+            <hr>
+
+            <h2>🔗 Lien officiel</h2>
+            <p>Pour consulter le texte complet de la licence :<br>
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" target="_blank">https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr</a></p>
+
+            <hr>
+
+            <h2>⚖️ Restrictions de responsabilité</h2>
+            <div class="highlight-box">
+                <strong>Avertissement légal :</strong> Ce projet est une étude personnelle réalisée à titre de réflexion. Il ne prend pas en compte l'ensemble des contraintes techniques, financières et réglementaires d'un projet réel. Les données et hypothèses présentées ne constituent pas une analyse officielle confirmée.
+            </div>
+            <p>La licence ne couvre que le contenu créatif. Les ressources externes (OpenStreetMap, Leaflet.js, etc.) conservent leurs propres licences.</p>
+
+            <hr>
+
+            <h2>🚀 Utilisation encouragée</h2>
+            <p>Ce projet est une proposition indépendante. Sa réutilisation dans des travaux publics, académiques ou institutionnels est <strong>encouragée</strong>, sous réserve du respect de la licence et de l'attribution.</p>
+
+            <hr>
+
+            <h2>📧 Pour toute demande</h2>
+            <p>Pour toute question concernant cette licence ou pour une autorisation spéciale (usage commercial par exemple) :</p>
+            <p>
+                📧 <strong>Email :</strong> <a href="mailto:clemrup@gmail.com">clemrup@gmail.com</a><br>
+                📍 <strong>Sujet :</strong> [Licence CC BY-NC-SA] [Description de votre demande]
+            </p>
+        </div>
+
+        <div class="footer">
+            <p>Dernière mise à jour : 2026</p>
+            <p style="margin-top: 15px; font-size: 11px;">
+                <a href="/">Retour au site</a> | 
+                <a href="/LICENSE.md">Version Markdown</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
