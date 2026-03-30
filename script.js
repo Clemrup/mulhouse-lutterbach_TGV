@@ -648,6 +648,73 @@ L.control.scale({
     updateWhenIdle: true
 }).addTo(map);
 
+// Créer une légende personnalisée
+const legend = L.control({ position: 'bottomright' });
+
+legend.onAdd = function(map) {
+    const div = L.DomUtil.create('div', 'map-legend');
+    
+    const legendHTML = `
+        <div class="legend-content">
+            <h4>Légende</h4>
+            <!-- Tracés de lignes -->
+            <div class="legend-item">
+                <span class="legend-color" style="background-color: #f57c00;"></span>
+                <span class="legend-label">LGV</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-color" style="background-color: #00897b;"></span>
+                <span class="legend-label">Tram-train</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-color" style="background-color: #5d4037;"></span>
+                <span class="legend-label">Rail actuel</span>
+            </div>
+            <!-- Quais -->
+            <div class="legend-item">
+                <span class="legend-rectangle" style="background-color: #66BB6A;"></span>
+                <span class="legend-label">Nouveaux quais</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-rectangle" style="background-color: #FFA726;"></span>
+                <span class="legend-label">Ancien quais réhabilité</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-rectangle" style="background-color: #EF5350;"></span>
+                <span class="legend-label">Ancien quais inutilisé</span>
+            </div>
+            <!-- Gares -->
+            <div class="legend-item">
+                <span class="legend-rectangle" style="background-color: #66BB6A; opacity: 0.3;"></span>
+                <span class="legend-label">Nouvelles gares</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-rectangle" style="background-color: #FFA726; opacity: 0.3;"></span>
+                <span class="legend-label">Anciennes gares réhabilit.</span>
+            </div>
+            <!-- Ouvrages -->
+            <div class="legend-item">
+                <span class="legend-rectangle" style="background-color: #000000;"></span>
+                <span class="legend-label">Ouvrages souterrain</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-rectangle" style="background-color: #FFFFFF; border: 1px solid #999;"></span>
+                <span class="legend-label">Ouvrages en altitude</span>
+            </div>
+            <!-- Gares impliquées -->
+            <div class="legend-item">
+                <span class="legend-circle"></span>
+                <span class="legend-label">Gares impliquées</span>
+            </div>
+        </div>
+    `;
+    
+    div.innerHTML = legendHTML;
+    return div;
+};
+
+legend.addTo(map);
+
 const galleryImages = Array.from(document.querySelectorAll('.exploitation-gallery-item img'));
 const lightbox = document.getElementById('image-lightbox');
 const lightboxImage = document.getElementById('lightbox-image');
