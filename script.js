@@ -764,8 +764,17 @@ if (mapLegend) {
         if (e.target.tagName === 'A') {
             return;
         }
+        // Empêcher la propagation pour éviter de masquer la légende
+        e.stopPropagation();
         openLegendModal();
+        // Garder la légende visible en arrière-plan
+        setLegendVisible(true);
     });
+
+    // Empêcher la propagation des événements de la carte sur la légende
+    mapLegend.addEventListener('mousedown', (e) => e.stopPropagation());
+    mapLegend.addEventListener('touchstart', (e) => e.stopPropagation());
+    mapLegend.addEventListener('wheel', (e) => e.stopPropagation());
 }
 
 // Créer et gérer la modal fullscreen de la légende
