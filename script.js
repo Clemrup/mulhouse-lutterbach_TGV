@@ -659,7 +659,7 @@ legend.onAdd = function(map) {
             <h4>Légende</h4>
 
             <!-- Tracés de lignes -->
-            <p style="margin: 8px 0; font-weight: bold;">Types de tracés</p>
+            <p style="margin: 10px 0 0; font-weight: bold;">Types de tracés</p>
             <div class="legend-item">
                 <span class="legend-color" style="background-color: #f00;"></span>
                 <span class="legend-label">LGV</span>
@@ -674,7 +674,7 @@ legend.onAdd = function(map) {
             </div>
 
             <!-- Quais -->
-            <p style="margin: 8px 0; font-weight: bold;">Types de quais</p>
+            <p style="margin: 10px 0 0; font-weight: bold;">Types de quais</p>
             <div class="legend-item">
                 <span class="legend-rectangle" style="background-color: #006b00; border: 2px solid #002a50; opacity: 0.75;"></span>
                 <span class="legend-label">Nouveaux quais</span>
@@ -693,7 +693,7 @@ legend.onAdd = function(map) {
             </div>
 
             <!-- Gares -->
-            <p style="margin: 8px 0; font-weight: bold;">Types de gares</p>
+            <p style="margin: 10px 0 0; font-weight: bold;">Types de gares</p>
             <div class="legend-item">
                 <span class="legend-rectangle" style="background-color: #006b00; border: 1px solid #000; opacity: 0.5;"></span>
                 <span class="legend-label">Nouvelles gares</span>
@@ -708,7 +708,7 @@ legend.onAdd = function(map) {
             </div>
 
             <!-- Ouvrages -->
-            <p style="margin: 8px 0; font-weight: bold;">Types d'ouvrages</p>
+            <p style="margin: 10px 0 0; font-weight: bold;">Types d'ouvrages</p>
             <div class="legend-item">
                 <span class="legend-rectangle" style="background-color: #0005; border: 1px solid #000;"></span>
                 <span class="legend-label">Ouvrages souterrain</span>
@@ -719,7 +719,7 @@ legend.onAdd = function(map) {
             </div>
 
             <!-- Gares impliquées -->
-            <p style="margin: 8px 0; font-weight: bold;">Gares impliquées</p>
+            <p style="margin: 10px 0 0; font-weight: bold;">Gares impliquées</p>
             <div class="legend-item">
                 <span class="legend-circle"></span>
                 <span class="legend-label">Gares impliquées</span>
