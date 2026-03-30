@@ -137,6 +137,10 @@ function setMapInfoVisible(isVisible) {
     mapInfo.classList.toggle('is-hidden', !isVisible);
 }
 
+function isMapExpandedOnMobile() {
+    return !mobileViewport.matches || document.body.classList.contains('map-expanded');
+}
+
 if (mapInfo) {
     // Masquer l'aide dès que l'utilisateur manipule la carte.
     map.on('mousedown wheel touchstart dragstart zoomstart movestart', () => {
@@ -172,6 +176,12 @@ function setMobileMapExpanded(isExpanded) {
 
     document.body.classList.toggle('map-expanded', isExpanded);
     updateMobileMapToggleLabel();
+
+    if (!isExpanded) {
+        // En mobile replié, la légende et son modal ne doivent jamais rester visibles.
+        setLegendVisible(false);
+        closeLegendModal();
+    }
 
     if (isExpanded) {
         // Leaflet doit recalculer la taille après l'animation du panneau mobile.
@@ -739,7 +749,9 @@ function setLegendVisible(isVisible) {
     if (!mapLegend) {
         return;
     }
-    mapLegend.classList.toggle('is-hidden', !isVisible);
+
+    const shouldShow = isVisible && isMapExpandedOnMobile();
+    mapLegend.classList.toggle('is-hidden', !shouldShow);
 }
 
 const mapLegend = document.querySelector('.map-legend');
@@ -760,6 +772,10 @@ if (mapLegend) {
 
     // Ajouter fonctionnalité fullscreen modal au clic sur la légende
     mapLegend.addEventListener('click', (e) => {
+        if (!isMapExpandedOnMobile()) {
+            return;
+        }
+
         // Éviter d'ouvrir la modal si on clique sur un lien
         if (e.target.tagName === 'A') {
             return;
@@ -824,6 +840,10 @@ function createLegendModal() {
 }
 
 function openLegendModal() {
+    if (!isMapExpandedOnMobile()) {
+        return;
+    }
+
     let modal = document.getElementById('legend-modal');
     if (!modal) {
         modal = createLegendModal();
@@ -840,6 +860,15 @@ function closeLegendModal() {
         modal.setAttribute('aria-hidden', 'true');
         document.body.style.overflow = '';
     }
+}
+
+if (mobileViewport) {
+    mobileViewport.addEventListener('change', () => {
+        if (!document.body.classList.contains('map-expanded')) {
+            setLegendVisible(false);
+            closeLegendModal();
+        }
+    });
 }
 
 const galleryImages = Array.from(document.querySelectorAll('.exploitation-gallery-item img'));

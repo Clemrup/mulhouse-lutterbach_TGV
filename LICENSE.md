@@ -8,7 +8,7 @@
 
 ---
 
-## � Résumé rapide
+## 🔍 Résumé rapide
 
 Vous pouvez utiliser, modifier et partager ce projet librement à condition de :
 
