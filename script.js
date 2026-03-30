@@ -757,6 +757,80 @@ if (mapLegend) {
             }, { passive: true });
         });
     }
+
+    // Ajouter fonctionnalité fullscreen modal au clic sur la légende
+    mapLegend.addEventListener('click', (e) => {
+        // Éviter d'ouvrir la modal si on clique sur un lien
+        if (e.target.tagName === 'A') {
+            return;
+        }
+        openLegendModal();
+    });
+}
+
+// Créer et gérer la modal fullscreen de la légende
+function createLegendModal() {
+    const modal = document.createElement('div');
+    modal.className = 'legend-modal';
+    modal.id = 'legend-modal';
+    modal.setAttribute('aria-hidden', 'true');
+    modal.setAttribute('role', 'dialog');
+    modal.setAttribute('aria-label', 'Légende en plein écran');
+
+    const legendContent = document.querySelector('.map-legend .legend-content');
+    if (!legendContent) return;
+
+    const clonedContent = legendContent.cloneNode(true);
+    
+    const modalContent = document.createElement('div');
+    modalContent.className = 'legend-modal-content';
+    
+    const closeBtn = document.createElement('button');
+    closeBtn.className = 'legend-modal-close';
+    closeBtn.setAttribute('aria-label', 'Fermer la légende');
+    closeBtn.textContent = '✕';
+    closeBtn.addEventListener('click', closeLegendModal);
+    
+    modalContent.appendChild(closeBtn);
+    modalContent.appendChild(clonedContent);
+    
+    modal.appendChild(modalContent);
+    document.body.appendChild(modal);
+
+    // Fermer au clic sur le fond
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeLegendModal();
+        }
+    });
+
+    // Fermer à l'appui sur Échap
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('is-open')) {
+            closeLegendModal();
+        }
+    });
+
+    return modal;
+}
+
+function openLegendModal() {
+    let modal = document.getElementById('legend-modal');
+    if (!modal) {
+        modal = createLegendModal();
+    }
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeLegendModal() {
+    const modal = document.getElementById('legend-modal');
+    if (modal) {
+        modal.classList.remove('is-open');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    }
 }
 
 const galleryImages = Array.from(document.querySelectorAll('.exploitation-gallery-item img'));
