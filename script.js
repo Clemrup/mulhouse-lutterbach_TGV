@@ -704,11 +704,11 @@ legend.onAdd = function(map) {
 
             <!-- Ouvrages -->
             <div class="legend-item">
-                <span class="legend-rectangle" style="background-color: #0005; border: 1px solid #000; opacity: 0.5;"></span>
+                <span class="legend-rectangle" style="background-color: #0005; border: 1px solid #000;"></span>
                 <span class="legend-label">Ouvrages souterrain</span>
             </div>
             <div class="legend-item">
-                <span class="legend-rectangle" style="background-color: #fff5; border: 1px solid #fff; opacity: 0.5;"></span>
+                <span class="legend-rectangle" style="background-color: #fff5; border: 1px solid #fff;"></span>
                 <span class="legend-label">Ouvrages en altitude</span>
             </div>
             <!-- Gares impliquées -->
