@@ -8,7 +8,7 @@
 
 ---
 
-## 🔍 Résumé rapide
+## Résumé rapide
 
 Vous pouvez utiliser, modifier et partager ce projet librement à condition de :
 
@@ -18,7 +18,7 @@ Vous pouvez utiliser, modifier et partager ce projet librement à condition de :
 
 ---
 
-## 📋 Licence CC BY-NC-SA 4.0
+## Licence CC BY-NC-SA 4.0
 
 [![CC BY-NC-SA 4.0](https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr)
 
@@ -30,7 +30,7 @@ Cette œuvre est mise à disposition selon les termes de la Licence Creative Com
 
 ---
 
-## ✅ Vous êtes libres de :
+## Vous êtes libres de :
 
 - **Partager** : copier, distribuer et communiquer le matériel par tous moyens et sous tous formats
 - **Adapter** : remixer, transformer et créer à partir du matériel pour des usages **non commerciaux uniquement**
@@ -39,7 +39,7 @@ Cette œuvre est mise à disposition selon les termes de la Licence Creative Com
 
 ---
 
-## ⚠️ Sous les conditions suivantes :
+## Sous les conditions suivantes :
 
 ### 1️⃣ **Attribution (BY)**
 Vous devez créditer l'auteur, intégrer un lien vers la licence et indiquer les changements effectués. Vous devez le faire d'une manière raisonnable, mais pas d'une façon qui suggérerait que l'auteur vous approuve ou approuve l'utilisation que vous en faites.
@@ -63,7 +63,7 @@ Si vous remixez, transformez ou vous inspirez du matériel, vous devez distribue
 
 ---
 
-## 📚 Cas d'usage autorisés
+## Cas d'usage autorisés
 
 ✅ **OUI, vous pouvez :**
 - Étudiants : Utiliser pour des travaux académiques (avec attribution)
@@ -76,7 +76,7 @@ Si vous remixez, transformez ou vous inspirez du matériel, vous devez distribue
 
 ---
 
-## 💰 Cas d'usage interdits
+## Cas d'usage interdits
 
 ❌ **NON, vous ne pouvez pas :**
 - Vendre ou utiliser à des fins commerciales sans accord explicite
@@ -86,14 +86,14 @@ Si vous remixez, transformez ou vous inspirez du matériel, vous devez distribue
 
 ---
 
-## 🔗 Lien officiel
+## Lien officiel
 
 Pour consulter le texte complet de la licence :  
 https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr
 
 ---
 
-## ⚖️ Restrictions de responsabilité
+## Restrictions de responsabilité
 
 **Avertissement légal** : Ce projet est une étude personnelle réalisée à titre de réflexion. Il ne prend pas en compte l'ensemble des contraintes techniques, financières et réglementaires d'un projet réel. Les données et hypothèses présentées ne constituent pas une analyse officielle confirmée.
 
@@ -101,7 +101,7 @@ La licence ne couvre que le contenu créatif. Les ressources externes (OpenStree
 
 ---
 
-## 📧 Pour toute demande
+## Pour toute demande
 
 Pour toute question concernant cette licence ou pour une autorisation spéciale (usage commercial par exemple) :
 
@@ -110,7 +110,7 @@ Pour toute question concernant cette licence ou pour une autorisation spéciale 
 
 ---
 
-## 🚀 Utilisation encouragée
+## Utilisation encouragée
 
 Ce projet est une proposition indépendante. Sa réutilisation dans des travaux publics, académiques ou institutionnels est **encouragée**, sous réserve du respect de la licence et de l'attribution.
 
