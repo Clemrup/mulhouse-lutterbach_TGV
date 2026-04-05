@@ -689,5 +689,60 @@
 				</outerBoundaryIs>
 			</Polygon>
 		</Placemark>
+		<Placemark>
+			<Style>
+				<LineStyle>
+					<color>ff000000</color>
+					<width>1</width>
+				</LineStyle>
+				<PolyStyle>
+					<color>cc000000</color>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<Data name="measure">
+					<value>542.8 m^2</value>
+				</Data>
+			</ExtendedData>
+			<Polygon>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>7.144425856849362,47.719428646310405 7.14456462585409,47.719362391872096 7.143818555936195,47.719217836441345 7.143717090427362,47.719283087206264 7.144425856849362,47.719428646310405</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<Style>
+				<LineStyle>
+					<color>ff000000</color>
+					<width>3</width>
+				</LineStyle>
+			</Style>
+			<ExtendedData>
+				<Data name="measure">
+					<value>23.369 m</value>
+				</Data>
+			</ExtendedData>
+			<LineString>
+				<coordinates>7.144437793968049,47.71947883901069 7.144425856849362,47.71943065401936 7.144569102273599,47.719362391872096 7.144633264286537,47.719364399583554</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<Style>
+				<LineStyle>
+					<color>ff000000</color>
+					<width>3</width>
+				</LineStyle>
+			</Style>
+			<ExtendedData>
+				<Data name="measure">
+					<value>20.229 m</value>
+				</Data>
+			</ExtendedData>
+			<LineString>
+				<coordinates>7.14364695985508,47.71929513349238 7.143717090427362,47.719283087206264 7.143821540215868,47.71921482486562 7.14381706379636,47.71917968980247</coordinates>
+			</LineString>
+		</Placemark>
 	</Document>
 </kml>
