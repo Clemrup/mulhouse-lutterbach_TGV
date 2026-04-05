@@ -59,6 +59,11 @@ body {
     overflow-y: auto;
     scroll-padding-top: 120px;
     padding: 0 clamp(22px, 3vw, 36px) clamp(22px, 3vw, 36px);
+    scrollbar-width: none;
+}
+
+.resume-page .sidebar-inner::-webkit-scrollbar {
+    display: none;
 }
 
 .sidebar {
