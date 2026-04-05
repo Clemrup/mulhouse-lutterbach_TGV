@@ -114,6 +114,28 @@ h1 {
     padding-bottom: 12px;
 }
 
+.resume-link {
+    display: block;
+    background: linear-gradient(135deg, rgba(78, 161, 255, 0.15) 0%, rgba(158, 197, 255, 0.1) 100%);
+    border: 1px solid rgba(158, 197, 255, 0.4);
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-bottom: 16px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--blue);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+.resume-link:hover {
+    background: linear-gradient(135deg, rgba(78, 161, 255, 0.25) 0%, rgba(158, 197, 255, 0.2) 100%);
+    border-color: rgba(158, 197, 255, 0.6);
+    color: var(--navy);
+}
+
 h2 {
     font-family: 'IBM Plex Sans', sans-serif;
     color: var(--white);
