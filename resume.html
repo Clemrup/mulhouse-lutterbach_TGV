@@ -14,186 +14,85 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
-    <style>
-        .container {
-            display: flex;
-            height: 100vh;
-        }
-        
-        .sidebar {
-            flex: 0 0 min(100vw, 600px);
-            overflow-y: auto;
-            padding: 20px;
-            max-width: 700px;
-        }
-        
-        @media (max-width: 768px) {
-            .sidebar {
-                flex: 1;
-                max-width: none;
-            }
-            
-            .desktop-resizer {
-                display: none;
-            }
-        }
-        
-        .resume-container {
-            padding: 40px 20px;
-        }
-        
-        .resume-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        
-        .resume-header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-        
-        .resume-header p {
-            font-size: 1.1em;
-            color: #666;
-            font-style: italic;
-        }
-        
-        .cards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin: 30px 0;
-        }
-        
-        .card {
-            background: #f9f9f9;
-            border-left: 4px solid #0066cc;
-            padding: 20px;
-            border-radius: 4px;
-        }
-        
-        .card h3 {
-            margin-top: 0;
-            color: #0066cc;
-            font-size: 1.2em;
-        }
-        
-        .card p {
-            margin: 10px 0;
-            font-size: 0.95em;
-            line-height: 1.6;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background: #0066cc;
-            color: white;
-            padding: 12px 30px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 600;
-            margin-top: 20px;
-            transition: background 0.3s ease;
-        }
-        
-        .cta-button:hover {
-            background: #0052a3;
-        }
-        
-        .section-resume {
-            margin: 30px 0;
-            line-height: 1.8;
-        }
-        
-        .section-resume h2 {
-            font-size: 1.5em;
-            margin-bottom: 15px;
-            color: #333;
-        }
-        
-        .highlight {
-            background: #fff3cd;
-            padding: 20px;
-            border-radius: 4px;
-            margin: 20px 0;
-        }
-    </style>
+
 </head>
 <body>
     <div class="container">
         <div class="sidebar">
-            <div class="resume-container">
-                <div class="resume-header">
-                    <h1>🚆 Mulhouse-Lutterbach TGV</h1>
-                    <p>Une vision de mobilité pour le sud Alsace</p>
-                </div>
+            <div class="sidebar-inner">
+                
+                <h1>🚆 Mulhouse-Lutterbach TGV</h1>
 
-                <div class="highlight">
+                <div class="benefits">
                     <p><strong>Cette étude s'inscrit dans une démarche de réflexion citoyenne sur les mobilités du territoire.</strong></p>
-                    <p style="font-size: 0.9em; margin: 10px 0 0 0; color: #666;">Découvrez une approche innovante pour fluidifier le réseau ferroviaire autour de Mulhouse.</p>
+                    <p>Découvrez une approche innovante pour fluidifier le réseau ferroviaire autour de Mulhouse.</p>
                 </div>
 
-                <div class="section-resume">
+                <section class="section-block">
                     <h2>Le projet en 30 secondes</h2>
                     <p>Créer une gare TGV nouvelle génération à Mulhouse-Lutterbach, connectée directement à la LGV Rhin-Rhône et reliée par tram-train à Guebwiller. Un projet pour améliorer l'accessibilité ferroviaire et réduire la saturation du nœud de Mulhouse.</p>
-                </div>
+                </section>
 
-                <div class="cards-grid">
-                    <div class="card">
-                        <h3>🎯 Objectif</h3>
-                        <p>Améliorer l'accès TGV et fluidifier le réseau ferroviaire en créant une zone d'échanges multimodale</p>
-                    </div>
-                    
-                    <div class="card">
-                        <h3>🚉 La gare</h3>
-                        <p>Implantée à l'ouest de Lutterbach, connectée aux réseaux TGV, TER et tram-train avec parking relais</p>
-                    </div>
-                    
-                    <div class="card">
-                        <h3>🚊 Tram-train</h3>
-                        <p>Ligne Mulhouse-Guebwiller reconnectant la vallée au réseau, réutilisant d'anciennes emprises ferroviaires</p>
-                    </div>
+                <section class="section-block">
+                    <h2>Les 4 piliers du projet</h2>
+                    <div class="cards-grid">
+                        <div class="card">
+                            <h3>🎯 Objectif</h3>
+                            <p>Améliorer l'accès TGV et fluidifier le réseau ferroviaire en créant une zone d'échanges multimodale</p>
+                        </div>
+                        
+                        <div class="card">
+                            <h3>🚉 La gare</h3>
+                            <p>Implantée à l'ouest de Lutterbach, connectée aux réseaux TGV, TER et tram-train avec parking relais</p>
+                        </div>
+                        
+                        <div class="card">
+                            <h3>🚊 Tram-train</h3>
+                            <p>Ligne Mulhouse-Guebwiller reconnectant la vallée au réseau, réutilisant d'anciennes emprises ferroviaires</p>
+                        </div>
 
-                    <div class="card">
-                        <h3>📊 Impact</h3>
-                        <p>Meilleure connexion des vallées, alternative à la voiture, optimisation des infrastructures existantes</p>
+                        <div class="card">
+                            <h3>📊 Impact</h3>
+                            <p>Meilleure connexion des vallées, alternative à la voiture, optimisation des infrastructures existantes</p>
+                        </div>
                     </div>
-                </div>
+                </section>
 
-                <div class="section-resume">
+                <section class="section-block">
                     <h2>Pourquoi maintenant ?</h2>
                     <p>Mulhouse est le 2e nœud ferroviaire d'Alsace avec <strong>300 trains/jour</strong>. Le réseau atteint ses limites. Ce projet propose une réorganisation intelligente utilisant les infrastructures existantes pour améliorer les correspondances et créer de la capacité sans saturation supplémentaire.</p>
-                </div>
+                </section>
 
-                <div class="section-resume">
+                <section class="section-block">
                     <h2>Points clés</h2>
-                    <ul style="line-height: 2;">
-                        <li><strong>Réaliste:</strong> S'appuie sur des infrastructures existantes et des hypothèses évoquées dans les plans nationaux</li>
-                        <li><strong>Honnête:</strong> Reconnaît les défis (coûts, acceptabilité politique, études complémentaires) sans les cacher</li>
-                        <li><strong>Complet:</strong> Intègre grande vitesse ET dessерte locale pour une mobilité cohérente</li>
+                    <ul>
+                        <li><strong>Réaliste :</strong> S'appuie sur des infrastructures existantes et des hypothèses évoquées dans les plans nationaux</li>
+                        <li><strong>Honnête :</strong> Reconnaît les défis (coûts, acceptabilité politique, études complémentaires) sans les cacher</li>
+                        <li><strong>Complet :</strong> Intègre grande vitesse ET desserte locale pour une mobilité cohérente</li>
                     </ul>
-                </div>
+                </section>
 
-                <div class="section-resume">
+                <section class="section-block">
                     <h2>Vous voulez en savoir plus ?</h2>
-                    <p>Cette page est une introduction. La <strong>version complète</strong> détaille :</p>
-                    <ul style="line-height: 2;">
+                    <p>Cette page est une introduction. La <strong>version complète avec carte interactive</strong> détaille :</p>
+                    <ul>
                         <li>Les raccordements techniques à la LGV</li>
                         <li>L'infrastructure ferroviaire détaillée</li>
                         <li>Les scénarios d'exploitation</li>
                         <li>Les bénéfices et limites du projet</li>
                         <li>L'accessibilité et le stationnement</li>
                     </ul>
-                </div>
 
-                <center>
-                    <a href="index.html" class="cta-button">→ Version complète avec carte interactive</a>
-                </center>
+                    <div class="cta-section">
+                        <a href="index.html" class="cta-button">→ Consulter la version complète</a>
+                    </div>
+                </section>
 
-                <div style="margin-top: 50px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 0.9em; color: #888; text-align: center;">
-                    <p>📧 <a href="mailto:clemrup@gmail.com" style="color: #0066cc;">clemrup@gmail.com</a></p>
+                <div class="footer-resume">
+                    <p>📧 <a href="mailto:clemrup@gmail.com">clemrup@gmail.com</a></p>
                     <p>© 2026 Clemr - CC BY-NC-SA 4.0</p>
                 </div>
+
             </div>
         </div>
     </div>
