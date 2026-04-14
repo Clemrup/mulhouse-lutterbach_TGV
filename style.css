@@ -48,6 +48,24 @@ body {
     --sidebar-width: 39%;
 }
 
+.container.resume-page {
+    flex-direction: column;
+    align-items: center;
+    --sidebar-width: 100%;
+}
+
+.resume-page .sidebar-inner {
+    width: 100%;
+    overflow-y: auto;
+    scroll-padding-top: 120px;
+    padding: 0 clamp(22px, 3vw, 36px) clamp(22px, 3vw, 36px);
+    scrollbar-width: none;
+}
+
+.resume-page .sidebar-inner::-webkit-scrollbar {
+    display: none;
+}
+
 .sidebar {
     width: var(--sidebar-width);
     flex: 0 0 var(--sidebar-width);
@@ -112,6 +130,46 @@ h1 {
     line-height: 1.2;
     border-bottom: 2px solid rgba(158, 197, 255, 0.28);
     padding-bottom: 12px;
+}
+
+.resume-link {
+    display: block;
+    background: linear-gradient(135deg, rgba(78, 161, 255, 0.15) 0%, rgba(158, 197, 255, 0.1) 100%);
+    border: 1px solid rgba(158, 197, 255, 0.4);
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-bottom: 16px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--blue);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+.resume-link:hover {
+    background: linear-gradient(135deg, rgba(78, 161, 255, 0.25) 0%, rgba(158, 197, 255, 0.2) 100%);
+    border-color: rgba(158, 197, 255, 0.6);
+    color: var(--navy);
+}
+
+.back-link {
+    display: block;
+    padding: 8px 14px;
+    margin-top: 8px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 13px;
+    color: var(--ink);
+    text-decoration: none;
+    text-align: center;
+    transition: color 0.2s ease;
+    border-bottom: 1px solid rgba(158, 197, 255, 0.3);
+}
+
+.back-link:hover {
+    color: var(--blue);
+    border-bottom-color: rgba(78, 161, 255, 0.6);
 }
 
 h2 {
