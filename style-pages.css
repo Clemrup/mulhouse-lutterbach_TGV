@@ -1,15 +1,19 @@
-/* Couleurs et variables */
+/* Couleurs et variables - WCAG 2.1 AA Compatible */
 :root {
-    --primary-blue: #4ea1ff;
+    --primary-blue: #5eb3ff;       /* Augmenté pour contraste */
+    --primary-blue-dark: #1a73e8;  /* Variante plus foncée */
     --dark-blue: #1a2d40;
     --light-bg: #070c14;
     --dark-bg: #0f1621;
-    --text-light: #e5edf8;
-    --text-muted: #b0b8c9;
+    --text-light: #f5f5f5;         /* Plus clair pour contraste */
+    --text-muted: #d0d8e8;         /* Plus clair que avant */
     --accent-red: #ff6b5d;
-    --border-color: #2a3a4d;
+    --border-color: #3a4a5d;       /* Légèrement plus clair */
     --card-bg: #132334;
     --table-hover: #1b3046;
+    
+    /* Focus states for accessibility */
+    --focus-outline: 2px solid #5eb3ff;
 }
 
 * {
@@ -27,6 +31,21 @@ body {
     background: linear-gradient(180deg, var(--light-bg) 0%, var(--dark-bg) 100%);
     color: var(--text-light);
     line-height: 1.6;
+}
+
+/* Accessibility: Focus visible styles */
+body *:focus-visible {
+    outline: var(--focus-outline);
+    outline-offset: 2px;
+}
+
+/* Mode simplifié (grand public) */
+body.simple-mode .technical-only {
+    display: none !important;
+}
+
+body.technical-mode .simple-only {
+    display: none !important;
 }
 
 /* Header */
@@ -75,6 +94,12 @@ body {
     flex-wrap: wrap;
 }
 
+.mode-toggles {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: auto;
+}
+
 .nav-link {
     color: var(--text-muted);
     text-decoration: none;
@@ -103,6 +128,31 @@ body {
     padding: 0.5rem 1rem;
     border-radius: 4px;
     font-size: 0.85rem;
+}
+
+/* Mode toggle button */
+.mode-toggle {
+    background: transparent;
+    border: 1px solid var(--primary-blue);
+    color: var(--primary-blue);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    margin-left: 1rem;
+}
+
+.mode-toggle:hover,
+.mode-toggle:focus-visible {
+    background: var(--primary-blue);
+    color: var(--dark-bg);
+}
+
+.mode-toggle.active {
+    background: var(--primary-blue);
+    color: var(--dark-bg);
 }
 
 /* Main content */
@@ -478,10 +528,31 @@ strong {
 a {
     color: var(--primary-blue);
     text-decoration: underline;
+    transition: opacity 0.2s;
 }
 
 a:hover {
     opacity: 0.8;
+}
+
+a:focus-visible {
+    outline: var(--focus-outline);
+    outline-offset: 2px;
+}
+
+/* Ensure sufficient color contrast */
+a:visited {
+    color: #7eb3ff;
+}
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+button:focus-visible {
+    outline: var(--focus-outline);
+    outline-offset: 2px;
 }
 
 ul, ol {
