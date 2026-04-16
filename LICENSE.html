@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Licence - Gare Mulhouse-Lutterbach TGV</title>
     <meta name="description" content="Licence CC BY-NC-SA 4.0 - Étude Multimodale TGV Mulhouse-Lutterbach">
+    <link rel="stylesheet" href="style-pages.css" />
     <style>
         :root {
             --navy: #9ec5ff;
@@ -293,9 +294,25 @@
     </style>
 </head>
 <body>
-    <div class="license-container">
-        <a href="/" class="back-link">← Retour au site</a>
+    <header class="site-header">
+        <div class="header-container">
+            <a href="accueil.html" class="site-logo">
+                <span class="logo-icon">🚆</span>
+                <span class="logo-text">Mulhouse-Lutterbach TGV</span>
+            </a>
+            <nav class="site-nav" aria-label="Navigation principale">
+                <a href="accueil.html" class="nav-link">Accueil</a>
+                <a href="contexte.html" class="nav-link">Contexte</a>
+                <a href="le-projet.html" class="nav-link">Le projet</a>
+                <a href="exploitation.html" class="nav-link">Exploitation</a>
+                <a href="impacts.html" class="nav-link">Impacts</a>
+                <a href="LICENSE.html" class="nav-link active">Licence & Sources</a>
+                <a href="index.html" class="nav-link nav-link-fullsite">📺 Vue complète</a>
+            </nav>
+        </div>
+    </header>
 
+    <main class="main-content">
         <div class="license-header">
             <h1>Licence d'utilisation</h1>
             <p class="subtitle">Creative Commons Attribution - NonCommercial - ShareAlike 4.0</p>
@@ -414,15 +431,86 @@ par Clemr (2026), utilisée sous licence CC BY-NC-SA 4.0</div>
                 📧 <strong>Email :</strong> <a href="mailto:clemrup@gmail.com">clemrup@gmail.com</a><br>
                 📍 <strong>Sujet :</strong> [Licence CC BY-NC-SA] [Description de votre demande]
             </p>
+
+            <section class="technical-only" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(94, 179, 255, 0.2);">
+                <h3>🔬 MÉTHODOLOGIE DÉTAILLÉE</h3>
+                
+                <h4>Approche prospective</h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li><strong>Type :</strong> Étude exploratoire (pas planification officielle)</li>
+                    <li><strong>Horizon :</strong> 10-20 ans (2025-2045)</li>
+                    <li><strong>Scénario :</strong> Optimiste (technologies disponibles + volonté politique)</li>
+                    <li><strong>Référentiels :</strong> Accords européens mobilité, stratégies SNCF, plans régionaux</li>
+                </ul>
+
+                <h4>Données utilisées</h4>
+                <table style="width: 100%; margin: 1rem 0; border-collapse: collapse;">
+                    <tr style="background: rgba(94, 179, 255, 0.1); border: 1px solid rgba(94, 179, 255, 0.3);">
+                        <th style="padding: 0.75rem; text-align: left; border: 1px solid rgba(94, 179, 255, 0.3);">Source</th>
+                        <th style="padding: 0.75rem; text-align: left; border: 1px solid rgba(94, 179, 255, 0.3);">Type</th>
+                        <th style="padding: 0.75rem; text-align: left; border: 1px solid rgba(94, 179, 255, 0.3);">Année</th>
+                    </tr>
+                    <tr style="border: 1px solid rgba(94, 179, 255, 0.2);">
+                        <td style="padding: 0.75rem; border: 1px solid rgba(94, 179, 255, 0.2);">SNCF Réseau Open Data</td>
+                        <td style="padding: 0.75rem; border: 1px solid rgba(94, 179, 255, 0.2);">Infrastructure + trafic</td>
+                        <td style="padding: 0.75rem; border: 1px solid rgba(94, 179, 255, 0.2);">2020-2024</td>
+                    </tr>
+                    <tr style="border: 1px solid rgba(94, 179, 255, 0.2);">
+                        <td style="padding: 0.75rem; border: 1px solid rgba(94, 179, 255, 0.2);">IGN BD Ortho</td>
+                        <td style="padding: 0.75rem; border: 1px solid rgba(94, 179, 255, 0.2);">Géographie</td>
+                        <td style="padding: 0.75rem; border: 1px solid rgba(94, 179, 255, 0.2);">2023</td>
+                    </tr>
+                    <tr style="border: 1px solid rgba(94, 179, 255, 0.2);">
+                        <td style="padding: 0.75rem; border: 1px solid rgba(94, 179, 255, 0.2);">OpenStreetMap</td>
+                        <td style="padding: 0.75rem; border: 1px solid rgba(94, 179, 255, 0.2);">Réseau, POI</td>
+                        <td style="padding: 0.75rem; border: 1px solid rgba(94, 179, 255, 0.2);">2024</td>
+                    </tr>
+                    <tr style="border: 1px solid rgba(94, 179, 255, 0.2);">
+                        <td style="padding: 0.75rem; border: 1px solid rgba(94, 179, 255, 0.2);">INSEE - Mobilité quotidienne</td>
+                        <td style="padding: 0.75rem; border: 1px solid rgba(94, 179, 255, 0.2);">Socio-éco</td>
+                        <td style="padding: 0.75rem; border: 1px solid rgba(94, 179, 255, 0.2);">2019-2024</td>
+                    </tr>
+                </table>
+
+                <h4>Hypothèses clés</h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li>1️⃣ LGV Rhin-Rhône se prolonge à Mulhouse (décision politique 2025-2030)</li>
+                    <li>2️⃣ Ancien tronçon Bollwiller-Guebwiller réactivable (~30 km)</li>
+                    <li>3️⃣ Croissance trafic TER: +3.5%/an, TGV: +2.5%/an</li>
+                    <li>4️⃣ Électrification complète d'ici 2035</li>
+                    <li>5️⃣ Technologies tram-train disponibles + finançables</li>
+                    <li>6️⃣ Foncier Lutterbach disponible</li>
+                </ul>
+
+                <h4>Limites de l'étude</h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li>❌ Pas d'étude d'impact environnementale détaillée</li>
+                    <li>❌ Pas de modélisation hydrologique complète</li>
+                    <li>❌ Acceptabilité NIMBY non quantifiée</li>
+                    <li>❌ Coûts ordre de grandeur (≠ APD/AVP)</li>
+                    <li>❌ Pas d'étude signalisation/capacité réseau</li>
+                    <li>❌ COVID-19 impact trafic non stabilisé</li>
+                </ul>
+            </section>
         </div>
 
         <div class="footer">
             <p>Dernière mise à jour : 2026</p>
             <p style="margin-top: 15px; font-size: 11px;">
-                <a href="/">Retour au site</a> | 
                 <a href="/LICENSE.md">Version Markdown</a>
             </p>
         </div>
-    </div>
+        </div>
+
+        <div class="page-nav">
+            <a href="impacts.html" class="page-nav-link">← Impacts</a>
+            <a href="accueil.html" class="page-nav-link">Accueil</a>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2024-2026 Étude citoyenne. Tous droits réservés.</p>
+    </footer>
+    <script src="mode-toggle.js"></script>
 </body>
 </html>
