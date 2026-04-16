@@ -1,44 +1,52 @@
-// Initialisation de la carte
-const map = L.map('map').setView([47.77, 7.26], 12);
+// 🚀 OPTIMISATION: Lazy-load de la carte avec Intersection Observer
+let mapInitialized = false;
+let map = null;
 
-// Couche fond de carte - OpenStreetMap (par défaut)
-const osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap',
-    maxZoom: 19
-});
+function initializeMap() {
+    if (mapInitialized) return;
+    mapInitialized = true;
 
-// Couche fond de carte - Satellite Esri
-const satellite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-    attribution: '© Esri',
-    maxZoom: 18
-});
+    // Initialisation de la carte
+    map = L.map('map').setView([47.77, 7.26], 12);
 
-// Couche fond de carte - Fond dark (gris foncé)
-const darkLayer = L.tileLayer('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjU2IiBoZWlnaHQ9IjI1NiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjU2IiBoZWlnaHQ9IjI1NiIgZmlsbD0iIzMzMzMzMyIvPjwvc3ZnPg==', {
-    attribution: 'Fond dark',
-    maxZoom: 20
-});
+    // Couche fond de carte - OpenStreetMap (par défaut)
+    const osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap',
+        maxZoom: 19
+    });
 
-// Ajouter la couche satellite par défaut
-satellite.addTo(map);
+    // Couche fond de carte - Satellite Esri
+    const satellite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+        attribution: '© Esri',
+        maxZoom: 18
+    });
 
-function applyBaseLayerZoomLimits(baseLayer) {
-    const maxZoom = baseLayer?.options?.maxZoom ?? 18;
-    map.setMaxZoom(maxZoom);
+    // Couche fond de carte - Fond dark (gris foncé)
+    const darkLayer = L.tileLayer('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjU2IiBoZWlnaHQ9IjI1NiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjU2IiBoZWlnaHQ9IjI1NiIgZmlsbD0iIzMzMzMzMyIvPjwvc3ZnPg==', {
+        attribution: 'Fond dark',
+        maxZoom: 20
+    });
 
-    if (map.getZoom() > maxZoom) {
-        map.setZoom(maxZoom);
+    // Ajouter la couche satellite par défaut
+    satellite.addTo(map);
+
+    function applyBaseLayerZoomLimits(baseLayer) {
+        const maxZoom = baseLayer?.options?.maxZoom ?? 18;
+        map.setMaxZoom(maxZoom);
+
+        if (map.getZoom() > maxZoom) {
+            map.setZoom(maxZoom);
+        }
     }
-}
 
-// Appliquer la limite correspondant au fond initial
-applyBaseLayerZoomLimits(satellite);
+    // Appliquer la limite correspondant au fond initial
+    applyBaseLayerZoomLimits(satellite);
 
-// Contrôle des couches personnalisé avec opacité
-const baseLayers = {
-    'Satellite': satellite,
-    'Plan': osm
-};
+    // Contrôle des couches personnalisé avec opacité
+    const baseLayers = {
+        'Satellite': satellite,
+        'Plan': osm
+    };
 
 // Créer un contrôle personnalisé qui combine les couches et l'opacité
 L.Control.LayersWithOpacity = L.Control.Layers.extend({

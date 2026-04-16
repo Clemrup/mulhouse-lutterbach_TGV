@@ -492,3 +492,147 @@ ul, ol {
 li {
     margin-bottom: 0.5rem;
 }
+
+/* Takeaway / Key point boxes */
+.takeaway {
+    background: linear-gradient(135deg, rgba(78, 161, 255, 0.08) 0%, rgba(78, 161, 255, 0.02) 100%);
+    border-left: 4px solid var(--primary-blue);
+    border-radius: 4px;
+    padding: 1.25rem;
+    margin: 1.5rem 0;
+    font-weight: 500;
+}
+
+.takeaway strong {
+    color: var(--primary-blue);
+}
+
+/* Benefits list */
+.benefits-list {
+    display: grid;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.benefit-item {
+    background: rgba(78, 161, 255, 0.05);
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    border-radius: 6px;
+    display: flex;
+    gap: 1rem;
+    transition: all 0.3s ease;
+}
+
+.benefit-item:hover {
+    border-color: var(--primary-blue);
+    background: rgba(78, 161, 255, 0.1);
+}
+
+.benefit-icon {
+    font-size: 1.5rem;
+    min-width: 2rem;
+    text-align: center;
+}
+
+.benefit-text {
+    flex: 1;
+}
+
+.benefit-text strong {
+    display: block;
+    color: var(--text-light);
+    margin-bottom: 0.25rem;
+}
+
+.benefit-text p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* Limitation/Challenge boxes */
+.challenge {
+    background: rgba(255, 107, 93, 0.05);
+    border-left: 4px solid var(--accent-red);
+    border-radius: 4px;
+    padding: 1.25rem;
+    margin: 1.5rem 0;
+}
+
+.challenge strong {
+    color: var(--accent-red);
+}
+
+/* Data highlight */
+.data-highlight {
+    background: var(--dark-blue);
+    padding: 1.5rem;
+    border-radius: 6px;
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.data-highlight .number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.data-highlight .label {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* Column layout */
+.two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.two-columns ul {
+    margin-left: 0;
+}
+
+.two-columns li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.two-columns li:before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-blue);
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .two-columns {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Comparison table styling */
+.comparison-table {
+    width: 100%;
+    margin: 1.5rem 0;
+    border-collapse: collapse;
+}
+
+.comparison-table td {
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.comparison-table tr:hover {
+    background: var(--table-hover);
+}
+
+.comparison-table strong {
+    color: var(--primary-blue);
+}
