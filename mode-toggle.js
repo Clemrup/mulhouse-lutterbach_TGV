@@ -111,22 +111,6 @@
             techBtn.style.border = 'none';
         }
     }
-            
-            const techBtn = document.createElement('button');
-            techBtn.className = 'mode-toggle';
-            techBtn.dataset.mode = 'technical';
-            techBtn.textContent = '🔧 Mode Technique';
-            techBtn.setAttribute('aria-label', 'Mode technique - contenu expert');
-            techBtn.setAttribute('aria-pressed', 'false');
-            
-            simpleBtn.addEventListener('click', () => applyMode('simple'));
-            techBtn.addEventListener('click', () => applyMode('technical'));
-            
-            toggleContainer.appendChild(simpleBtn);
-            toggleContainer.appendChild(techBtn);
-            nav.appendChild(toggleContainer);
-        });
-    }
     
     // Initialiser au chargement du DOM
     if (document.readyState === 'loading') {

@@ -27,10 +27,11 @@ html, body {
 }
 
 body {
-    font-family: 'Source Serif 4', Georgia, serif;
+    font-family: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     background: linear-gradient(180deg, var(--light-bg) 0%, var(--dark-bg) 100%);
     color: var(--text-light);
     line-height: 1.6;
+    font-weight: 400;
 }
 
 /* Accessibility: Focus visible styles */
