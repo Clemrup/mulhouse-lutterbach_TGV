@@ -240,6 +240,28 @@ body.desktop-resizing {
     font-size: 0.85rem;
 }
 
+.resume-link {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--dark-blue), #1a3d5c);
+    color: var(--primary-blue);
+    padding: 0.75rem 1.25rem;
+    border-radius: 6px;
+    border: 1px solid var(--primary-blue);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    margin-bottom: 1.5rem;
+}
+
+.resume-link:hover {
+    background: linear-gradient(135deg, #1a3d5c, var(--dark-blue));
+    color: #7eb3ff;
+    border-color: #7eb3ff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(94, 179, 255, 0.2);
+}
+
 .mode-toggle {
     background: transparent;
     border: 1px solid var(--primary-blue);
