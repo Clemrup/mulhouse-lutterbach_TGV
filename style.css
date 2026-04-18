@@ -193,6 +193,8 @@ body.desktop-resizing {
 
 .logo-icon {
     font-size: 1.5rem;
+    color: revert; /* Garde les couleurs naturelles de l'emoji */
+    filter: none;
 }
 
 .site-nav {
