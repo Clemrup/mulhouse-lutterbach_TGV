@@ -1,194 +1,195 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>En cours de développement</title>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html, body {
-            height: 100%;
-        }
-
-        body {
-            font-family: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: linear-gradient(180deg, #070c14 0%, #0f1621 100%);
-            color: #f5f5f5;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            overflow: hidden;
-            padding: 1rem;
-        }
-
-        .container {
-            text-align: center;
-            max-width: 600px;
-        }
-
-        .icon {
-            font-size: 5rem;
-            margin-bottom: 1.5rem;
-            animation: bounce 2s infinite;
-        }
-
-        @keyframes bounce {
-            0%, 100% {
-                transform: translateY(0);
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>En cours de développement</title>
+        <link rel="icon" type="image/svg+xml" href="favicon.svg">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
             }
-            50% {
-                transform: translateY(-20px);
+        
+            html, body {
+                height: 100%;
             }
-        }
-
-        h1 {
-            font-size: clamp(2rem, 5vw, 3rem);
-            font-weight: 600;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, #5eb3ff, #6fb6ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        p {
-            font-size: 1.1rem;
-            color: #d0d8e8;
-            margin-bottom: 1rem;
-            line-height: 1.6;
-        }
-
-        .status {
-            background: rgba(26, 45, 64, 0.5);
-            border: 1px solid #3a4a5d;
-            border-left: 4px solid #5eb3ff;
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin-top: 2rem;
-            text-align: left;
-        }
-
-        .status-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .status-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .status-icon {
-            font-size: 1.5rem;
-        }
-
-        .status-text {
-            flex: 1;
-        }
-
-        .status-title {
-            font-weight: 600;
-            color: #f5f5f5;
-            font-size: 0.95rem;
-        }
-
-        .status-desc {
-            color: #d0d8e8;
-            font-size: 0.85rem;
-            margin-top: 0.25rem;
-        }
-
-        .progress-bar {
-            width: 100%;
-            height: 4px;
-            background: #324559;
-            border-radius: 2px;
-            margin-top: 2rem;
-            overflow: hidden;
-        }
-
-        .progress-fill {
-            height: 100%;
-            background: linear-gradient(90deg, #5eb3ff, #6fb6ff);
-            width: 65%;
-            animation: loading 2s ease-in-out infinite;
-            border-radius: 2px;
-        }
-
-        @keyframes loading {
-            0%, 100% {
+        
+            body {
+                font-family: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+                background: linear-gradient(180deg, #070c14 0%, #0f1621 100%);
+                color: #f5f5f5;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                overflow: hidden;
+                padding: 1rem;
+            }
+        
+            .container {
+                text-align: center;
+                max-width: 600px;
+            }
+        
+            .icon {
+                font-size: 5rem;
+                margin-bottom: 1.5rem;
+                animation: bounce 2s infinite;
+            }
+        
+            @keyframes bounce {
+                0%, 100% {
+                    transform: translateY(0);
+                }
+                50% {
+                    transform: translateY(-20px);
+                }
+            }
+        
+            h1 {
+                font-size: clamp(2rem, 5vw, 3rem);
+                font-weight: 600;
+                margin-bottom: 1rem;
+                background: linear-gradient(135deg, #5eb3ff, #6fb6ff);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+        
+            p {
+                font-size: 1.1rem;
+                color: #d0d8e8;
+                margin-bottom: 1rem;
+                line-height: 1.6;
+            }
+        
+            .status {
+                background: rgba(26, 45, 64, 0.5);
+                border: 1px solid #3a4a5d;
+                border-left: 4px solid #5eb3ff;
+                border-radius: 8px;
+                padding: 1.5rem;
+                margin-top: 2rem;
+                text-align: left;
+            }
+        
+            .status-item {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                margin-bottom: 1rem;
+            }
+        
+            .status-item:last-child {
+                margin-bottom: 0;
+            }
+        
+            .status-icon {
+                font-size: 1.5rem;
+            }
+        
+            .status-text {
+                flex: 1;
+            }
+        
+            .status-title {
+                font-weight: 600;
+                color: #f5f5f5;
+                font-size: 0.95rem;
+            }
+        
+            .status-desc {
+                color: #d0d8e8;
+                font-size: 0.85rem;
+                margin-top: 0.25rem;
+            }
+        
+            .progress-bar {
+                width: 100%;
+                height: 4px;
+                background: #324559;
+                border-radius: 2px;
+                margin-top: 2rem;
+                overflow: hidden;
+            }
+        
+            .progress-fill {
+                height: 100%;
+                background: linear-gradient(90deg, #5eb3ff, #6fb6ff);
                 width: 65%;
+                animation: loading 2s ease-in-out infinite;
+                border-radius: 2px;
             }
-            50% {
-                width: 85%;
+        
+            @keyframes loading {
+                0%, 100% {
+                    width: 65%;
+                }
+                50% {
+                    width: 85%;
+                }
             }
-        }
-
-        .back-link {
-            margin-top: 2rem;
-            display: inline-block;
-        }
-
-        a {
-            color: #5eb3ff;
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.2s;
-        }
-
-        a:hover {
-            color: #7eb3ff;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div style="margin-top: 50px;" class="icon">🚧</div>
-        <h1>En cours de développement</h1>
-        <p>Cette page est actuellement en construction. Revenez bientôt pour découvrir du contenu frais!</p>
-
-        <div class="status">
-            <div class="status-item">
-                <div class="status-icon">📝</div>
-                <div class="status-text">
-                    <div class="status-title">Contenu</div>
-                    <div class="status-desc">Rédaction et structuration du contenu</div>
+        
+            .back-link {
+                margin-top: 2rem;
+                display: inline-block;
+            }
+        
+            a {
+                color: #5eb3ff;
+                text-decoration: none;
+                font-weight: 600;
+                transition: color 0.2s;
+            }
+        
+            a:hover {
+                color: #7eb3ff;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div style="margin-top: 50px;" class="icon">🚧</div>
+            <h1>En cours de développement</h1>
+            <p>Cette page est actuellement en construction. Revenez bientôt pour découvrir du contenu frais!</p>
+        
+            <div class="status">
+                <div class="status-item">
+                    <div class="status-icon">📝</div>
+                    <div class="status-text">
+                        <div class="status-title">Contenu</div>
+                        <div class="status-desc">Rédaction et structuration du contenu</div>
+                    </div>
+                </div>
+                <div class="status-item">
+                    <div class="status-icon">🎨</div>
+                    <div class="status-text">
+                        <div class="status-title">Design</div>
+                        <div class="status-desc">Mise en place du design final</div>
+                    </div>
+                </div>
+                <div class="status-item">
+                    <div class="status-icon">✅</div>
+                    <div class="status-text">
+                        <div class="status-title">Tests</div>
+                        <div class="status-desc">Vérification et optimisations</div>
+                    </div>
                 </div>
             </div>
-            <div class="status-item">
-                <div class="status-icon">🎨</div>
-                <div class="status-text">
-                    <div class="status-title">Design</div>
-                    <div class="status-desc">Mise en place du design final</div>
-                </div>
+        
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
             </div>
-            <div class="status-item">
-                <div class="status-icon">✅</div>
-                <div class="status-text">
-                    <div class="status-title">Tests</div>
-                    <div class="status-desc">Vérification et optimisations</div>
-                </div>
+        
+            <div class="back-link">
+                <a href="index.html">← Retour à l'accueil</a>
             </div>
         </div>
-
-        <div class="progress-bar">
-            <div class="progress-fill"></div>
-        </div>
-
-        <div class="back-link">
-            <a href="index.html">← Retour à l'accueil</a>
-        </div>
-    </div>
-</body>
+    </body>
+    <script src="load-nav.js"></script>
 </html>
