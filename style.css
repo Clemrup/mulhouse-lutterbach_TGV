@@ -714,7 +714,6 @@ strong {
     position: sticky;
     top: 0;
     z-index: 50;
-    background: rgba(11, 18, 28, 0.94);
     border-bottom: 1px solid var(--line);
     backdrop-filter: blur(6px);
 }
