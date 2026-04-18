@@ -281,6 +281,17 @@ h1 {
     background-clip: text;
 }
 
+/* Emoji dans h1 garde ses couleurs naturelles */
+.h1-emoji {
+    display: inline-block;
+    background: none;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset;
+    background-clip: unset;
+    color: revert;
+    margin-right: 0.2em;
+}
+
 h2 {
     font-size: 1.75rem;
     font-weight: 600;
