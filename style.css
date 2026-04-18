@@ -54,10 +54,12 @@ html, body {
 body {
     font-family: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     background: linear-gradient(180deg, var(--light-bg) 0%, var(--dark-bg) 100%);
+    background-attachment: fixed;
     color: var(--text-light);
     line-height: 1.6;
     font-weight: 400;
     overflow: auto;
+    min-height: 100vh;
 }
 
 /* Accessibility: Focus visible */
