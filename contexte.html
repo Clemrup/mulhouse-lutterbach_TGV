@@ -303,85 +303,176 @@
             <section style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid rgba(94, 179, 255, 0.3);">
                 <h2>📊 ANALYSE TECHNIQUE DÉTAILLÉE</h2>
                 
-                <h3>Croisement de 7 axes majeurs</h3>
-                <p style="color: #666; margin-bottom: 1.2rem;"><strong>Flux actuels générant des conflits permanents :</strong></p>
+                <h3>Circulations réelles par ligne (24 avril 2026)</h3>
+                <p style="color: var(--text-muted); margin-bottom: 1.2rem;"><strong>Données GTFS OpenData SNCF</strong> — Tous les types de trains confondus</p>
                 
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
-                    <div style="background: rgba(94, 179, 255, 0.1); border: 1px solid rgba(94, 179, 255, 0.3); border-radius: 8px; padding: 1.2rem; text-align: center;">
-                        <div style="font-size: 2.2rem; margin-bottom: 0.5rem;">🚄</div>
-                        <div style="font-size: 1.5rem; font-weight: 700; color: #4ea1ff;">50+</div>
-                        <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem; color: #666;">TGV/jour</p>
-                    </div>
-                    <div style="background: rgba(94, 179, 255, 0.1); border: 1px solid rgba(94, 179, 255, 0.3); border-radius: 8px; padding: 1.2rem; text-align: center;">
-                        <div style="font-size: 2.2rem; margin-bottom: 0.5rem;">🚆</div>
-                        <div style="font-size: 1.5rem; font-weight: 700; color: #4ea1ff;">120+</div>
-                        <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem; color: #666;">TER/jour</p>
-                    </div>
-                    <div style="background: rgba(94, 179, 255, 0.1); border: 1px solid rgba(94, 179, 255, 0.3); border-radius: 8px; padding: 1.2rem; text-align: center;">
-                        <div style="font-size: 2.2rem; margin-bottom: 0.5rem;">📦</div>
-                        <div style="font-size: 1.5rem; font-weight: 700; color: #4ea1ff;">40+</div>
-                        <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem; color: #666;">Fret/jour</p>
-                    </div>
-                    <div style="background: rgba(94, 179, 255, 0.1); border: 1px solid rgba(94, 179, 255, 0.3); border-radius: 8px; padding: 1.2rem; text-align: center;">
-                        <div style="font-size: 2.2rem; margin-bottom: 0.5rem;">🚂</div>
-                        <div style="font-size: 1.3rem; font-weight: 700; color: #4ea1ff;">Fréq. 30m</div>
-                        <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem; color: #666;">Tram-train</p>
-                    </div>
-                </div>
-                
-                <h3 style="margin-top: 2rem;">Indicateurs de saturation</h3>
-                <table style="width: 100%; margin: 1rem 0; border-collapse: collapse;">
-                    <thead>
-                        <tr style="background: rgba(94, 179, 255, 0.1); border: 1px solid rgba(94, 179, 255, 0.3);">
-                            <th style="padding: 0.75rem; text-align: left; border: 1px solid rgba(94, 179, 255, 0.3);">Indicateur</th>
-                            <th style="padding: 0.75rem; text-align: left; border: 1px solid rgba(94, 179, 255, 0.3);">Valeur</th>
-                            <th style="padding: 0.75rem; text-align: left; border: 1px solid rgba(94, 179, 255, 0.3);">Acceptabilité</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr style="border: 1px solid rgba(94, 179, 255, 0.2);">
-                            <td style="padding: 0.75rem; border: 1px solid rgba(94, 179, 255, 0.2);">Utilisation ligne Belfort</td>
-                            <td style="padding: 0.75rem; border: 1px solid rgba(94, 179, 255, 0.2);">~92%</td>
-                            <td style="padding: 0.75rem; border: 1px solid rgba(94, 179, 255, 0.2);">❌ Critique (seuil: 80%)</td>
-                        </tr>
-                        <tr style="border: 1px solid rgba(94, 179, 255, 0.2);">
-                            <td style="padding: 0.75rem; border: 1px solid rgba(94, 179, 255, 0.2);">Retards moyens</td>
-                            <td style="padding: 0.75rem; border: 1px solid rgba(94, 179, 255, 0.2);">3-5 min à Mulhouse</td>
-                            <td style="padding: 0.75rem; border: 1px solid rgba(94, 179, 255, 0.2);">⚠️ Dégradé</td>
-                        </tr>
-                        <tr style="border: 1px solid rgba(94, 179, 255, 0.2);">
-                            <td style="padding: 0.75rem; border: 1px solid rgba(94, 179, 255, 0.2);">Fiabilité jour J</td>
-                            <td style="padding: 0.75rem; border: 1px solid rgba(94, 179, 255, 0.2);">96.8%</td>
-                            <td style="padding: 0.75rem; border: 1px solid rgba(94, 179, 255, 0.2);">✅ Acceptable (seuil: 95%)</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="quick-table" style="overflow-x: auto; margin: 1.5rem 0;">
+                    <table class="summary-table">
+                        <thead>
+                            <tr>
+                                <th>Ligne ferroviaire</th>
+                                <th>Direction</th>
+                                <th style="text-align: center;">Type</th>
+                                <th style="text-align: center;">Nb trains</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Mulhouse-Thann -->
+                            <tr style="background: var(--card-bg);">
+                                <td colspan="4" style="padding: 0.8rem 1rem; background: var(--bg-h4-light); font-weight: 700; color: var(--primary-blue);"><strong>Mulhouse ↔ Thann</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Thann-Vallée</td>
+                                <td>Mulhouse → Thann</td>
+                                <td style="text-align: center;">TER</td>
+                                <td style="text-align: center; font-weight: 600; color: var(--primary-blue);">13</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Mulhouse → Thann</td>
+                                <td style="text-align: center;">TramTrain</td>
+                                <td style="text-align: center; font-weight: 600; color: var(--primary-blue);">28</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Thann → Mulhouse</td>
+                                <td style="text-align: center;">TER</td>
+                                <td style="text-align: center; font-weight: 600; color: var(--primary-blue);">13</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Thann → Mulhouse</td>
+                                <td style="text-align: center;">TramTrain</td>
+                                <td style="text-align: center; font-weight: 600; color: var(--primary-blue);">27</td>
+                            </tr>
+                            <tr style="background: var(--bg-h3); font-weight: 700; border-top: 2px solid var(--primary-blue);">
+                                <td colspan="3">Sous-total Mulhouse-Thann</td>
+                                <td style="text-align: center; color: var(--primary-blue); font-size: 1.05rem;"><strong>81</strong></td>
+                            </tr>
 
-                <h3 style="margin-top: 2rem;">Hypothèses de croissance (horizon 2035)</h3>
-                <p style="color: #666; margin-bottom: 1rem;"><strong>Prévisions SNCF :</strong></p>
-                <div style="background: rgba(94, 179, 255, 0.05); border: 1px solid rgba(94, 179, 255, 0.2); border-radius: 8px; padding: 1.2rem;">
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem;">
-                        <div>
-                            <div style="font-weight: 600; color: #4ea1ff; margin-bottom: 0.5rem;">🚄 TGV</div>
-                            <div style="font-size: 1.3rem; font-weight: 700; color: #d32f2f;">+18%</div>
-                            <p style="margin: 0.5rem 0 0 0; font-size: 0.85rem; color: #666;">réouverture liaisons</p>
-                        </div>
-                        <div>
-                            <div style="font-weight: 600; color: #4ea1ff; margin-bottom: 0.5rem;">🚆 TER</div>
-                            <div style="font-size: 1.3rem; font-weight: 700; color: #d32f2f;">+12%</div>
-                            <p style="margin: 0.5rem 0 0 0; font-size: 0.85rem; color: #666;">réseau urbain</p>
-                        </div>
-                        <div>
-                            <div style="font-weight: 600; color: #4ea1ff; margin-bottom: 0.5rem;">📦 Fret</div>
-                            <div style="font-size: 1.3rem; font-weight: 700; color: #d32f2f;">+25%</div>
-                            <p style="margin: 0.5rem 0 0 0; font-size: 0.85rem; color: #666;">tendance euracienne</p>
-                        </div>
-                    </div>
-                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(94, 179, 255, 0.2);">
-                        <p style="margin: 0; font-weight: 600;">📈 Total attendu</p>
-                        <p style="margin: 0.5rem 0 0 0; font-size: 1.1rem; color: #d32f2f;"><strong>350–370 trains/jour</strong> <span style="color: #666;">→ infrastructure saturée</span></p>
-                    </div>
+                            <!-- Mulhouse-Colmar -->
+                            <tr style="background: var(--card-bg);">
+                                <td colspan="4" style="padding: 0.8rem 1rem; background: var(--bg-h4-light); font-weight: 700; color: var(--primary-blue);"><strong>Mulhouse ↔ Colmar/Strasbourg</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Belfort-Mulhouse</td>
+                                <td>Mulhouse → Colmar</td>
+                                <td style="text-align: center;">TER</td>
+                                <td style="text-align: center; font-weight: 600; color: var(--primary-blue);">48</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Mulhouse → Strasbourg</td>
+                                <td style="text-align: center;">TGV INOUI</td>
+                                <td style="text-align: center; font-weight: 600; color: var(--primary-blue);">4</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Colmar → Mulhouse</td>
+                                <td style="text-align: center;">TER</td>
+                                <td style="text-align: center; font-weight: 600; color: var(--primary-blue);">47</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Strasbourg → Mulhouse</td>
+                                <td style="text-align: center;">TGV INOUI</td>
+                                <td style="text-align: center; font-weight: 600; color: var(--primary-blue);">5</td>
+                            </tr>
+                            <tr style="background: var(--bg-h3); font-weight: 700; border-top: 2px solid var(--primary-blue);">
+                                <td colspan="3">Sous-total Mulhouse-Colmar</td>
+                                <td style="text-align: center; color: var(--primary-blue); font-size: 1.05rem;"><strong>104</strong></td>
+                            </tr>
+
+                            <!-- Mulhouse-Basel -->
+                            <tr style="background: var(--card-bg);">
+                                <td colspan="4" style="padding: 0.8rem 1rem; background: var(--bg-h4-light); font-weight: 700; color: var(--primary-blue);"><strong>Mulhouse ↔ Basel</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Belfort-Mulhouse</td>
+                                <td>Mulhouse → Saint-Louis</td>
+                                <td style="text-align: center;">TER</td>
+                                <td style="text-align: center; font-weight: 600; color: var(--primary-blue);">43</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Mulhouse → Basel</td>
+                                <td style="text-align: center;">Lyria</td>
+                                <td style="text-align: center; font-weight: 600; color: var(--primary-blue);">5</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Saint-Louis → Mulhouse</td>
+                                <td style="text-align: center;">TER</td>
+                                <td style="text-align: center; font-weight: 600; color: var(--primary-blue);">41</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Basel → Mulhouse</td>
+                                <td style="text-align: center;">Lyria</td>
+                                <td style="text-align: center; font-weight: 600; color: var(--primary-blue);">6</td>
+                            </tr>
+                            <tr style="background: var(--bg-h3); font-weight: 700; border-top: 2px solid var(--primary-blue);">
+                                <td colspan="3">Sous-total Mulhouse-Basel</td>
+                                <td style="text-align: center; color: var(--primary-blue); font-size: 1.05rem;"><strong>95</strong></td>
+                            </tr>
+
+                            <!-- Mulhouse-Belfort -->
+                            <tr style="background: var(--card-bg);">
+                                <td colspan="4" style="padding: 0.8rem 1rem; background: var(--bg-h4-light); font-weight: 700; color: var(--primary-blue);"><strong>Mulhouse ↔ Belfort/Ouest</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Belfort-Mulhouse</td>
+                                <td>Mulhouse → Belfort</td>
+                                <td style="text-align: center;">TER</td>
+                                <td style="text-align: center; font-weight: 600; color: var(--primary-blue);">13</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Mulhouse → Besançon</td>
+                                <td style="text-align: center;">TGV INOUI</td>
+                                <td style="text-align: center; font-weight: 600; color: var(--primary-blue);">10</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Mulhouse → Paris</td>
+                                <td style="text-align: center;">Lyria</td>
+                                <td style="text-align: center; font-weight: 600; color: var(--primary-blue);">6</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Belfort → Mulhouse</td>
+                                <td style="text-align: center;">TER</td>
+                                <td style="text-align: center; font-weight: 600; color: var(--primary-blue);">12</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Besançon → Mulhouse</td>
+                                <td style="text-align: center;">TGV INOUI</td>
+                                <td style="text-align: center; font-weight: 600; color: var(--primary-blue);">8</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Paris → Mulhouse</td>
+                                <td style="text-align: center;">Lyria</td>
+                                <td style="text-align: center; font-weight: 600; color: var(--primary-blue);">5</td>
+                            </tr>
+                            <tr style="background: var(--bg-h3); font-weight: 700; border-top: 2px solid var(--primary-blue);">
+                                <td colspan="3">Sous-total Mulhouse-Belfort</td>
+                                <td style="text-align: center; color: var(--primary-blue); font-size: 1.05rem;"><strong>54</strong></td>
+                            </tr>
+
+                            <!-- TOTAL GÉNÉRAL -->
+                            <tr style="background: var(--primary-blue-dark); color: var(--text-light); font-weight: 700; font-size: 1.05rem; border-top: 3px solid var(--primary-blue);">
+                                <td colspan="3" style="padding: 1rem; font-size: 1.1rem;"><strong>TOTAL GÉNÉRAL</strong></td>
+                                <td style="text-align: center; padding: 1rem; font-size: 1.1rem;"><strong>334</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
+
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 1rem; font-style: italic; border-left: 3px solid var(--primary-blue); padding-left: 1rem;">
+                    <strong>Source :</strong> Export GTFS OpenData SNCF (Export_OpenData_SNCF_GTFS_NewTripId) | <strong>Date d'analyse :</strong> 24 avril 2026 | <strong>Méthodologie :</strong> Comptage des circulations passant par chaque gare, filtrées par type de train selon les StopPoints GTFS
+                </p>
             </section>
         </section>
 
