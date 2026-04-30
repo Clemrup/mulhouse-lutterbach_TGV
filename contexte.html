@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <main class="main-content">
@@ -65,11 +66,106 @@
                 <div style="font-size: 1.5rem; margin-bottom: 1rem;">
                     <span style="color: #4ea1ff; font-weight: 700;">≈ 300 trains/jour</span> à Mulhouse
                 </div>
-                <p style="margin: 0.5rem 0;"><strong>5,7 millions</strong> de voyageurs en 2024</p>
-                <p style="margin: 0;"><strong>+13 %</strong> croissance vs 2022</p>
             </div>
             <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 1rem; font-style: italic;">
-                <strong>Source :</strong> A retrouver | <strong>Date :</strong> XX XX XXXX
+                <strong>Source :</strong> SNCF Réseau — fiches projet / modernisation du nœud de Mulhouse 
+            </p>
+
+            <h3>Fréquentation par année</h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 1rem 0; align-items: start;">
+                <div style="background: rgba(94, 179, 255, 0.08); border: 1px solid rgba(94, 179, 255, 0.3); border-radius: 8px; padding: 1.5rem;">
+                    <p style="margin: 0.5rem 0;"><strong>2015 :</strong> 5 017 072 voyageurs</p>
+                    <p style="margin: 0.5rem 0;"><strong>2016 :</strong> 4 946 420 voyageurs <em style="color: #d32f2f;">(-1,41%)</em></p>
+                    <p style="margin: 0.5rem 0;"><strong>2018 :</strong> 5 055 333 voyageurs <em style="color: #4ea1ff;">(+2,20%)</em></p>
+                    <p style="margin: 0.5rem 0;"><strong>2019 :</strong> 5 320 370 voyageurs <em style="color: #4ea1ff;">(+5,24%)</em></p>
+                    <p style="margin: 0.5rem 0; color: #d32f2f;"><strong>2020 :</strong> 3 408 899 voyageurs <em>(-35,92% - impact COVID-19)</em></p>
+                    <p style="margin: 0.5rem 0;"><strong>2021 :</strong> 4 074 689 voyageurs <em style="color: #4ea1ff;">(+19,53%)</em></p>
+                    <p style="margin: 0.5rem 0;"><strong>2022 :</strong> 5 056 324 voyageurs <em style="color: #4ea1ff;">(+24,09%)</em></p>
+                    <p style="margin: 0.5rem 0;"><strong>2023 :</strong> 5 637 668 voyageurs <em style="color: #4ea1ff;">(+11,50%)</em></p>
+                    <p style="margin: 0;"><strong>2024 :</strong> 5 702 065 voyageurs <em style="color: #4ea1ff;">(+1,14%)</em></p>
+                </div>
+                <div style="background: rgba(94, 179, 255, 0.05); border: 1px solid rgba(94, 179, 255, 0.3); border-radius: 8px; padding: 1.5rem;">
+                    <canvas id="frequentationChart"></canvas>
+                </div>
+            </div>
+            <script>
+                const ctx = document.getElementById('frequentationChart').getContext('2d');
+                const frequentationChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ['2015', '2016', '2018', '2019', '2020', '2021', '2022', '2023', '2024'],
+                        datasets: [{
+                            label: 'Fréquentation (voyageurs)',
+                            data: [5017072, 4946420, 5055333, 5320370, 3408899, 4074689, 5056324, 5637668, 5702065],
+                            borderColor: '#4ea1ff',
+                            backgroundColor: 'rgba(78, 161, 255, 0.1)',
+                            borderWidth: 3,
+                            fill: true,
+                            tension: 0.4,
+                            pointBackgroundColor: '#4ea1ff',
+                            pointBorderColor: '#ffffff',
+                            pointBorderWidth: 2,
+                            pointRadius: 5,
+                            pointHoverRadius: 7
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: true,
+                        plugins: {
+                            legend: {
+                                display: true,
+                                labels: {
+                                    font: { size: 12, family: 'Raleway' },
+                                    color: '#555',
+                                    padding: 15
+                                }
+                            },
+                            tooltip: {
+                                backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                                titleFont: { family: 'Raleway', size: 12 },
+                                bodyFont: { family: 'Raleway', size: 11 },
+                                callbacks: {
+                                    label: function(context) {
+                                        return 'Voyageurs: ' + context.parsed.y.toLocaleString('fr-FR');
+                                    }
+                                }
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: false,
+                                min: 3000000,
+                                max: 6000000,
+                                ticks: {
+                                    font: { family: 'Raleway', size: 10 },
+                                    color: '#999',
+                                    callback: function(value) {
+                                        return (value / 1000000).toFixed(1) + 'M';
+                                    }
+                                },
+                                grid: {
+                                    color: 'rgba(94, 179, 255, 0.1)',
+                                    drawBorder: false
+                                }
+                            },
+                            x: {
+                                ticks: {
+                                    font: { family: 'Raleway', size: 10 },
+                                    color: '#999'
+                                },
+                                grid: {
+                                    display: false,
+                                    drawBorder: false
+                                }
+                            }
+                        }
+                    }
+                });
+            </script>
+
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 1rem; font-style: italic;">
+                <strong>Source :</strong> <a href="https://ressources.data.sncf.com/explore/dataset/frequentation-gares/" target="_blank" rel="noopener">SNCF Open Data — Fréquentation des gares</a>
             </p>
 
             <h3>Problèmes identifiés</h3>
