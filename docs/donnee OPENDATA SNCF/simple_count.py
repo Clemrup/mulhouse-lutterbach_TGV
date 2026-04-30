@@ -95,6 +95,17 @@ if __name__ == "__main__":
                 ("TGV INOUI-87300863", "TGV INOUI-87182063",            "Besaçon Franche-Comté → Mulhouse TGV-INOUI"),
                 ("Lyria-87686006", "Lyria-87182063",                    "Paris Gare de Lyon → Mulhouse Lyria"),
             ]
+        },
+        #=================================
+            #ligne Mulhouse-Muellheim (Baden)
+        #=================================
+        "Muellheim-Belfort": {
+            "Muellheim → Belfort": [
+                ("Train TER-87182063", "Train TER-80144139",            "Mulhouse → Muellheim TER")
+            ],
+            "Muellheim → Mulhouse": [
+                ("Train TER-80144139", "Train TER-87182063",            "Muellheim → Mulhouse TER")
+            ]
         }
     }
 
