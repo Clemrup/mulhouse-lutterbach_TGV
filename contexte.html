@@ -70,169 +70,159 @@
             </div>
 
             <h3>Détail des circulations par ligne (2026-04-24)</h3>
-            <div style="overflow-x: auto; margin: 1.5rem 0;">
-                <table style="width: 100%; border-collapse: collapse; background: white; font-size: 0.95rem;">
+            <div class="quick-table" style="overflow-x: auto; margin: 1.5rem 0;">
+                <table class="summary-table">
                     <thead>
-                        <tr style="background: #4ea1ff; color: white;">
-                            <th style="padding: 12px; text-align: left; font-weight: 600; border: 1px solid #ddd;">Ligne</th>
-                            <th style="padding: 12px; text-align: left; font-weight: 600; border: 1px solid #ddd;">Sens</th>
-                            <th style="padding: 12px; text-align: left; font-weight: 600; border: 1px solid #ddd;">Type de trains</th>
-                            <th style="padding: 12px; text-align: center; font-weight: 600; border: 1px solid #ddd;">Nombre</th>
+                        <tr>
+                            <th>Ligne</th>
+                            <th>Sens</th>
+                            <th>Type de trains</th>
+                            <th style="text-align: center;">Nombre</th>
                         </tr>
                     </thead>
                     <tbody>
                         <!-- Mulhouse-Thann -->
-                        <tr style="border: 1px solid #ddd; background: rgba(78, 161, 255, 0.02);">
-                            <td style="padding: 12px; border: 1px solid #ddd; font-weight: 600;">Mulhouse-Thann</td>
-                            <td style="padding: 12px; border: 1px solid #ddd;">→ Thann</td>
-                            <td style="padding: 12px; border: 1px solid #ddd;">TER</td>
-                            <td style="padding: 12px; border: 1px solid #ddd; text-align: center;">13</td>
+                        <tr>
+                            <td><strong>Mulhouse-Thann</strong></td>
+                            <td>→ Thann</td>
+                            <td>TER</td>
+                            <td style="text-align: center;">13</td>
                         </tr>
-                        <tr style="border: 1px solid #ddd;">
-                            <td style="padding: 12px; border: 1px solid #ddd;"></td>
-                            <td style="padding: 12px; border: 1px solid #ddd;">→ Thann</td>
-                            <td style="padding: 12px; border: 1px solid #ddd;">TramTrain</td>
-                            <td style="padding: 12px; border: 1px solid #ddd; text-align: center;">28</td>
+                        <tr>
+                            <td></td>
+                            <td>→ Thann</td>
+                            <td>TramTrain</td>
+                            <td style="text-align: center;">28</td>
                         </tr>
-                        <tr style="border: 1px solid #ddd; background: rgba(78, 161, 255, 0.05);">
-                            <td style="padding: 12px; border: 1px solid #ddd;"></td>
-                            <td style="padding: 12px; border: 1px solid #ddd; font-weight: 600;">← Mulhouse</td>
-                            <td style="padding: 12px; border: 1px solid #ddd;">TER</td>
-                            <td style="padding: 12px; border: 1px solid #ddd; text-align: center;">13</td>
+                        <tr>
+                            <td></td>
+                            <td><strong>← Mulhouse</strong></td>
+                            <td>TER</td>
+                            <td style="text-align: center;">13</td>
                         </tr>
-                        <tr style="border: 1px solid #ddd;">
-                            <td style="padding: 12px; border: 1px solid #ddd;"></td>
-                            <td style="padding: 12px; border: 1px solid #ddd; font-weight: 600;">← Mulhouse</td>
-                            <td style="padding: 12px; border: 1px solid #ddd;">TramTrain</td>
-                            <td style="padding: 12px; border: 1px solid #ddd; text-align: center;">27</td>
+                        <tr>
+                            <td></td>
+                            <td><strong>← Mulhouse</strong></td>
+                            <td>TramTrain</td>
+                            <td style="text-align: center;">27</td>
                         </tr>
-                        <tr style="border: 1px solid #ddd; background: #f0f4ff; font-weight: 600;">
-                            <td style="padding: 12px; border: 1px solid #ddd; font-weight: 700;">TOTAL Mulhouse-Thann</td>
-                            <td style="padding: 12px; border: 1px solid #ddd;"></td>
-                            <td style="padding: 12px; border: 1px solid #ddd;"></td>
-                            <td style="padding: 12px; border: 1px solid #ddd; text-align: center; font-weight: 700;">81</td>
+                        <tr style="background: var(--bg-h3); font-weight: 700;">
+                            <td colspan="3">TOTAL Mulhouse-Thann</td>
+                            <td style="text-align: center;">81</td>
                         </tr>
 
                         <!-- Mulhouse-Colmar -->
-                        <tr style="border: 1px solid #ddd; background: rgba(78, 161, 255, 0.02);">
-                            <td style="padding: 12px; border: 1px solid #ddd; font-weight: 600;">Mulhouse-Colmar</td>
-                            <td style="padding: 12px; border: 1px solid #ddd;">→ Colmar</td>
-                            <td style="padding: 12px; border: 1px solid #ddd;">TER</td>
-                            <td style="padding: 12px; border: 1px solid #ddd; text-align: center;">48</td>
+                        <tr>
+                            <td><strong>Mulhouse-Colmar</strong></td>
+                            <td>→ Colmar</td>
+                            <td>TER</td>
+                            <td style="text-align: center;">48</td>
                         </tr>
-                        <tr style="border: 1px solid #ddd;">
-                            <td style="padding: 12px; border: 1px solid #ddd;"></td>
-                            <td style="padding: 12px; border: 1px solid #ddd;">→ Strasbourg</td>
-                            <td style="padding: 12px; border: 1px solid #ddd;">TGV INOUI</td>
-                            <td style="padding: 12px; border: 1px solid #ddd; text-align: center;">4</td>
+                        <tr>
+                            <td></td>
+                            <td>→ Strasbourg</td>
+                            <td>TGV INOUI</td>
+                            <td style="text-align: center;">4</td>
                         </tr>
-                        <tr style="border: 1px solid #ddd; background: rgba(78, 161, 255, 0.05);">
-                            <td style="padding: 12px; border: 1px solid #ddd;"></td>
-                            <td style="padding: 12px; border: 1px solid #ddd; font-weight: 600;">← Mulhouse</td>
-                            <td style="padding: 12px; border: 1px solid #ddd;">TER</td>
-                            <td style="padding: 12px; border: 1px solid #ddd; text-align: center;">47</td>
+                        <tr>
+                            <td></td>
+                            <td><strong>← Mulhouse</strong></td>
+                            <td>TER</td>
+                            <td style="text-align: center;">47</td>
                         </tr>
-                        <tr style="border: 1px solid #ddd;">
-                            <td style="padding: 12px; border: 1px solid #ddd;"></td>
-                            <td style="padding: 12px; border: 1px solid #ddd; font-weight: 600;">← Mulhouse</td>
-                            <td style="padding: 12px; border: 1px solid #ddd;">TGV INOUI</td>
-                            <td style="padding: 12px; border: 1px solid #ddd; text-align: center;">5</td>
+                        <tr>
+                            <td></td>
+                            <td><strong>← Mulhouse</strong></td>
+                            <td>TGV INOUI</td>
+                            <td style="text-align: center;">5</td>
                         </tr>
-                        <tr style="border: 1px solid #ddd; background: #f0f4ff; font-weight: 600;">
-                            <td style="padding: 12px; border: 1px solid #ddd; font-weight: 700;">TOTAL Mulhouse-Colmar</td>
-                            <td style="padding: 12px; border: 1px solid #ddd;"></td>
-                            <td style="padding: 12px; border: 1px solid #ddd;"></td>
-                            <td style="padding: 12px; border: 1px solid #ddd; text-align: center; font-weight: 700;">104</td>
+                        <tr style="background: var(--bg-h3); font-weight: 700;">
+                            <td colspan="3">TOTAL Mulhouse-Colmar</td>
+                            <td style="text-align: center;">104</td>
                         </tr>
 
                         <!-- Mulhouse-Basel -->
-                        <tr style="border: 1px solid #ddd; background: rgba(78, 161, 255, 0.02);">
-                            <td style="padding: 12px; border: 1px solid #ddd; font-weight: 600;">Mulhouse-Basel</td>
-                            <td style="padding: 12px; border: 1px solid #ddd;">→ Saint-Louis</td>
-                            <td style="padding: 12px; border: 1px solid #ddd;">TER</td>
-                            <td style="padding: 12px; border: 1px solid #ddd; text-align: center;">43</td>
+                        <tr>
+                            <td><strong>Mulhouse-Basel</strong></td>
+                            <td>→ Saint-Louis</td>
+                            <td>TER</td>
+                            <td style="text-align: center;">43</td>
                         </tr>
-                        <tr style="border: 1px solid #ddd;">
-                            <td style="padding: 12px; border: 1px solid #ddd;"></td>
-                            <td style="padding: 12px; border: 1px solid #ddd;">→ Basel</td>
-                            <td style="padding: 12px; border: 1px solid #ddd;">Lyria</td>
-                            <td style="padding: 12px; border: 1px solid #ddd; text-align: center;">5</td>
+                        <tr>
+                            <td></td>
+                            <td>→ Basel</td>
+                            <td>Lyria</td>
+                            <td style="text-align: center;">5</td>
                         </tr>
-                        <tr style="border: 1px solid #ddd; background: rgba(78, 161, 255, 0.05);">
-                            <td style="padding: 12px; border: 1px solid #ddd;"></td>
-                            <td style="padding: 12px; border: 1px solid #ddd; font-weight: 600;">← Mulhouse</td>
-                            <td style="padding: 12px; border: 1px solid #ddd;">TER</td>
-                            <td style="padding: 12px; border: 1px solid #ddd; text-align: center;">41</td>
+                        <tr>
+                            <td></td>
+                            <td><strong>← Mulhouse</strong></td>
+                            <td>TER</td>
+                            <td style="text-align: center;">41</td>
                         </tr>
-                        <tr style="border: 1px solid #ddd;">
-                            <td style="padding: 12px; border: 1px solid #ddd;"></td>
-                            <td style="padding: 12px; border: 1px solid #ddd; font-weight: 600;">← Mulhouse</td>
-                            <td style="padding: 12px; border: 1px solid #ddd;">Lyria</td>
-                            <td style="padding: 12px; border: 1px solid #ddd; text-align: center;">6</td>
+                        <tr>
+                            <td></td>
+                            <td><strong>← Mulhouse</strong></td>
+                            <td>Lyria</td>
+                            <td style="text-align: center;">6</td>
                         </tr>
-                        <tr style="border: 1px solid #ddd; background: #f0f4ff; font-weight: 600;">
-                            <td style="padding: 12px; border: 1px solid #ddd; font-weight: 700;">TOTAL Mulhouse-Basel</td>
-                            <td style="padding: 12px; border: 1px solid #ddd;"></td>
-                            <td style="padding: 12px; border: 1px solid #ddd;"></td>
-                            <td style="padding: 12px; border: 1px solid #ddd; text-align: center; font-weight: 700;">95</td>
+                        <tr style="background: var(--bg-h3); font-weight: 700;">
+                            <td colspan="3">TOTAL Mulhouse-Basel</td>
+                            <td style="text-align: center;">95</td>
                         </tr>
 
                         <!-- Mulhouse-Belfort -->
-                        <tr style="border: 1px solid #ddd; background: rgba(78, 161, 255, 0.02);">
-                            <td style="padding: 12px; border: 1px solid #ddd; font-weight: 600;">Mulhouse-Belfort</td>
-                            <td style="padding: 12px; border: 1px solid #ddd;">→ Belfort</td>
-                            <td style="padding: 12px; border: 1px solid #ddd;">TER</td>
-                            <td style="padding: 12px; border: 1px solid #ddd; text-align: center;">13</td>
+                        <tr>
+                            <td><strong>Mulhouse-Belfort</strong></td>
+                            <td>→ Belfort</td>
+                            <td>TER</td>
+                            <td style="text-align: center;">13</td>
                         </tr>
-                        <tr style="border: 1px solid #ddd;">
-                            <td style="padding: 12px; border: 1px solid #ddd;"></td>
-                            <td style="padding: 12px; border: 1px solid #ddd;">→ Besançon</td>
-                            <td style="padding: 12px; border: 1px solid #ddd;">TGV INOUI</td>
-                            <td style="padding: 12px; border: 1px solid #ddd; text-align: center;">10</td>
+                        <tr>
+                            <td></td>
+                            <td>→ Besançon</td>
+                            <td>TGV INOUI</td>
+                            <td style="text-align: center;">10</td>
                         </tr>
-                        <tr style="border: 1px solid #ddd;">
-                            <td style="padding: 12px; border: 1px solid #ddd;"></td>
-                            <td style="padding: 12px; border: 1px solid #ddd;">→ Paris</td>
-                            <td style="padding: 12px; border: 1px solid #ddd;">Lyria</td>
-                            <td style="padding: 12px; border: 1px solid #ddd; text-align: center;">6</td>
+                        <tr>
+                            <td></td>
+                            <td>→ Paris</td>
+                            <td>Lyria</td>
+                            <td style="text-align: center;">6</td>
                         </tr>
-                        <tr style="border: 1px solid #ddd; background: rgba(78, 161, 255, 0.05);">
-                            <td style="padding: 12px; border: 1px solid #ddd;"></td>
-                            <td style="padding: 12px; border: 1px solid #ddd; font-weight: 600;">← Mulhouse</td>
-                            <td style="padding: 12px; border: 1px solid #ddd;">TER</td>
-                            <td style="padding: 12px; border: 1px solid #ddd; text-align: center;">12</td>
+                        <tr>
+                            <td></td>
+                            <td><strong>← Mulhouse</strong></td>
+                            <td>TER</td>
+                            <td style="text-align: center;">12</td>
                         </tr>
-                        <tr style="border: 1px solid #ddd;">
-                            <td style="padding: 12px; border: 1px solid #ddd;"></td>
-                            <td style="padding: 12px; border: 1px solid #ddd; font-weight: 600;">← Mulhouse</td>
-                            <td style="padding: 12px; border: 1px solid #ddd;">TGV INOUI</td>
-                            <td style="padding: 12px; border: 1px solid #ddd; text-align: center;">8</td>
+                        <tr>
+                            <td></td>
+                            <td><strong>← Mulhouse</strong></td>
+                            <td>TGV INOUI</td>
+                            <td style="text-align: center;">8</td>
                         </tr>
-                        <tr style="border: 1px solid #ddd;">
-                            <td style="padding: 12px; border: 1px solid #ddd;"></td>
-                            <td style="padding: 12px; border: 1px solid #ddd; font-weight: 600;">← Mulhouse</td>
-                            <td style="padding: 12px; border: 1px solid #ddd;">Lyria</td>
-                            <td style="padding: 12px; border: 1px solid #ddd; text-align: center;">5</td>
+                        <tr>
+                            <td></td>
+                            <td><strong>← Mulhouse</strong></td>
+                            <td>Lyria</td>
+                            <td style="text-align: center;">5</td>
                         </tr>
-                        <tr style="border: 1px solid #ddd; background: #f0f4ff; font-weight: 600;">
-                            <td style="padding: 12px; border: 1px solid #ddd; font-weight: 700;">TOTAL Mulhouse-Belfort</td>
-                            <td style="padding: 12px; border: 1px solid #ddd;"></td>
-                            <td style="padding: 12px; border: 1px solid #ddd;"></td>
-                            <td style="padding: 12px; border: 1px solid #ddd; text-align: center; font-weight: 700;">54</td>
+                        <tr style="background: var(--bg-h3); font-weight: 700;">
+                            <td colspan="3">TOTAL Mulhouse-Belfort</td>
+                            <td style="text-align: center;">54</td>
                         </tr>
 
                         <!-- TOTAL GÉNÉRAL -->
-                        <tr style="border: 1px solid #ddd; background: #4ea1ff; color: white; font-weight: 700; font-size: 1.05rem;">
-                            <td style="padding: 12px; border: 1px solid #ddd; font-weight: 700;">TOTAL GÉNÉRAL</td>
-                            <td style="padding: 12px; border: 1px solid #ddd;"></td>
-                            <td style="padding: 12px; border: 1px solid #ddd;"></td>
-                            <td style="padding: 12px; border: 1px solid #ddd; text-align: center; font-weight: 700;">334</td>
+                        <tr style="background: var(--primary-blue-dark); color: var(--text-light); font-weight: 700; font-size: 1.05rem;">
+                            <td colspan="3"><strong>TOTAL GÉNÉRAL</strong></td>
+                            <td style="text-align: center;"><strong>334</strong></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
-            <p style="font-size: 0.85rem; color: #666; margin-top: 1rem; font-style: italic;">
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 1rem; font-style: italic;">
                 <strong>Source :</strong> Données GTFS OpenData SNCF | <strong>Date :</strong> 24 avril 2026
             </p>
 
