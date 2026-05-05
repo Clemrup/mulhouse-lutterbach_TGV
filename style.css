@@ -1446,7 +1446,6 @@ body.carte-page {
     flex-direction: column;
     min-height: 0;
     position: relative;
-    padding: 20px;
 }
 
 .carte-page #map {
