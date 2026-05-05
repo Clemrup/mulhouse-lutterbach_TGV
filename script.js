@@ -745,6 +745,11 @@ legend.addTo(map);
 
 // Gérer la visibilité de la légende comme le mapInfo
 function setLegendVisible(isVisible) {
+    // Sur la page carte, la légende est toujours visible
+    if (window.isMapPageOnly) {
+        return;
+    }
+
     const mapLegend = document.querySelector('.map-legend');
     if (!mapLegend) {
         return;
@@ -756,36 +761,43 @@ function setLegendVisible(isVisible) {
 
 const mapLegend = document.querySelector('.map-legend');
 if (mapLegend) {
-    // Masquer la légende dès que l'utilisateur manipule la carte
-    map.on('mousedown wheel touchstart dragstart zoomstart movestart', () => {
-        setLegendVisible(false);
-    });
-
-    // Réafficher la légende dès interaction avec la colonne de texte
-    if (sidebar) {
-        ['pointerdown', 'wheel', 'touchstart', 'scroll', 'keydown'].forEach((eventName) => {
-            sidebar.addEventListener(eventName, () => {
-                setLegendVisible(true);
-            }, { passive: true });
+    // Sur la page carte, la légende est toujours visible
+    if (window.isMapPageOnly) {
+        mapLegend.classList.remove('is-hidden');
+    } else {
+        // Masquer la légende dès que l'utilisateur manipule la carte
+        map.on('mousedown wheel touchstart dragstart zoomstart movestart', () => {
+            setLegendVisible(false);
         });
+
+        // Réafficher la légende dès interaction avec la colonne de texte
+        if (sidebar) {
+            ['pointerdown', 'wheel', 'touchstart', 'scroll', 'keydown'].forEach((eventName) => {
+                sidebar.addEventListener(eventName, () => {
+                    setLegendVisible(true);
+                }, { passive: true });
+            });
+        }
     }
 
-    // Ajouter fonctionnalité fullscreen modal au clic sur la légende
-    mapLegend.addEventListener('click', (e) => {
-        if (!isMapExpandedOnMobile()) {
-            return;
-        }
+    // Ajouter fonctionnalité fullscreen modal au clic sur la légende (seulement sur vue complète)
+    if (!window.isMapPageOnly) {
+        mapLegend.addEventListener('click', (e) => {
+            if (!isMapExpandedOnMobile()) {
+                return;
+            }
 
-        // Éviter d'ouvrir la modal si on clique sur un lien
-        if (e.target.tagName === 'A') {
-            return;
-        }
-        // Empêcher la propagation pour éviter de masquer la légende
-        e.stopPropagation();
-        openLegendModal();
-        // Garder la légende visible en arrière-plan
-        setLegendVisible(true);
-    });
+            // Éviter d'ouvrir la modal si on clique sur un lien
+            if (e.target.tagName === 'A') {
+                return;
+            }
+            // Empêcher la propagation pour éviter de masquer la légende
+            e.stopPropagation();
+            openLegendModal();
+            // Garder la légende visible en arrière-plan
+            setLegendVisible(true);
+        });
+    }
 
     // Empêcher la propagation des événements de la carte sur la légende
     mapLegend.addEventListener('mousedown', (e) => e.stopPropagation());
