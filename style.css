@@ -1446,6 +1446,7 @@ body.carte-page {
     flex-direction: column;
     min-height: 0;
     position: relative;
+    padding: 20px;
 }
 
 .carte-page #map {
@@ -1498,6 +1499,7 @@ body.carte-page {
 /* Highlight Section - Featured content */
 .highlight-section {
     background: linear-gradient(135deg, rgba(94, 179, 255, 0.08) 0%, rgba(78, 161, 255, 0.04) 100%);
+    color: var(--dark-blue);
     border: 2px solid var(--primary-blue);
     border-radius: 12px;
     padding: 2rem;
