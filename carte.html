@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Carte interactive du projet de gare Mulhouse-Lutterbach TGV et tram-train Mulhouse-Guebwiller">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Carte - Gare Mulhouse-Lutterbach TGV">
+    <meta property="og:description" content="Carte interactive montrant le tracé de la gare TGV, la LGV et le tram-train">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mulhouse-lutterbach-tgv.vercel.app/carte.html">
+    <title>Carte Interactive - Gare Mulhouse-Lutterbach TGV</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body class="carte-page">
+    <header>
+        <div class="header-content">
+            <a href="index.html">← Retour à l'accueil</a>
+            <span class="header-divider">|</span>
+            <p class="page-title">🗺️ Carte interactive du projet</p>
+        </div>
+    </header>
+
+    <main>
+        <div id="map"></div>
+        <div class="map-info">
+            <strong>Carte interactive</strong><br>
+            Zoomez, déplacez-vous et explorez le tracé du projet
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <script src="https://mapbox.github.io/togeojson/togeojson.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
