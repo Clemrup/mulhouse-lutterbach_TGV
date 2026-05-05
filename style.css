@@ -1198,6 +1198,9 @@ strong {
     backdrop-filter: blur(2px);
     cursor: pointer;
     transition: all 0.2s ease;
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+    scrollbar-width: thin;
 }
 
 .map-legend:hover {
@@ -1207,6 +1210,23 @@ strong {
 
 .map-legend.is-hidden {
     display: none;
+}
+
+.map-legend::-webkit-scrollbar {
+    width: 6px;
+}
+
+.map-legend::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.map-legend::-webkit-scrollbar-thumb {
+    background: rgba(94, 179, 255, 0.4);
+    border-radius: 3px;
+}
+
+.map-legend::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-blue);
 }
 
 .legend-content h4 {
