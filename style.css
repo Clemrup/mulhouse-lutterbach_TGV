@@ -74,8 +74,8 @@ body.vue-complete-page {
 }
 
 .vue-complete-page .sidebar-inner {
-    height: 100%;
-    overflow-y: auto;
+    height: auto;
+    overflow: visible;
     min-height: 0;
 }
 
