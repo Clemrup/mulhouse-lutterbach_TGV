@@ -51,6 +51,39 @@ html, body {
     height: 100%;
 }
 
+body.vue-complete-page {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.vue-complete-page header {
+    flex: 0 0 auto;
+}
+
+.vue-complete-page .container {
+    flex: 1;
+    height: auto;
+    min-height: 0;
+}
+
+.vue-complete-page .sidebar {
+    height: 100%;
+    min-height: 0;
+}
+
+.vue-complete-page .sidebar-inner {
+    height: 100%;
+    overflow-y: auto;
+    min-height: 0;
+}
+
+.vue-complete-page .map-container {
+    height: 100%;
+    min-height: 0;
+}
+
 body {
     font-family: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     background: linear-gradient(180deg, var(--light-bg) 0%, var(--dark-bg) 100%);
