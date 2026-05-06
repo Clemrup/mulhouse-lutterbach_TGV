@@ -173,7 +173,6 @@ body.carte-page {
     flex-direction: column;
     min-height: 0;
     position: relative;
-    padding: 20px;
 }
 
 .carte-page #map {
@@ -1198,7 +1197,7 @@ strong {
     backdrop-filter: blur(2px);
     cursor: pointer;
     transition: all 0.2s ease;
-    max-height: calc(100vh - 200px);
+    max-height: calc(100vh - 100px);
     overflow-y: auto;
     scrollbar-width: thin;
 }
@@ -1214,6 +1213,8 @@ strong {
 
 .map-legend::-webkit-scrollbar {
     width: 6px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
 }
 
 .map-legend::-webkit-scrollbar-track {
