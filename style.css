@@ -1243,10 +1243,20 @@ strong {
     background: transparent;
     border: 0;
     box-shadow: none;
+    color: var(--white);
 }
 
 .legend-controls .leaflet-control-layers-list {
     padding: 6px 0 0;
+}
+
+.legend-controls .leaflet-control-layers-list label,
+.legend-controls .opacity-section label {
+    color: var(--white);
+}
+
+.legend-controls .leaflet-control-layers-list label span {
+    color: var(--white);
 }
 
 .legend-controls .opacity-section {
@@ -1279,6 +1289,15 @@ strong {
     height: 3px;
     border-radius: 1px;
     flex-shrink: 0;
+}
+
+.legend-rectangle {
+    width: 16px;
+    height: 10px;
+    border-radius: 2px;
+    flex-shrink: 0;
+    display: inline-block;
+    box-sizing: border-box;
 }
 
 .legend-circle {

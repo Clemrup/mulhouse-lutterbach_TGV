@@ -291,19 +291,19 @@ const kmlSources = [
         key: 'lgv',
         label: 'LGV',
         file: 'LGV.kml',
-        defaultStyle: { color: '#f57c00', weight: 4, opacity: 0.95 }
+        defaultStyle: { color: '#f00', weight: 4, opacity: 0.95 }
     },
     {
         key: 'tramTrain',
         label: 'Tram-train',
         file: 'tram-train.kml',
-        defaultStyle: { color: '#00897b', weight: 3, opacity: 0.95 }
+        defaultStyle: { color: '#d4ff00', weight: 3, opacity: 0.95 }
     },
     {
         key: 'railActuel',
         label: 'Rail actuel',
         file: 'rail_actuel.kml',
-        defaultStyle: { color: '#5d4037', weight: 2, opacity: 0.9 }
+        defaultStyle: { color: '#002a50', weight: 2, opacity: 0.9 }
     }
 ];
 
