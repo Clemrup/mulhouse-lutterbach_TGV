@@ -1230,6 +1230,31 @@ strong {
     background: var(--primary-blue);
 }
 
+.legend-controls {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+}
+
+.legend-controls .leaflet-control-layers {
+    width: 100% !important;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+}
+
+.legend-controls .leaflet-control-layers-list {
+    padding: 6px 0 0;
+}
+
+.legend-controls .opacity-section {
+    padding: 6px 0 0;
+    max-height: none;
+    overflow: visible;
+}
+
 .legend-content h4 {
     margin: 0 0 10px 0;
     color: var(--navy);

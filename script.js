@@ -738,6 +738,13 @@ legend.onAdd = function(map) {
     `;
     
     div.innerHTML = legendHTML;
+
+    if (window.isMapPageOnly && layerControl && typeof layerControl.getContainer === 'function') {
+        const controlsWrapper = L.DomUtil.create('div', 'legend-controls');
+        controlsWrapper.appendChild(layerControl.getContainer());
+        div.appendChild(controlsWrapper);
+    }
+
     return div;
 };
 
