@@ -83,12 +83,12 @@ INOUI après projet :
 
 
 	Strasbourg -> Mulhouse Lutterbach TGV -> Lyon Part-Dieu		 	06h47 -> 07h33 -> 10h34
-	départ même heure ->      -15min      ->     -10min			09h04 -> 09h38 -> 13h35 (sauf samedi)
+	départ même heure ->      -15min      ->     -10min			09h04 -> 09h38 -> 12h35 (sauf samedi)
 										12h00 -> 13h09 -> 16h39 (seulement samedi)
-										13h05 -> 13h39 -> 17h38
+										13h05 -> 13h39 -> 16h38
 										13h37 -> 14h22 -> 17h34 (sauf samedi)
 										16h15 -> 16h50 -> 19h33
-										17h03 -> 17h43 -> 21h49 (seulement lundi)
+										17h03 -> 17h43 -> 20h49 (seulement lundi)
 										19h03 -> 19h43 -> 22h31 (seulement dimanche)
 
 	Lyon Part-Dieu -> Mulhouse Lutterbach TGV -> Strasbourg : 		08h32 -> 11h11 -> 11h59 (samedi départ à 08h33)
