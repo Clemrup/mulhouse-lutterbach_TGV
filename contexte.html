@@ -14,6 +14,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
@@ -248,8 +250,14 @@
             <section style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid rgba(94, 179, 255, 0.3);">
                 <h2>📊 ANALYSE TECHNIQUE DÉTAILLÉE</h2>
                 
-                <h3>Circulations réelles par ligne (24 avril 2026)</h3>                
-                <div class="quick-table" style="overflow-x: auto; margin: 1.5rem 0;">
+                <h3>Circulations réelles par ligne (<span id="analysis-date">24 avril 2026</span>)</h3>                
+                <div class="quick-table" id="dynamic-table-wrap" style="position: relative; overflow-x: auto; margin: 1.5rem 0;">
+                    <div id="dynamic-table-loading" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(8, 18, 32, 0.78); backdrop-filter: blur(3px); z-index: 2; border-radius: 12px;">
+                        <div style="text-align: center; color: #fff; font-weight: 600; padding: 1.5rem 2rem;">
+                            <div style="width: 42px; height: 42px; margin: 0 auto 0.9rem; border: 4px solid rgba(255, 255, 255, 0.18); border-top-color: #4ea1ff; border-radius: 50%; animation: dynamicTableSpin 0.9s linear infinite;"></div>
+                            <div id="dynamic-table-loading-text">Chargement des circulations du jour...</div>
+                        </div>
+                    </div>
                     <table class="summary-table">
                         <thead>
                             <tr>
@@ -269,41 +277,41 @@
                             <tr style="border-top: 2px solid var(--border-color);">
                                 <td colspan="2" style="padding: 0.8rem 1.2rem; font-weight: 600; color: var(--primary-blue); border-left: 4px solid var(--primary-blue); font-size: 0.95rem;">↓ Mulhouse → Thann</td>
                                 <td colspan="1"></td>
-                                <td style="text-align: center; font-weight: 700; color: var(--primary-blue); font-size: 1.2rem;"><strong>41</strong></td>
+                                <td id="mt_dir_out_total" style="text-align: center; font-weight: 700; color: var(--primary-blue); font-size: 1.2rem;"><strong>47</strong></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>Mulhouse → Thann</td>
                                 <td style="text-align: center;">TER</td>
-                                <td style="text-align: center; font-weight: 600; color: var(--primary-blue);">13</td>
+                                <td id="mt_out_ter" style="text-align: center; font-weight: 600; color: var(--primary-blue);">15</td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>Mulhouse → Thann</td>
                                 <td style="text-align: center;">TramTrain</td>
-                                <td style="text-align: center; font-weight: 600; color: var(--primary-blue);">28</td>
+                                <td id="mt_out_tram" style="text-align: center; font-weight: 600; color: var(--primary-blue);">32</td>
                             </tr>
                             <!-- Sens 2: Thann → Mulhouse -->
                             <tr style="border-top: 2px solid var(--border-color);">
                                 <td colspan="2" style="padding: 0.8rem 1.2rem; font-weight: 600; color: var(--primary-blue); border-left: 4px solid var(--primary-blue); font-size: 0.95rem;">↑ Thann → Mulhouse</td>
                                 <td colspan="1"></td>
-                                <td style="text-align: center; font-weight: 700; color: var(--primary-blue); font-size: 1.2rem;"><strong>40</strong></td>
+                                <td id="mt_dir_in_total" style="text-align: center; font-weight: 700; color: var(--primary-blue); font-size: 1.2rem;"><strong>47</strong></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>Thann → Mulhouse</td>
                                 <td style="text-align: center;">TER</td>
-                                <td style="text-align: center; font-weight: 600; color: var(--primary-blue);">13</td>
+                                <td id="mt_in_ter" style="text-align: center; font-weight: 600; color: var(--primary-blue);">15</td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>Thann → Mulhouse</td>
                                 <td style="text-align: center;">TramTrain</td>
-                                <td style="text-align: center; font-weight: 600; color: var(--primary-blue);">27</td>
+                                <td id="mt_in_tram" style="text-align: center; font-weight: 600; color: var(--primary-blue);">32</td>
                             </tr>
                             <tr style="background: var(--bg-h3); font-weight: 700; border-top: 2px solid var(--primary-blue);">
                                 <td colspan="3">Total Mulhouse-Thann</td>
-                                <td style="text-align: center; font-size: 1.2rem;"><strong>81</strong></td>
+                                <td id="mt_total" style="text-align: center; font-size: 1.2rem;"><strong>94</strong></td>
                             </tr>
 
                             <!-- Mulhouse-Colmar -->
@@ -315,42 +323,42 @@
                             <tr style="border-top: 2px solid var(--border-color);">
                                 <td colspan="2" style="padding: 0.8rem 1.2rem; font-weight: 600; color: var(--primary-blue); border-left: 4px solid var(--primary-blue); font-size: 0.95rem;">↓ Mulhouse → Colmar/Strasbourg</td>
                                 <td colspan="1"></td>
-                                <td style="text-align: center; font-weight: 700; color: var(--primary-blue); font-size: 1.2rem;"><strong>52</strong></td>
+                                <td id="mc_dir_out_total" style="text-align: center; font-weight: 700; color: var(--primary-blue); font-size: 1.2rem;"><strong>61</strong></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>Mulhouse → Colmar</td>
                                 <td style="text-align: center;">TER</td>
-                                <td style="text-align: center; font-weight: 600; color: var(--primary-blue);">48</td>
+                                <td id="mc_out_ter" style="text-align: center; font-weight: 600; color: var(--primary-blue);">53</td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>Mulhouse → Strasbourg</td>
                                 <td style="text-align: center;">TGV INOUI</td>
-                                <td style="text-align: center; font-weight: 600; color: var(--primary-blue);">4</td>
+                                <td id="mc_out_tgv" style="text-align: center; font-weight: 600; color: var(--primary-blue);">8</td>
                             </tr>
 
                             <!-- Sens 2: Colmar/Strasbourg → Mulhouse -->
                             <tr style="border-top: 2px solid var(--border-color);">
                                 <td colspan="2" style="padding: 0.8rem 1.2rem; font-weight: 600; color: var(--primary-blue); border-left: 4px solid var(--primary-blue); font-size: 0.95rem;">↑ Colmar/Strasbourg → Mulhouse</td>
                                 <td colspan="1"></td>
-                                <td style="text-align: center; font-weight: 700; color: var(--primary-blue); font-size: 1.2rem;"><strong>52</strong></td>
+                                <td id="mc_dir_in_total" style="text-align: center; font-weight: 700; color: var(--primary-blue); font-size: 1.2rem;"><strong>57</strong></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>Colmar → Mulhouse</td>
                                 <td style="text-align: center;">TER</td>
-                                <td style="text-align: center; font-weight: 600; color: var(--primary-blue);">47</td>
+                                <td id="mc_in_ter" style="text-align: center; font-weight: 600; color: var(--primary-blue);">51</td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>Strasbourg → Mulhouse</td>
                                 <td style="text-align: center;">TGV INOUI</td>
-                                <td style="text-align: center; font-weight: 600; color: var(--primary-blue);">5</td>
+                                <td id="mc_in_tgv" style="text-align: center; font-weight: 600; color: var(--primary-blue);">6</td>
                             </tr>
                             <tr style="background: var(--bg-h3); font-weight: 700; border-top: 2px solid var(--primary-blue);">
                                 <td colspan="3">Total Mulhouse-Colmar</td>
-                                <td style="text-align: center; font-size: 1.2rem;"><strong>104</strong></td>
+                                <td id="mc_total" style="text-align: center; font-size: 1.2rem;"><strong>118</strong></td>
                             </tr>
 
                             <!-- Mulhouse-Basel -->
@@ -362,41 +370,41 @@
                             <tr style="border-top: 2px solid var(--border-color);">
                                 <td colspan="2" style="padding: 0.8rem 1.2rem; font-weight: 600; color: var(--primary-blue); border-left: 4px solid var(--primary-blue); font-size: 0.95rem;">↓ Mulhouse → Saint-Louis/Basel</td>
                                 <td colspan="1"></td>
-                                <td style="text-align: center; font-weight: 700; color: var(--primary-blue); font-size: 1.2rem;"><strong>49</strong></td>
+                                <td id="mb_dir_out_total" style="text-align: center; font-weight: 700; color: var(--primary-blue); font-size: 1.2rem;"><strong>57</strong></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>Mulhouse → Saint-Louis</td>
                                 <td style="text-align: center;">TER</td>
-                                <td style="text-align: center; font-weight: 600; color: var(--primary-blue);">43</td>
+                                <td id="mb_out_ter" style="text-align: center; font-weight: 600; color: var(--primary-blue);">52</td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>Mulhouse → Basel</td>
                                 <td style="text-align: center;">Lyria</td>
-                                <td style="text-align: center; font-weight: 600; color: var(--primary-blue);">6</td>
+                                <td id="mb_out_lyria" style="text-align: center; font-weight: 600; color: var(--primary-blue);">5</td>
                             </tr>
                             <!-- Sens 2: Basel → Mulhouse -->
                             <tr style="border-top: 2px solid var(--border-color);">
                                 <td colspan="2" style="padding: 0.8rem 1.2rem; font-weight: 600; color: var(--primary-blue); border-left: 4px solid var(--primary-blue); font-size: 0.95rem;">↑ Saint-Louis/Basel → Mulhouse</td>
                                 <td colspan="1"></td>
-                                <td style="text-align: center; font-weight: 700; color: var(--primary-blue); font-size: 1.2rem;"><strong>47</strong></td>
+                                <td id="mb_dir_in_total" style="text-align: center; font-weight: 700; color: var(--primary-blue); font-size: 1.2rem;"><strong>56</strong></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>Saint-Louis → Mulhouse</td>
                                 <td style="text-align: center;">TER</td>
-                                <td style="text-align: center; font-weight: 600; color: var(--primary-blue);">41</td>
+                                <td id="mb_in_ter" style="text-align: center; font-weight: 600; color: var(--primary-blue);">50</td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>Basel → Mulhouse</td>
                                 <td style="text-align: center;">Lyria</td>
-                                <td style="text-align: center; font-weight: 600; color: var(--primary-blue);">6</td>
+                                <td id="mb_in_lyria" style="text-align: center; font-weight: 600; color: var(--primary-blue);">6</td>
                             </tr>
                             <tr style="background: var(--bg-h3); font-weight: 700; border-top: 2px solid var(--primary-blue);">
                                 <td colspan="3">Total Mulhouse-Basel</td>
-                                <td style="text-align: center; font-size: 1.2rem;"><strong>96</strong></td>
+                                <td id="mb_total" style="text-align: center; font-size: 1.2rem;"><strong>113</strong></td>
                             </tr>
 
                             <!-- Mulhouse-Müllheim -->
@@ -408,29 +416,29 @@
                             <tr style="border-top: 2px solid var(--border-color);">
                                 <td colspan="2" style="padding: 0.8rem 1.2rem; font-weight: 600; color: var(--primary-blue); border-left: 4px solid var(--primary-blue); font-size: 0.95rem;">↑ Mulhouse → Müllheim</td>
                                 <td colspan="1"></td>
-                                <td style="text-align: center; font-weight: 700; color: var(--primary-blue); font-size: 1.2rem;"><strong>7</strong></td>
+                                <td id="mm_dir_out_total" style="text-align: center; font-weight: 700; color: var(--primary-blue); font-size: 1.2rem;"><strong>7</strong></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>Mulhouse → Müllheim</td>
                                 <td style="text-align: center;">TER</td>
-                                <td style="text-align: center; font-weight: 600; color: var(--primary-blue);">7</td>
+                                <td id="mm_out_ter" style="text-align: center; font-weight: 600; color: var(--primary-blue);">7</td>
                             </tr>
                             <!-- Sens 2: Müllheim → Mulhouse -->
                             <tr style="border-top: 2px solid var(--border-color);">
                                 <td colspan="2" style="padding: 0.8rem 1.2rem; font-weight: 600; color: var(--primary-blue); border-left: 4px solid var(--primary-blue); font-size: 0.95rem;">↓ Müllheim → Mulhouse</td>
                                 <td colspan="1"></td>
-                                <td style="text-align: center; font-weight: 700; color: var(--primary-blue); font-size: 1.2rem;"><strong>7</strong></td>
+                                <td id="mm_dir_in_total" style="text-align: center; font-weight: 700; color: var(--primary-blue); font-size: 1.2rem;"><strong>7</strong></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>Müllheim → Mulhouse</td>
                                 <td style="text-align: center;">TER</td>
-                                <td style="text-align: center; font-weight: 600; color: var(--primary-blue);">7</td>
+                                <td id="mm_in_ter" style="text-align: center; font-weight: 600; color: var(--primary-blue);">7</td>
                             </tr>
                             <tr style="background: var(--bg-h3); font-weight: 700; border-top: 2px solid var(--primary-blue);">
                                 <td colspan="3">Total Mulhouse-Müllheim</td>
-                                <td style="text-align: center; font-size: 1.2rem;"><strong>14</strong></td>
+                                <td id="mm_total" style="text-align: center; font-size: 1.2rem;"><strong>14</strong></td>
                             </tr>
 
                             <!-- Mulhouse-Belfort -->
@@ -442,67 +450,67 @@
                             <tr style="border-top: 2px solid var(--border-color);">
                                 <td colspan="2" style="padding: 0.8rem 1.2rem; font-weight: 600; color: var(--primary-blue); border-left: 4px solid var(--primary-blue); font-size: 0.95rem;">↓ Mulhouse → Belfort/Ouest</td>
                                 <td colspan="1"></td>
-                                <td style="text-align: center; font-weight: 700; color: var(--primary-blue); font-size: 1.2rem;"><strong>29</strong></td>
+                                <td id="mbf_dir_out_total" style="text-align: center; font-weight: 700; color: var(--primary-blue); font-size: 1.2rem;"><strong>38</strong></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>Mulhouse → Belfort</td>
                                 <td style="text-align: center;">TER</td>
-                                <td style="text-align: center; font-weight: 600; color: var(--primary-blue);">13</td>
+                                <td id="mbf_out_ter" style="text-align: center; font-weight: 600; color: var(--primary-blue);">21</td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>Mulhouse → Besançon</td>
                                 <td style="text-align: center;">TGV INOUI</td>
-                                <td style="text-align: center; font-weight: 600; color: var(--primary-blue);">10</td>
+                                <td id="mbf_out_tgv" style="text-align: center; font-weight: 600; color: var(--primary-blue);">11</td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>Mulhouse → Paris</td>
                                 <td style="text-align: center;">Lyria</td>
-                                <td style="text-align: center; font-weight: 600; color: var(--primary-blue);">6</td>
+                                <td id="mbf_out_lyria" style="text-align: center; font-weight: 600; color: var(--primary-blue);">6</td>
                             </tr>
 
                             <!-- Sens 2: Belfort/Ouest → Mulhouse -->
                             <tr style="border-top: 2px solid var(--border-color);">
                                 <td colspan="2" style="padding: 0.8rem 1.2rem; font-weight: 600; color: var(--primary-blue); border-left: 4px solid var(--primary-blue); font-size: 0.95rem;">↑ Belfort/Ouest → Mulhouse</td>
                                 <td colspan="1"></td>
-                                <td style="text-align: center; font-weight: 700; color: var(--primary-blue); font-size: 1.2rem;"><strong>26</strong></td>
+                                <td id="mbf_dir_in_total" style="text-align: center; font-weight: 700; color: var(--primary-blue); font-size: 1.2rem;"><strong>37</strong></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>Belfort → Mulhouse</td>
                                 <td style="text-align: center;">TER</td>
-                                <td style="text-align: center; font-weight: 600; color: var(--primary-blue);">12</td>
+                                <td id="mbf_in_ter" style="text-align: center; font-weight: 600; color: var(--primary-blue);">20</td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>Besançon → Mulhouse</td>
                                 <td style="text-align: center;">TGV INOUI</td>
-                                <td style="text-align: center; font-weight: 600; color: var(--primary-blue);">8</td>
+                                <td id="mbf_in_tgv" style="text-align: center; font-weight: 600; color: var(--primary-blue);">12</td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>Paris → Mulhouse</td>
                                 <td style="text-align: center;">Lyria</td>
-                                <td style="text-align: center; font-weight: 600; color: var(--primary-blue);">6</td>
+                                <td id="mbf_in_lyria" style="text-align: center; font-weight: 600; color: var(--primary-blue);">5</td>
                             </tr>
                             <tr style="background: var(--bg-h3); font-weight: 700; border-top: 2px solid var(--primary-blue);">
                                 <td colspan="3">Total Mulhouse-Belfort</td>
-                                <td style="text-align: center; font-size: 1.2rem;"><strong>55</strong></td>
+                                <td id="mbf_total" style="text-align: center; font-size: 1.2rem;"><strong>75</strong></td>
                             </tr>
 
                             <!-- TOTAL GÉNÉRAL -->
                             <tr style="background: var(--primary-blue-dark); color: var(--text-light); font-weight: 700; font-size: 1.05rem; border-top: 3px solid var(--primary-blue);">
                                 <td colspan="3" style="padding: 1rem; font-size: 1.3rem;"><strong>TOTAL GÉNÉRAL</strong></td>
-                                <td style="text-align: center; padding: 1rem; font-size: 1.3rem;"><strong>350</strong></td>
+                                <td id="grand_total" style="text-align: center; padding: 1rem; font-size: 1.3rem;"><strong>414</strong></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
                 <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 1rem; font-style: italic; border-left: 3px solid var(--primary-blue); padding-left: 1rem;">
-                    <strong>Source :</strong> Export GTFS OpenData SNCF (Export_OpenData_SNCF_GTFS_NewTripId) | <strong>Date d'analyse :</strong> 24 avril 2026 | <strong>Méthodologie :</strong> Comptage des circulations passant par chaque gare, filtrées par type de train selon les StopPoints GTFS
+                    <strong>Source :</strong> Export GTFS OpenData SNCF (Export_OpenData_SNCF_GTFS_NewTripId) | <strong>Date d'analyse :</strong> <span id="analysis-date-source">24 avril 2026</span> | <strong>Méthodologie :</strong> Comptage des circulations passant par chaque gare, filtrées par type de train selon les StopPoints GTFS
                 </p>
             </section>
         </section>
@@ -518,6 +526,209 @@
         <p>© 2026 Clemr - CC BY-NC-SA 4.0<br>
         <a href="/LICENSE.html">Conditions d'utilisation</a></p>
     </div>
+    <script>
+        const dynamicTableStyle = document.createElement("style");
+        dynamicTableStyle.textContent = `
+            @keyframes dynamicTableSpin {
+                from { transform: rotate(0deg); }
+                to { transform: rotate(360deg); }
+            }
+        `;
+        document.head.appendChild(dynamicTableStyle);
+
+        async function loadDynamicTrainCounts() {
+            const zipPath = "docs/donnee%20OPENDATA%20SNCF/Export_OpenData_SNCF_GTFS_NewTripId.zip";
+            const loadingOverlay = document.getElementById("dynamic-table-loading");
+            const loadingText = document.getElementById("dynamic-table-loading-text");
+
+            const today = new Date();
+            const yyyy = today.getFullYear();
+            const mm = String(today.getMonth() + 1).padStart(2, "0");
+            const dd = String(today.getDate()).padStart(2, "0");
+            const dateIso = `${yyyy}-${mm}-${dd}`;
+            const dateToken = `${yyyy}${mm}${dd}`;
+            const dateFr = today.toLocaleDateString("fr-FR", {
+                day: "numeric",
+                month: "long",
+                year: "numeric"
+            });
+
+            const titleDate = document.getElementById("analysis-date");
+            const sourceDate = document.getElementById("analysis-date-source");
+            if (titleDate) titleDate.textContent = dateFr;
+            if (sourceDate) sourceDate.textContent = dateFr;
+
+            const toRows = (csvText) => Papa.parse(csvText, {
+                header: true,
+                skipEmptyLines: true,
+                dynamicTyping: false
+            }).data;
+
+            try {
+                const response = await fetch(zipPath);
+                if (!response.ok) {
+                    throw new Error(`Impossible de charger l'archive GTFS (${response.status})`);
+                }
+
+                const arrayBuffer = await response.arrayBuffer();
+                const zip = await JSZip.loadAsync(arrayBuffer);
+
+                const [stopsText, stopTimesText, tripsText, calendarDatesText] = await Promise.all([
+                    zip.file("stops.txt").async("string"),
+                    zip.file("stop_times.txt").async("string"),
+                    zip.file("trips.txt").async("string"),
+                    zip.file("calendar_dates.txt").async("string")
+                ]);
+
+                const stops = toRows(stopsText);
+                const stopTimes = toRows(stopTimesText);
+                const trips = toRows(tripsText);
+                const calendarDates = toRows(calendarDatesText);
+
+                const serviceRowsToday = calendarDates.filter(row => row.date === dateToken && row.exception_type === "1");
+                const fallbackRowsToday = calendarDates.filter(row => row.date === dateToken);
+                const validServices = new Set((serviceRowsToday.length > 0 ? serviceRowsToday : fallbackRowsToday).map(row => row.service_id));
+                const tripsToday = trips.filter(row => validServices.has(row.service_id));
+
+                const sequencesByTrip = new Map();
+                for (const row of stopTimes) {
+                    if (!sequencesByTrip.has(row.trip_id)) {
+                        sequencesByTrip.set(row.trip_id, []);
+                    }
+                    sequencesByTrip.get(row.trip_id).push({
+                        stop_id: row.stop_id,
+                        stop_sequence: Number.parseInt(row.stop_sequence, 10)
+                    });
+                }
+                for (const [tripId, rows] of sequencesByTrip.entries()) {
+                    rows.sort((a, b) => a.stop_sequence - b.stop_sequence);
+                    sequencesByTrip.set(tripId, rows.map(r => r.stop_id));
+                }
+
+                function buildStopSet(codeFragment) {
+                    const set = new Set();
+                    for (const row of stops) {
+                        if ((row.stop_id || "").includes(codeFragment)) {
+                            set.add(row.stop_id);
+                        }
+                    }
+                    return set;
+                }
+
+                function countTrains(gareACode, gareBCode) {
+                    const stopsA = buildStopSet(gareACode);
+                    const stopsB = buildStopSet(gareBCode);
+                    let count = 0;
+
+                    for (const trip of tripsToday) {
+                        const seq = sequencesByTrip.get(trip.trip_id) || [];
+                        let posA = -1;
+                        let posB = -1;
+
+                        for (let i = 0; i < seq.length; i += 1) {
+                            const stopId = seq[i];
+                            if (posA === -1 && stopsA.has(stopId)) {
+                                posA = i;
+                            }
+                            if (posB === -1 && stopsB.has(stopId)) {
+                                posB = i;
+                            }
+                            if (posA !== -1 && posB !== -1) {
+                                break;
+                            }
+                        }
+
+                        if (posA !== -1 && posB !== -1 && posA < posB) {
+                            count += 1;
+                        }
+                    }
+
+                    return count;
+                }
+
+                const counts = {
+                    mt_out_ter: countTrains("Train TER-87182063", "Train TER-87182568"),
+                    mt_out_tram: countTrains("TramTrain-87533620", "TramTrain-87182568"),
+                    mt_in_ter: countTrains("Train TER-87182568", "Train TER-87182063"),
+                    mt_in_tram: countTrains("TramTrain-87182568", "TramTrain-87533620"),
+
+                    mc_out_ter: countTrains("Train TER-87182063", "Train TER-87182014"),
+                    mc_out_tgv: countTrains("TGV INOUI-87182063", "TGV INOUI-87212027"),
+                    mc_in_ter: countTrains("Train TER-87182014", "Train TER-87182063"),
+                    mc_in_tgv: countTrains("TGV INOUI-87212027", "TGV INOUI-87182063"),
+
+                    mb_out_ter: countTrains("Train TER-87182063", "Train TER-87182139"),
+                    mb_out_lyria: countTrains("Lyria-87182063", "Lyria-85000109"),
+                    mb_in_ter: countTrains("Train TER-87182139", "Train TER-87182063"),
+                    mb_in_lyria: countTrains("Lyria-85000109", "Lyria-87182063"),
+
+                    mbf_out_ter: countTrains("Train TER-87182063", "Train TER-87184002"),
+                    mbf_out_tgv: countTrains("TGV INOUI-87182063", "TGV INOUI-87300863"),
+                    mbf_out_lyria: countTrains("Lyria-87182063", "Lyria-87686006"),
+                    mbf_in_ter: countTrains("Train TER-87184002", "Train TER-87182063"),
+                    mbf_in_tgv: countTrains("TGV INOUI-87300863", "TGV INOUI-87182063"),
+                    mbf_in_lyria: countTrains("Lyria-87686006", "Lyria-87182063"),
+
+                    mm_out_ter: countTrains("Train TER-87182063", "Train TER-80144139"),
+                    mm_in_ter: countTrains("Train TER-80144139", "Train TER-87182063")
+                };
+
+                counts.mt_dir_out_total = counts.mt_out_ter + counts.mt_out_tram;
+                counts.mt_dir_in_total = counts.mt_in_ter + counts.mt_in_tram;
+                counts.mt_total = counts.mt_dir_out_total + counts.mt_dir_in_total;
+
+                counts.mc_dir_out_total = counts.mc_out_ter + counts.mc_out_tgv;
+                counts.mc_dir_in_total = counts.mc_in_ter + counts.mc_in_tgv;
+                counts.mc_total = counts.mc_dir_out_total + counts.mc_dir_in_total;
+
+                counts.mb_dir_out_total = counts.mb_out_ter + counts.mb_out_lyria;
+                counts.mb_dir_in_total = counts.mb_in_ter + counts.mb_in_lyria;
+                counts.mb_total = counts.mb_dir_out_total + counts.mb_dir_in_total;
+
+                counts.mm_dir_out_total = counts.mm_out_ter;
+                counts.mm_dir_in_total = counts.mm_in_ter;
+                counts.mm_total = counts.mm_dir_out_total + counts.mm_dir_in_total;
+
+                counts.mbf_dir_out_total = counts.mbf_out_ter + counts.mbf_out_tgv + counts.mbf_out_lyria;
+                counts.mbf_dir_in_total = counts.mbf_in_ter + counts.mbf_in_tgv + counts.mbf_in_lyria;
+                counts.mbf_total = counts.mbf_dir_out_total + counts.mbf_dir_in_total;
+
+                counts.grand_total = counts.mt_total + counts.mc_total + counts.mb_total + counts.mbf_total + counts.mm_total;
+
+                for (const [id, value] of Object.entries(counts)) {
+                    const cell = document.getElementById(id);
+                    if (cell) {
+                        const strong = cell.querySelector("strong");
+                        if (strong) {
+                            strong.textContent = String(value);
+                        } else {
+                            cell.textContent = String(value);
+                        }
+                    }
+                }
+
+                if (loadingText) {
+                    loadingText.textContent = "Valeurs mises à jour";
+                }
+                setTimeout(() => {
+                    if (loadingOverlay) loadingOverlay.style.display = "none";
+                }, 250);
+
+                console.info(`Tableau mis a jour avec les donnees GTFS du ${dateIso}`);
+            } catch (error) {
+                if (loadingText) {
+                    loadingText.textContent = "Chargement impossible pour le moment.";
+                }
+                console.error("Mise a jour dynamique du tableau impossible:", error);
+            }
+        }
+
+        window.addEventListener("DOMContentLoaded", () => {
+            loadDynamicTrainCounts().catch((error) => {
+                console.error("Mise a jour dynamique du tableau impossible:", error);
+            });
+        });
+    </script>
     <script src="load-nav.js"></script>
 </body>
 </html>
