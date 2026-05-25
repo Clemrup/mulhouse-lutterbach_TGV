@@ -4,7 +4,7 @@ VRAIMENT simple : compte tous les trains entre deux gares
 """
 import zipfile, io, pandas as pd
 
-def count_trains(gare_a_code, gare_b_code, date="2026-04-24"):
+def count_trains(gare_a_code, gare_b_code, date="2026-05-26"):
     """Compte TOUS les trains entre deux gares pour une date"""
     zf = zipfile.ZipFile("Export_OpenData_SNCF_GTFS_NewTripId.zip")
     
@@ -99,11 +99,11 @@ if __name__ == "__main__":
         #=================================
             #ligne Mulhouse-Muellheim (Baden)
         #=================================
-        "Muellheim-Belfort": {
-            "Muellheim → Belfort": [
+        "Muellheim-Mulhouse": {
+            "Muellheim → Mulhouse": [
                 ("Train TER-87182063", "Train TER-80144139",            "Mulhouse → Muellheim TER")
             ],
-            "Muellheim → Mulhouse": [
+            "Mulhouse → Muellheim": [
                 ("Train TER-80144139", "Train TER-87182063",            "Muellheim → Mulhouse TER")
             ]
         }
