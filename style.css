@@ -2001,7 +2001,11 @@ strong {
 /* Conteneur pour permettre le scroll horizontal des tableaux larges */
 .table-scroll {
     width: 100%;
+    max-height: 70vh;
+
     overflow-x: auto;
+    overflow-y: auto;
+
     -webkit-overflow-scrolling: touch;
     margin-bottom: 1rem;
 }
