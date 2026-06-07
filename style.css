@@ -2046,3 +2046,36 @@ strong {
     color: #36853a;
     border-left: 3px solid #ff9800;
 }
+
+.t3 {
+    display:inline-block;
+    border:0.5px solid #000;
+    border-radius:10px;
+    width:30px;
+    height:15px;
+    text-align:center;
+    background-color: #00873a;
+    color:#fff;
+}
+
+.tt4 {
+    display:inline-block;
+    border:0.5px solid #000;
+    border-radius:10px;
+    width:30px;
+    height:15px;
+    text-align:center;
+    background-color: red;
+    color:#fff;
+}
+
+.tt5 {
+    display:inline-block;
+    border:0.5px solid #000;
+    border-radius:10px;
+    width:30px;
+    height:15px;
+    text-align:center;
+    background-color: purple;
+    color:#fff;
+}
