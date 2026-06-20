@@ -1,191 +1,191 @@
 gares;heure;ligne;niveau quai;quai
-Gare Centrale;5:50;T T - 4;quai bas;1
-Guebwiller Heissenstein;6:03;T T - 5;quai haut;4
-Thann Gare;6:09;T T - 5;quai bas;2
-Gare Centrale;6:13;T T - 4;quai haut;3
-Guebwiller Heissenstein;6:18;TER Int-Val;quai haut;4
-Thann Gare;6:28;TER Int-Val;quai bas;2
-Guebwiller Heissenstein;6:33;T T - 5;quai haut;4
-Gare Centrale;6:43;T T - 4;quai haut;3
-Gare Centrale;6:49;T T - 4;quai bas;1
-Guebwiller Heissenstein;6:53;T T - 5;quai haut;4
-Thann Gare;6:56;TER Int-Val;quai bas;2
-Guebwiller Heissenstein;7:07;TER Int-Val;quai haut;4
-Gare Centrale;7:09;T T - 5;quai haut;3
-Thann Gare;7:13;T T - 4;quai bas;2
-Gare Centrale;7:20;T T - 4;quai bas;1
-Guebwiller Heissenstein;7:23;T T - 5;quai haut;4
-Thann Gare;7:26;TER Int-Val;quai bas;2
-Guebwiller Heissenstein;7:37;TER Int-Val;quai haut;4
-Gare Centrale;7:40;T T - 5;quai haut;3
-Thann Gare;7:43;T T - 4;quai bas;2
-Gare Centrale;7:50;T T - 4;quai bas;1
-Guebwiller Heissenstein;7:53;T T - 5;quai haut;4
-Thann Gare;7:56;TER Int-Val;quai bas;2
-Guebwiller Heissenstein;8:07;TER Int-Val;quai haut;4
-Gare Centrale;8:10;T T - 5;quai haut;3
-Thann Gare;8:13;T T - 4;quai bas;2
-Gare Centrale;8:20;T T - 4;quai bas;1
-Guebwiller Heissenstein;8:23;T T - 5;quai haut;4
-Thann Gare;8:26;TER Int-Val;quai bas;2
-Guebwiller Heissenstein;8:37;TER Int-Val;quai haut;4
-Gare Centrale;8:40;T T - 5;quai haut;3
-Thann Gare;8:43;T T - 4;quai bas;2
-Gare Centrale;8:50;T T - 4;quai bas;1
-Guebwiller Heissenstein;8:53;T T - 5;quai haut;4
-Thann Gare;8:56;TER Int-Val;quai bas;2
-Guebwiller Heissenstein;9:07;TER Int-Val;quai haut;4
-Gare Centrale;9:10;T T - 5;quai haut;3
-Thann Gare;9:13;T T - 4;quai bas;2
-Gare Centrale;9:20;T T - 4;quai bas;1
-Guebwiller Heissenstein;9:23;T T - 5;quai haut;4
-Thann Gare;9:26;TER Int-Val;quai bas;2
-Guebwiller Heissenstein;9:37;TER Int-Val;quai haut;4
-Gare Centrale;9:40;T T - 5;quai haut;3
-Thann Gare;9:43;T T - 4;quai bas;2
-Gare Centrale;9:50;T T - 4;quai bas;1
-Guebwiller Heissenstein;9:53;T T - 5;quai haut;4
-Thann Gare;9:56;TER Int-Val;quai bas;2
+Gare Centrale;05:50;TT-4;quai bas;1
+Guebwiller Heissenstein;06:03;TT-5;quai haut;4
+Thann Gare;06:09;TT-5;quai bas;2
+Gare Centrale;06:13;TT-4;quai haut;3
+Guebwiller Heissenstein;06:18;TER Int-Val;quai haut;4
+Thann Gare;06:28;TER Int-Val;quai bas;2
+Guebwiller Heissenstein;06:33;TT-5;quai haut;4
+Gare Centrale;06:43;TT-4;quai haut;3
+Gare Centrale;06:49;TT-4;quai bas;1
+Guebwiller Heissenstein;06:53;TT-5;quai haut;4
+Thann Gare;06:56;TER Int-Val;quai bas;2
+Guebwiller Heissenstein;07:07;TER Int-Val;quai haut;4
+Gare Centrale;07:09;TT-5;quai haut;3
+Thann Gare;07:13;TT-4;quai bas;2
+Gare Centrale;07:20;TT-4;quai bas;1
+Guebwiller Heissenstein;07:23;TT-5;quai haut;4
+Thann Gare;07:26;TER Int-Val;quai bas;2
+Guebwiller Heissenstein;07:37;TER Int-Val;quai haut;4
+Gare Centrale;07:40;TT-5;quai haut;3
+Thann Gare;07:43;TT-4;quai bas;2
+Gare Centrale;07:50;TT-4;quai bas;1
+Guebwiller Heissenstein;07:53;TT-5;quai haut;4
+Thann Gare;07:56;TER Int-Val;quai bas;2
+Guebwiller Heissenstein;08:07;TER Int-Val;quai haut;4
+Gare Centrale;08:10;TT-5;quai haut;3
+Thann Gare;08:13;TT-4;quai bas;2
+Gare Centrale;08:20;TT-4;quai bas;1
+Guebwiller Heissenstein;08:23;TT-5;quai haut;4
+Thann Gare;08:26;TER Int-Val;quai bas;2
+Guebwiller Heissenstein;08:37;TER Int-Val;quai haut;4
+Gare Centrale;08:40;TT-5;quai haut;3
+Thann Gare;08:43;TT-4;quai bas;2
+Gare Centrale;08:50;TT-4;quai bas;1
+Guebwiller Heissenstein;08:53;TT-5;quai haut;4
+Thann Gare;08:56;TER Int-Val;quai bas;2
+Guebwiller Heissenstein;09:07;TER Int-Val;quai haut;4
+Gare Centrale;09:10;TT-5;quai haut;3
+Thann Gare;09:13;TT-4;quai bas;2
+Gare Centrale;09:20;TT-4;quai bas;1
+Guebwiller Heissenstein;09:23;TT-5;quai haut;4
+Thann Gare;09:26;TER Int-Val;quai bas;2
+Guebwiller Heissenstein;09:37;TER Int-Val;quai haut;4
+Gare Centrale;09:40;TT-5;quai haut;3
+Thann Gare;09:43;TT-4;quai bas;2
+Gare Centrale;09:50;TT-4;quai bas;1
+Guebwiller Heissenstein;09:53;TT-5;quai haut;4
+Thann Gare;09:56;TER Int-Val;quai bas;2
 Guebwiller Heissenstein;10:07;TER Int-Val;quai haut;4
-Gare Centrale;10:10;T T - 5;quai haut;3
-Thann Gare;10:13;T T - 4;quai bas;2
-Gare Centrale;10:20;T T - 4;quai bas;1
-Guebwiller Heissenstein;10:23;T T - 5;quai haut;4
+Gare Centrale;10:10;TT-5;quai haut;3
+Thann Gare;10:13;TT-4;quai bas;2
+Gare Centrale;10:20;TT-4;quai bas;1
+Guebwiller Heissenstein;10:23;TT-5;quai haut;4
 Thann Gare;10:26;TER Int-Val;quai bas;2
 Guebwiller Heissenstein;10:37;TER Int-Val;quai haut;4
-Gare Centrale;10:40;T T - 5;quai haut;3
-Thann Gare;10:43;T T - 4;quai bas;2
-Gare Centrale;10:50;T T - 4;quai bas;1
-Guebwiller Heissenstein;10:53;T T - 5;quai haut;4
+Gare Centrale;10:40;TT-5;quai haut;3
+Thann Gare;10:43;TT-4;quai bas;2
+Gare Centrale;10:50;TT-4;quai bas;1
+Guebwiller Heissenstein;10:53;TT-5;quai haut;4
 Thann Gare;10:56;TER Int-Val;quai bas;2
 Guebwiller Heissenstein;11:07;TER Int-Val;quai haut;4
-Gare Centrale;11:10;T T - 5;quai haut;3
-Thann Gare;11:13;T T - 4;quai bas;2
-Gare Centrale;11:20;T T - 4;quai bas;1
-Guebwiller Heissenstein;11:23;T T - 5;quai haut;4
+Gare Centrale;11:10;TT-5;quai haut;3
+Thann Gare;11:13;TT-4;quai bas;2
+Gare Centrale;11:20;TT-4;quai bas;1
+Guebwiller Heissenstein;11:23;TT-5;quai haut;4
 Thann Gare;11:26;TER Int-Val;quai bas;2
 Guebwiller Heissenstein;11:37;TER Int-Val;quai haut;4
-Gare Centrale;11:40;T T - 5;quai haut;3
-Thann Gare;11:43;T T - 4;quai bas;2
-Gare Centrale;11:50;T T - 4;quai bas;1
-Guebwiller Heissenstein;11:53;T T - 5;quai haut;4
+Gare Centrale;11:40;TT-5;quai haut;3
+Thann Gare;11:43;TT-4;quai bas;2
+Gare Centrale;11:50;TT-4;quai bas;1
+Guebwiller Heissenstein;11:53;TT-5;quai haut;4
 Thann Gare;11:56;TER Int-Val;quai bas;2
 Guebwiller Heissenstein;12:07;TER Int-Val;quai haut;4
-Gare Centrale;12:10;T T - 5;quai haut;3
-Thann Gare;12:13;T T - 4;quai bas;2
-Gare Centrale;12:20;T T - 4;quai bas;1
-Guebwiller Heissenstein;12:23;T T - 5;quai haut;4
+Gare Centrale;12:10;TT-5;quai haut;3
+Thann Gare;12:13;TT-4;quai bas;2
+Gare Centrale;12:20;TT-4;quai bas;1
+Guebwiller Heissenstein;12:23;TT-5;quai haut;4
 Thann Gare;12:26;TER Int-Val;quai bas;2
 Guebwiller Heissenstein;12:37;TER Int-Val;quai haut;4
-Gare Centrale;12:40;T T - 5;quai haut;3
-Thann Gare;12:43;T T - 4;quai bas;2
-Gare Centrale;12:50;T T - 4;quai bas;1
-Guebwiller Heissenstein;12:53;T T - 5;quai haut;4
+Gare Centrale;12:40;TT-5;quai haut;3
+Thann Gare;12:43;TT-4;quai bas;2
+Gare Centrale;12:50;TT-4;quai bas;1
+Guebwiller Heissenstein;12:53;TT-5;quai haut;4
 Thann Gare;12:56;TER Int-Val;quai bas;2
 Guebwiller Heissenstein;13:07;TER Int-Val;quai haut;4
-Gare Centrale;13:10;T T - 5;quai haut;3
-Thann Gare;13:13;T T - 4;quai bas;2
-Gare Centrale;13:20;T T - 4;quai bas;1
-Guebwiller Heissenstein;13:23;T T - 5;quai haut;4
+Gare Centrale;13:10;TT-5;quai haut;3
+Thann Gare;13:13;TT-4;quai bas;2
+Gare Centrale;13:20;TT-4;quai bas;1
+Guebwiller Heissenstein;13:23;TT-5;quai haut;4
 Thann Gare;13:26;TER Int-Val;quai bas;2
 Guebwiller Heissenstein;13:37;TER Int-Val;quai haut;4
-Gare Centrale;13:40;T T - 5;quai haut;3
-Thann Gare;13:43;T T - 4;quai bas;2
-Gare Centrale;13:50;T T - 4;quai bas;1
-Guebwiller Heissenstein;13:53;T T - 5;quai haut;4
+Gare Centrale;13:40;TT-5;quai haut;3
+Thann Gare;13:43;TT-4;quai bas;2
+Gare Centrale;13:50;TT-4;quai bas;1
+Guebwiller Heissenstein;13:53;TT-5;quai haut;4
 Thann Gare;13:56;TER Int-Val;quai bas;2
 Guebwiller Heissenstein;14:07;TER Int-Val;quai haut;4
-Gare Centrale;14:10;T T - 5;quai haut;3
-Thann Gare;14:13;T T - 4;quai bas;2
-Gare Centrale;14:20;T T - 4;quai bas;1
-Guebwiller Heissenstein;14:23;T T - 5;quai haut;4
+Gare Centrale;14:10;TT-5;quai haut;3
+Thann Gare;14:13;TT-4;quai bas;2
+Gare Centrale;14:20;TT-4;quai bas;1
+Guebwiller Heissenstein;14:23;TT-5;quai haut;4
 Thann Gare;14:26;TER Int-Val;quai bas;2
 Guebwiller Heissenstein;14:37;TER Int-Val;quai haut;4
-Gare Centrale;14:40;T T - 5;quai haut;3
-Thann Gare;14:43;T T - 4;quai bas;2
-Gare Centrale;14:50;T T - 4;quai bas;1
-Guebwiller Heissenstein;14:53;T T - 5;quai haut;4
+Gare Centrale;14:40;TT-5;quai haut;3
+Thann Gare;14:43;TT-4;quai bas;2
+Gare Centrale;14:50;TT-4;quai bas;1
+Guebwiller Heissenstein;14:53;TT-5;quai haut;4
 Thann Gare;14:56;TER Int-Val;quai bas;2
 Guebwiller Heissenstein;15:07;TER Int-Val;quai haut;4
-Gare Centrale;15:10;T T - 5;quai haut;3
-Thann Gare;15:13;T T - 4;quai bas;2
-Gare Centrale;15:20;T T - 4;quai bas;1
-Guebwiller Heissenstein;15:23;T T - 5;quai haut;4
+Gare Centrale;15:10;TT-5;quai haut;3
+Thann Gare;15:13;TT-4;quai bas;2
+Gare Centrale;15:20;TT-4;quai bas;1
+Guebwiller Heissenstein;15:23;TT-5;quai haut;4
 Thann Gare;15:26;TER Int-Val;quai bas;2
 Guebwiller Heissenstein;15:37;TER Int-Val;quai haut;4
-Gare Centrale;15:40;T T - 5;quai haut;3
-Thann Gare;15:43;T T - 4;quai bas;2
-Gare Centrale;15:50;T T - 4;quai bas;1
-Guebwiller Heissenstein;15:53;T T - 5;quai haut;4
+Gare Centrale;15:40;TT-5;quai haut;3
+Thann Gare;15:43;TT-4;quai bas;2
+Gare Centrale;15:50;TT-4;quai bas;1
+Guebwiller Heissenstein;15:53;TT-5;quai haut;4
 Thann Gare;15:56;TER Int-Val;quai bas;2
 Guebwiller Heissenstein;16:07;TER Int-Val;quai haut;4
-Gare Centrale;16:10;T T - 5;quai haut;3
-Thann Gare;16:13;T T - 4;quai bas;2
-Gare Centrale;16:20;T T - 4;quai bas;1
-Guebwiller Heissenstein;16:23;T T - 5;quai haut;4
+Gare Centrale;16:10;TT-5;quai haut;3
+Thann Gare;16:13;TT-4;quai bas;2
+Gare Centrale;16:20;TT-4;quai bas;1
+Guebwiller Heissenstein;16:23;TT-5;quai haut;4
 Thann Gare;16:26;TER Int-Val;quai bas;2
 Guebwiller Heissenstein;16:37;TER Int-Val;quai haut;4
-Gare Centrale;16:40;T T - 5;quai haut;3
-Thann Gare;16:43;T T - 4;quai bas;2
-Gare Centrale;16:50;T T - 4;quai bas;1
-Guebwiller Heissenstein;16:53;T T - 5;quai haut;4
+Gare Centrale;16:40;TT-5;quai haut;3
+Thann Gare;16:43;TT-4;quai bas;2
+Gare Centrale;16:50;TT-4;quai bas;1
+Guebwiller Heissenstein;16:53;TT-5;quai haut;4
 Thann Gare;16:56;TER Int-Val;quai bas;2
 Guebwiller Heissenstein;17:07;TER Int-Val;quai haut;4
-Gare Centrale;17:10;T T - 5;quai haut;3
-Thann Gare;17:13;T T - 4;quai bas;2
-Gare Centrale;17:20;T T - 4;quai bas;1
-Guebwiller Heissenstein;17:23;T T - 5;quai haut;4
+Gare Centrale;17:10;TT-5;quai haut;3
+Thann Gare;17:13;TT-4;quai bas;2
+Gare Centrale;17:20;TT-4;quai bas;1
+Guebwiller Heissenstein;17:23;TT-5;quai haut;4
 Thann Gare;17:26;TER Int-Val;quai bas;2
 Guebwiller Heissenstein;17:37;TER Int-Val;quai haut;4
-Gare Centrale;17:40;T T - 5;quai haut;3
-Thann Gare;17:43;T T - 4;quai bas;2
-Gare Centrale;17:50;T T - 4;quai bas;1
-Guebwiller Heissenstein;17:53;T T - 5;quai haut;4
+Gare Centrale;17:40;TT-5;quai haut;3
+Thann Gare;17:43;TT-4;quai bas;2
+Gare Centrale;17:50;TT-4;quai bas;1
+Guebwiller Heissenstein;17:53;TT-5;quai haut;4
 Thann Gare;17:56;TER Int-Val;quai bas;2
 Guebwiller Heissenstein;18:07;TER Int-Val;quai haut;4
-Gare Centrale;18:10;T T - 5;quai haut;3
-Thann Gare;18:13;T T - 4;quai bas;2
-Gare Centrale;18:20;T T - 4;quai bas;1
-Guebwiller Heissenstein;18:23;T T - 5;quai haut;4
+Gare Centrale;18:10;TT-5;quai haut;3
+Thann Gare;18:13;TT-4;quai bas;2
+Gare Centrale;18:20;TT-4;quai bas;1
+Guebwiller Heissenstein;18:23;TT-5;quai haut;4
 Thann Gare;18:26;TER Int-Val;quai bas;2
 Guebwiller Heissenstein;18:37;TER Int-Val;quai haut;4
-Gare Centrale;18:40;T T - 5;quai haut;3
-Thann Gare;18:43;T T - 4;quai bas;2
-Gare Centrale;18:50;T T - 4;quai bas;1
-Guebwiller Heissenstein;18:53;T T - 5;quai haut;4
+Gare Centrale;18:40;TT-5;quai haut;3
+Thann Gare;18:43;TT-4;quai bas;2
+Gare Centrale;18:50;TT-4;quai bas;1
+Guebwiller Heissenstein;18:53;TT-5;quai haut;4
 Thann Gare;18:56;TER Int-Val;quai bas;2
 Guebwiller Heissenstein;19:07;TER Int-Val;quai haut;4
-Gare Centrale;19:10;T T - 5;quai haut;3
-Thann Gare;19:13;T T - 4;quai bas;2
-Gare Centrale;19:20;T T - 4;quai bas;1
+Gare Centrale;19:10;TT-5;quai haut;3
+Thann Gare;19:13;TT-4;quai bas;2
+Gare Centrale;19:20;TT-4;quai bas;1
 Thann Gare;19:21;TER Int-Val;quai bas;2
-Guebwiller Heissenstein;19:23;T T - 5;quai haut;4
-Gare Centrale;19:30;T T - 5;quai haut;3
+Guebwiller Heissenstein;19:23;TT-5;quai haut;4
+Gare Centrale;19:30;TT-5;quai haut;3
 Guebwiller Heissenstein;19:37;TER Int-Val;quai haut;4
-Thann Gare;19:43;T T - 4;quai bas;2
-Gare Centrale;19:50;T T - 4;quai bas;1
-Guebwiller Heissenstein;19:53;T T - 5;quai haut;4
-Thann Gare;20:00;T T - 5;quai bas;2
+Thann Gare;19:43;TT-4;quai bas;2
+Gare Centrale;19:50;TT-4;quai bas;1
+Guebwiller Heissenstein;19:53;TT-5;quai haut;4
+Thann Gare;20:00;TT-5;quai bas;2
 Guebwiller Heissenstein;20:07;TER Int-Val;quai haut;4
 Gare Centrale;20:10;TER Int-Val;quai haut;3
-Thann Gare;20:20;T T - 5;quai bas;2
-Thann Gare;20:23;T T - 4;quai bas;2
-Gare Centrale;20:30;T T - 4;quai bas;1
+Thann Gare;20:20;TT-5;quai bas;2
+Thann Gare;20:23;TT-4;quai bas;2
+Gare Centrale;20:30;TT-4;quai bas;1
 Thann Gare;20:35;TER Int-Val;quai bas;2
-Thann Gare;20:50;T T - 5;quai bas;2
+Thann Gare;20:50;TT-5;quai bas;2
 Guebwiller Heissenstein;20:52;TER Int-Val;quai haut;4
-Gare Centrale;21:12;T T - 4;quai bas;1
-Guebwiller Heissenstein;21:15;T T - 5;quai haut;4
-Gare Centrale;21:30;T T - 4;quai haut;3
+Gare Centrale;21:12;TT-4;quai bas;1
+Guebwiller Heissenstein;21:15;TT-5;quai haut;4
+Gare Centrale;21:30;TT-4;quai haut;3
 Guebwiller Heissenstein;21:33;TER Int-Val;quai haut;4
 Thann Gare;21:35;TER Int-Val;quai bas;2
-Gare Centrale;21:50;T T - 5;quai haut;3
-Guebwiller Heissenstein;21:51;T T - 5;quai haut;4
-Gare Centrale;22:12;T T - 4;quai bas;1
-Thann Gare;22:14;T T - 4;quai bas;2
-Gare Centrale;22:40;T T - 5;quai haut;3
-Guebwiller Heissenstein;22:41;T T - 5;quai haut;4
-Gare Centrale;22:58;T T - 4;quai bas;1
+Gare Centrale;21:50;TT-5;quai haut;3
+Guebwiller Heissenstein;21:51;TT-5;quai haut;4
+Gare Centrale;22:12;TT-4;quai bas;1
+Thann Gare;22:14;TT-4;quai bas;2
+Gare Centrale;22:40;TT-5;quai haut;3
+Guebwiller Heissenstein;22:41;TT-5;quai haut;4
+Gare Centrale;22:58;TT-4;quai bas;1
 Gare centrale;22:58;TT-4;quai bas;1
-Thann Gare;23:09;T T - 4;quai bas;2
+Thann Gare;23:09;TT-4;quai bas;2
 Thann Gare;23:09;TT-4;quai bas;2
