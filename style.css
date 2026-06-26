@@ -1470,7 +1470,7 @@ strong {
     display: inline-block;
     padding: 0.875rem 1.75rem;
     background: linear-gradient(135deg, var(--primary-blue) 0%, #4ea1ff 100%);
-    color: var(--white);
+    color: var(--dark-blue);
     text-decoration: none;
     border-radius: 8px;
     font-weight: 600;
