@@ -2019,6 +2019,16 @@ strong {
     min-width: 820px; /* Permet au tableau de conserver sa mise en page sur petits écrans */
 }
 
+.table-scroll.pdf-viewer {
+    max-height: none;
+    overflow: hidden;
+}
+
+.table-scroll.pdf-viewer iframe {
+    width: 100%;
+    display: block;
+}
+
 .text-muted {
     color: var(--text-muted);
 }
