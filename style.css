@@ -1038,7 +1038,7 @@ strong {
     overflow: auto;
     display: flex;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
     border: 1px solid var(--line);
     border-radius: 10px;
     background: #fff;
@@ -1047,11 +1047,12 @@ strong {
 
 .image-lightbox-image {
     display: block;
+    flex: 0 0 auto;
     max-width: none;
     max-height: none;
     width: auto;
     height: auto;
-    margin: 0 auto;
+    margin: 0;
     transition: width 0.16s ease, height 0.16s ease;
 }
 
