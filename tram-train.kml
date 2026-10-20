@@ -1,5 +1,8 @@
 <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/kml/2.2 https://developers.google.com/kml/schema/kml22gx.xsd">
-	<ExtendedData/>
+	<ExtendedData>
+		<Data name="geoportail:compute">{}</Data>
+		<Data name="description">"export"</Data>
+	</ExtendedData>
 	<Document>
 		<Placemark>
 			<Style>
@@ -574,7 +577,7 @@
 			<name>Mulhouse-Lutterbach TGV</name>
 			<Style>
 				<IconStyle>
-					<scale>1.67456</scale>
+					<scale>1.98854</scale>
 					<Icon>
 						<href>data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGNiYAAAAAkAAxkR2eQAAAAASUVORK5CYII=</href>
 						<gx:w>51</gx:w>
@@ -601,7 +604,7 @@
 			<name></name>
 			<Style>
 				<IconStyle>
-					<scale>0.000001</scale>
+					<scale>0</scale>
 					<Icon>
 						<href>data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGNiYAAAAAkAAxkR2eQAAAAASUVORK5CYII=</href>
 						<gx:w>1</gx:w>
@@ -624,7 +627,7 @@
 			<name></name>
 			<Style>
 				<IconStyle>
-					<scale>0.000001</scale>
+					<scale>0</scale>
 					<Icon>
 						<href>data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGNiYAAAAAkAAxkR2eQAAAAASUVORK5CYII=</href>
 						<gx:w>1</gx:w>
@@ -647,7 +650,7 @@
 			<name></name>
 			<Style>
 				<IconStyle>
-					<scale>0.000001</scale>
+					<scale>0</scale>
 					<Icon>
 						<href>data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGNiYAAAAAkAAxkR2eQAAAAASUVORK5CYII=</href>
 						<gx:w>1</gx:w>
@@ -670,7 +673,7 @@
 			<name>Staffelfelden</name>
 			<Style>
 				<IconStyle>
-					<scale>1.67456</scale>
+					<scale>1.98854</scale>
 					<Icon>
 						<href>data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGNiYAAAAAkAAxkR2eQAAAAASUVORK5CYII=</href>
 						<gx:w>51</gx:w>
@@ -693,7 +696,7 @@
 			<name>Bollwiller</name>
 			<Style>
 				<IconStyle>
-					<scale>1.67456</scale>
+					<scale>1.98854</scale>
 					<Icon>
 						<href>data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGNiYAAAAAkAAxkR2eQAAAAASUVORK5CYII=</href>
 						<gx:w>51</gx:w>
@@ -720,7 +723,7 @@
 			<name>Wittelsheim</name>
 			<Style>
 				<IconStyle>
-					<scale>1.67456</scale>
+					<scale>1.98854</scale>
 					<Icon>
 						<href>data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGNiYAAAAAkAAxkR2eQAAAAASUVORK5CYII=</href>
 						<gx:w>51</gx:w>
@@ -743,7 +746,7 @@
 			<name>Richwiller</name>
 			<Style>
 				<IconStyle>
-					<scale>1.67456</scale>
+					<scale>1.98854</scale>
 					<Icon>
 						<href>data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGNiYAAAAAkAAxkR2eQAAAAASUVORK5CYII=</href>
 						<gx:w>51</gx:w>
@@ -766,7 +769,7 @@
 			<name></name>
 			<Style>
 				<IconStyle>
-					<scale>0.000001</scale>
+					<scale>0</scale>
 					<Icon>
 						<href>data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGNiYAAAAAkAAxkR2eQAAAAASUVORK5CYII=</href>
 						<gx:w>1</gx:w>
@@ -825,36 +828,11 @@
 				</LineStyle>
 			</Style>
 			<ExtendedData>
-				<Data name="measure">
-					<value>640.409 m</value>
-				</Data>
+				<Data name="measure"/>
 			</ExtendedData>
 			<LineString>
-				<coordinates>7.206776177225456,47.91619769519002,0 7.207083290157662,47.916094329542915,0 7.2073550826432875,47.91599196256229,0 7.2076722538592986,47.915812644790776,0 7.207885909822045,47.91566519721937,0 7.208042819049417,47.91550879881149,0 7.208163149391404,47.91537495464635,0 7.208368585414525,47.915116698193486,0 7.20867701064309,47.914734773635814,0 7.208845399004184,47.91451871321178,0 7.208980368229614,47.91427027204483,0 7.209055254811082,47.91408225990156,0 7.209081123035058,47.913954472056076,0 7.2092180562826345,47.91361652780532,0 7.209333026166972,47.91347011626641,0 7.209669188177548,47.91319409314883,0 7.209852892919293,47.91305745808893,0 7.210069798838505,47.912874303916794,0 7.210471843054416,47.9125451185526,0 7.210851829558598,47.91223702369726,0 7.211277532268245,47.91187577266879,0 7.211592578310247,47.91158694454924,0</coordinates>
+				<coordinates>7.206776177225456,47.91619769519002,0 7.207083290157662,47.916094329542915,0 7.2073550826432875,47.91599196256229,0 7.2076722538592986,47.915812644790776,0 7.207885909822045,47.91566519721937,0 7.208042819049417,47.91550879881149,0 7.208163149391404,47.91537495464635,0 7.208368585414525,47.915116698193486,0 7.20867701064309,47.914734773635814,0 7.208845399004184,47.91451871321178,0 7.208980368229614,47.91427027204483,0 7.209055254811082,47.91408225990156,0 7.209081123035058,47.913954472056076,0 7.2092180562826345,47.91361652780532,0 7.209333026166972,47.91347011626641,0 7.209669188177548,47.91319409314883,0 7.209852892919293,47.91305745808893,0 7.210069798838505,47.912874303916794,0 7.210471843054416,47.9125451185526,0 7.210851829558598,47.91223702369726,0 7.21126108539572,47.91186889885256,0 7.21145326532193,47.91169235356591,0 7.211535020343133,47.911623140024005,0 7.2115893350756854,47.911583124825285,0</coordinates>
 			</LineString>
-		</Placemark>
-		<Placemark>
-			<Style>
-				<LineStyle>
-					<color>ff502a00</color>
-					<width>3</width>
-				</LineStyle>
-				<PolyStyle>
-					<color>7f006b00</color>
-				</PolyStyle>
-			</Style>
-			<ExtendedData>
-				<Data name="measure">
-					<value>314.1 m^2</value>
-				</Data>
-			</ExtendedData>
-			<Polygon>
-				<outerBoundaryIs>
-					<LinearRing>
-						<coordinates>7.209375899766681,47.913444788793555,0 7.209344363556981,47.91347147732884,0 7.209231948734264,47.91362324510814,0 7.209090138408442,47.91395594036845,0 7.209082091781397,47.91400717591935,0 7.209104220005771,47.91400897365705,0 7.209181779963574,47.913815298816985,0 7.2092358078704715,47.913707309108815,0 7.209273434448489,47.9136387646262,0 7.2094142929200435,47.91347192956272,0 7.209691010209168,47.91323453531871,0 7.209666985193671,47.913216898814994,0 7.209375899766681,47.913444788793555,0</coordinates>
-					</LinearRing>
-				</outerBoundaryIs>
-			</Polygon>
 		</Placemark>
 		<Placemark>
 			<Style>
@@ -910,12 +888,10 @@
 				</LineStyle>
 			</Style>
 			<ExtendedData>
-				<Data name="measure">
-					<value>1.356 km</value>
-				</Data>
+				<Data name="measure"/>
 			</ExtendedData>
 			<LineString>
-				<coordinates>7.211593568923554,47.91158462790892,0 7.211866279012312,47.91132088595373,0 7.2121321396502776,47.911061454772266,0 7.212460924090452,47.910788470199975,0 7.2128483758601165,47.91050340986956,0 7.2132249943620845,47.91023297060784,0 7.213485712719615,47.910041329673675,0 7.213957911623409,47.90971139856535,0 7.214417371071799,47.909435744147885,0 7.2147230720962225,47.90924607753732,0 7.215122309820151,47.90902331971472,0 7.215549017500072,47.908766566238484,0 7.215898265148927,47.90856824457947,0 7.216074225294378,47.908465876523906,0 7.21626761094684,47.90830279375828,0 7.2164682753922085,47.90810429840391,0 7.216871627802278,47.907672835731546,0 7.217120025294739,47.907404192949315,0 7.2173329099888175,47.907240930610755,0 7.217415399325455,47.907175526021376,0 7.21773022147329,47.906886568377445,0 7.21795979947033,47.906682673698384,0 7.218199064302685,47.90646579121551,0 7.218413354076593,47.90628820802212,0 7.218702923838554,47.90605089099728,0 7.21986101621555,47.905273606473884,0 7.220919344392283,47.904625220360884,0 7.221235128094433,47.90437852488364,0 7.221493722622175,47.90414182946918,0 7.221615560428517,47.90398847693274,0 7.221787101601215,47.90368680648959,0 7.221881588063274,47.90345844238752,0 7.221986020468709,47.90323841178869,0 7.2221483918875276,47.90295132031008,0 7.222347310755023,47.90267461230087,0 7.22282471603701,47.902169533024335,0</coordinates>
+				<coordinates>7.211590005627937,47.911583574434445,0 7.211697964540788,47.911493202917626,0 7.211866279012312,47.91132088595373,0 7.2121321396502776,47.911061454772266,0 7.212460924090452,47.910788470199975,0 7.2128483758601165,47.91050340986956,0 7.2132249943620845,47.91023297060784,0 7.213485712719615,47.910041329673675,0 7.213957911623409,47.90971139856535,0 7.214417371071799,47.909435744147885,0 7.2147230720962225,47.90924607753732,0 7.215122309820151,47.90902331971472,0 7.215549017500072,47.908766566238484,0 7.215898265148927,47.90856824457947,0 7.216074225294378,47.908465876523906,0 7.21626761094684,47.90830279375828,0 7.2164682753922085,47.90810429840391,0 7.216871627802278,47.907672835731546,0 7.217120025294739,47.907404192949315,0 7.2173329099888175,47.907240930610755,0 7.217415399325455,47.907175526021376,0 7.21773022147329,47.906886568377445,0 7.21795979947033,47.906682673698384,0 7.218199064302685,47.90646579121551,0 7.218413354076593,47.90628820802212,0 7.218702923838554,47.90605089099728,0 7.21986101621555,47.905273606473884,0 7.220919344392283,47.904625220360884,0 7.221235128094433,47.90437852488364,0 7.221493722622175,47.90414182946918,0 7.221615560428517,47.90398847693274,0 7.221787101601215,47.90368680648959,0 7.221881588063274,47.90345844238752,0 7.221986020468709,47.90323841178869,0 7.2221483918875276,47.90295132031008,0 7.222347310755023,47.90267461230087,0 7.22282471603701,47.902169533024335,0</coordinates>
 			</LineString>
 		</Placemark>
 		<Placemark>
@@ -1305,7 +1281,7 @@
 			<name>Guebwiller Heissenstein</name>
 			<Style>
 				<IconStyle>
-					<scale>1.410156</scale>
+					<scale>1.67456</scale>
 					<Icon>
 						<href>data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGNiYAAAAAkAAxkR2eQAAAAASUVORK5CYII=</href>
 						<gx:w>51</gx:w>
@@ -1325,33 +1301,10 @@
 			</Point>
 		</Placemark>
 		<Placemark>
-			<name>Guebwiller Centre</name>
-			<Style>
-				<IconStyle>
-					<scale>1.410156</scale>
-					<Icon>
-						<href>data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGNiYAAAAAkAAxkR2eQAAAAASUVORK5CYII=</href>
-						<gx:w>51</gx:w>
-						<gx:h>38</gx:h>
-					</Icon>
-					<color>ffffffff</color>
-					<hotSpot x="25.5" y="0" xunits="pixels" yunits="pixels"/>
-				</IconStyle>
-				<LabelStyle>
-					<color>ff006b00</color>
-					<LabelStyleSimpleExtensionGroup fontSize="16px" fontFamily="sans" haloColor="ffffffff" haloRadius="3" haloOpacity="1"/>
-				</LabelStyle>
-			</Style>
-			<ExtendedData/>
-			<Point>
-				<coordinates>7.20931428843324,47.91364668529852,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
 			<name>Guebwiller Gare</name>
 			<Style>
 				<IconStyle>
-					<scale>1.410156</scale>
+					<scale>1.67456</scale>
 					<Icon>
 						<href>data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGNiYAAAAAkAAxkR2eQAAAAASUVORK5CYII=</href>
 						<gx:w>51</gx:w>
@@ -1374,7 +1327,7 @@
 			<name>Guebwiller - Storck</name>
 			<Style>
 				<IconStyle>
-					<scale>1.410156</scale>
+					<scale>1.67456</scale>
 					<Icon>
 						<href>data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGNiYAAAAAkAAxkR2eQAAAAASUVORK5CYII=</href>
 						<gx:w>51</gx:w>
@@ -1397,7 +1350,7 @@
 			<name></name>
 			<Style>
 				<IconStyle>
-					<scale>0.000031</scale>
+					<scale>0.000001</scale>
 					<Icon>
 						<href>data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGNiYAAAAAkAAxkR2eQAAAAASUVORK5CYII=</href>
 						<gx:w>1</gx:w>
@@ -1420,7 +1373,7 @@
 			<name>Soultz Zone-Industrielle</name>
 			<Style>
 				<IconStyle>
-					<scale>1.410156</scale>
+					<scale>1.67456</scale>
 					<Icon>
 						<href>data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGNiYAAAAAkAAxkR2eQAAAAASUVORK5CYII=</href>
 						<gx:w>51</gx:w>
@@ -1443,7 +1396,7 @@
 			<name></name>
 			<Style>
 				<IconStyle>
-					<scale>0.000031</scale>
+					<scale>0.000001</scale>
 					<Icon>
 						<href>data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGNiYAAAAAkAAxkR2eQAAAAASUVORK5CYII=</href>
 						<gx:w>1</gx:w>
@@ -1466,7 +1419,7 @@
 			<name>Soultz Centre</name>
 			<Style>
 				<IconStyle>
-					<scale>1.410156</scale>
+					<scale>1.67456</scale>
 					<Icon>
 						<href>data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGNiYAAAAAkAAxkR2eQAAAAASUVORK5CYII=</href>
 						<gx:w>51</gx:w>
@@ -1489,7 +1442,7 @@
 			<name></name>
 			<Style>
 				<IconStyle>
-					<scale>0.000031</scale>
+					<scale>0.000001</scale>
 					<Icon>
 						<href>data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGNiYAAAAAkAAxkR2eQAAAAASUVORK5CYII=</href>
 						<gx:w>1</gx:w>
@@ -1512,7 +1465,7 @@
 			<name>Soultz Nouveau Monde</name>
 			<Style>
 				<IconStyle>
-					<scale>1.410156</scale>
+					<scale>1.67456</scale>
 					<Icon>
 						<href>data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGNiYAAAAAkAAxkR2eQAAAAASUVORK5CYII=</href>
 						<gx:w>51</gx:w>
@@ -1535,7 +1488,7 @@
 			<name></name>
 			<Style>
 				<IconStyle>
-					<scale>0.000031</scale>
+					<scale>0.000001</scale>
 					<Icon>
 						<href>data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGNiYAAAAAkAAxkR2eQAAAAASUVORK5CYII=</href>
 						<gx:w>1</gx:w>
@@ -1837,29 +1790,6 @@
 					<width>1</width>
 				</LineStyle>
 				<PolyStyle>
-					<color>19006b00</color>
-				</PolyStyle>
-			</Style>
-			<ExtendedData>
-				<Data name="measure">
-					<value>756.66 m^2</value>
-				</Data>
-			</ExtendedData>
-			<Polygon>
-				<outerBoundaryIs>
-					<LinearRing>
-						<coordinates>7.209711061741236,47.91323893215545,0 7.209646366680889,47.91319026027779,0 7.20931364922768,47.91346813183671,0 7.209184259106989,47.91361591642104,0 7.209054868986295,47.91394422677172,0 7.209042986220108,47.914019445831,0 7.2091288061981205,47.91402033076045,0 7.2091486108084295,47.91393891718687,0 7.209281961851183,47.913657508413564,0 7.209413992586584,47.91349025530434,0 7.209711061741236,47.91323893215545,0</coordinates>
-					</LinearRing>
-				</outerBoundaryIs>
-			</Polygon>
-		</Placemark>
-		<Placemark>
-			<Style>
-				<LineStyle>
-					<color>ff000000</color>
-					<width>1</width>
-				</LineStyle>
-				<PolyStyle>
 					<color>19006b6b</color>
 				</PolyStyle>
 			</Style>
@@ -1912,12 +1842,13 @@
 			<name>-- Vers Mulhouse --&gt;</name>
 			<Style>
 				<IconStyle>
-					<scale>0.03125</scale>
+					<scale>0.000977</scale>
 					<Icon>
 						<href>data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGNiYAAAAAkAAxkR2eQAAAAASUVORK5CYII=</href>
 						<gx:w>1</gx:w>
 						<gx:h>1</gx:h>
 					</Icon>
+					<color>ffffffff</color>
 					<hotSpot x="0" y="1" xunits="pixels" yunits="pixels"/>
 				</IconStyle>
 				<LabelStyle>
@@ -1925,12 +1856,84 @@
 					<LabelStyleSimpleExtensionGroup fontSize="16px" fontFamily="sans" haloColor="ffffffff" haloRadius="3" haloOpacity="1"/>
 				</LabelStyle>
 			</Style>
+			<ExtendedData/>
 			<Point>
-				<coordinates>7.276292826411628,47.75842243207353</coordinates>
+				<coordinates>7.276292826411628,47.75842243207353,0</coordinates>
 			</Point>
 		</Placemark>
 		<Placemark>
-			<name>&lt;-- Vers Thann --</name>
+			<name>
+				<![CDATA[&lt;-- Vers Thann --]]>
+			</name>
+			<Style>
+				<IconStyle>
+					<scale>0.000977</scale>
+					<Icon>
+						<href>data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGNiYAAAAAkAAxkR2eQAAAAASUVORK5CYII=</href>
+						<gx:w>1</gx:w>
+						<gx:h>1</gx:h>
+					</Icon>
+					<color>ffffffff</color>
+					<hotSpot x="0" y="1" xunits="pixels" yunits="pixels"/>
+				</IconStyle>
+				<LabelStyle>
+					<color>ff000000</color>
+					<LabelStyleSimpleExtensionGroup fontSize="16px" fontFamily="sans" haloColor="ffffffff" haloRadius="3" haloOpacity="1"/>
+				</LabelStyle>
+			</Style>
+			<ExtendedData/>
+			<Point>
+				<coordinates>7.222774377845887,47.78093686585649,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Style>
+				<LineStyle>
+					<color>ff000000</color>
+					<width>1</width>
+				</LineStyle>
+				<PolyStyle>
+					<color>19006b00</color>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<Data name="measure">
+					<value>834.15 m^2</value>
+				</Data>
+			</ExtendedData>
+			<Polygon>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>7.212275052322699,47.910856427813656 7.212354848040893,47.91089149780774 7.211552310046991,47.911655047207205 7.211518782434304,47.91156692386164 7.211555662808259,47.91153365276358 7.2117295404632085,47.911345128807255 7.212024583454846,47.91107176446616 7.212275052322699,47.910856427813656</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<Style>
+				<LineStyle>
+					<color>ff502a00</color>
+					<width>3</width>
+				</LineStyle>
+				<PolyStyle>
+					<color>7f006b00</color>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<Data name="measure">
+					<value>534.04 m^2</value>
+				</Data>
+			</ExtendedData>
+			<Polygon>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>7.2115369328786665,47.91161083730529 7.211517202560244,47.91156820959148 7.2115573939496205,47.91153146153411 7.211743735845819,47.911330571692815 7.212041882879733,47.91105716426557 7.212274992938115,47.9108567625637 7.21233491464591,47.91088371149297 7.212122996411019,47.91105863420185 7.211684544890554,47.9114893237296 7.2115369328786665,47.91161083730529</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>Guebwiller Centre</name>
 			<Style>
 				<IconStyle>
 					<scale>0.03125</scale>
@@ -1942,12 +1945,15 @@
 					<hotSpot x="0" y="1" xunits="pixels" yunits="pixels"/>
 				</IconStyle>
 				<LabelStyle>
-					<color>ff000000</color>
+					<color>ff006b00</color>
 					<LabelStyleSimpleExtensionGroup fontSize="16px" fontFamily="sans" haloColor="ffffffff" haloRadius="3" haloOpacity="1"/>
 				</LabelStyle>
 			</Style>
+			<ExtendedData>
+				<Data name="measure"/>
+			</ExtendedData>
 			<Point>
-				<coordinates>7.222774377845887,47.78093686585649</coordinates>
+				<coordinates>7.211876679556253,47.91133418503745</coordinates>
 			</Point>
 		</Placemark>
 	</Document>
