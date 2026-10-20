@@ -624,8 +624,8 @@ const stations = [
     },
     {
         name: 'Guebwiller Centre',
-        lat: 47.91364668529852,
-        lng: 7.20931428843324,
+        lat: 47.911329,
+        lng: 7.211857,
         desc: 'Gare nouvelle'
     },
     {
