@@ -1353,29 +1353,6 @@ strong {
     font-weight: 500;
 }
 
-.station-toggle {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    width: 100%;
-    margin-top: 10px;
-    padding: 6px 0 0;
-    background: transparent;
-    border: 0;
-    border-top: 1px solid var(--line);
-    color: var(--ink);
-    font: inherit;
-    text-align: left;
-}
-
-.station-toggle .legend-circle {
-    transition: opacity 0.2s ease;
-}
-
-.station-toggle.is-off .legend-circle {
-    opacity: 0.35;
-}
-
 /* ===== LEGEND MODAL ===== */
 .legend-modal {
     display: none;

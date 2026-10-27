@@ -689,6 +689,8 @@ stations.forEach(function(station) {
     marker.bindPopup(`<strong>${station.name}</strong><br>${station.desc}`);
 });
 
+layerControl.addOverlay(stationLayer, 'Stations');
+
 // Ajouter un contrôle d'échelle
 L.control.scale({
     metric: true,
@@ -772,10 +774,6 @@ legend.onAdd = function(map) {
                 <span class="legend-circle"></span>
                 <span class="legend-label">Gares impliquées</span>
             </div>
-            <button type="button" class="station-toggle" aria-pressed="true">
-                <span class="legend-circle"></span>
-                <span>Afficher les stations</span>
-            </button>
         </div>
     `;
     
@@ -791,29 +789,6 @@ legend.onAdd = function(map) {
 };
 
 legend.addTo(map);
-
-function updateStationToggleButtons(isVisible) {
-    document.querySelectorAll('.station-toggle').forEach((button) => {
-        button.setAttribute('aria-pressed', String(isVisible));
-        button.classList.toggle('is-off', !isVisible);
-    });
-}
-
-document.addEventListener('click', (event) => {
-    const toggle = event.target.closest('.station-toggle');
-    if (!toggle) {
-        return;
-    }
-
-    event.stopPropagation();
-    const isVisible = !map.hasLayer(stationLayer);
-    if (isVisible) {
-        stationLayer.addTo(map);
-    } else {
-        map.removeLayer(stationLayer);
-    }
-    updateStationToggleButtons(isVisible);
-});
 
 // Gérer la visibilité de la légende comme le mapInfo
 function setLegendVisible(isVisible) {
@@ -859,8 +834,8 @@ if (mapLegend) {
                 return;
             }
 
-            // Éviter d'ouvrir la modal si on clique sur un contrôle interactif
-            if (e.target.closest('a, button, input, select')) {
+            // Éviter d'ouvrir la modal si on clique sur un lien
+            if (e.target.tagName === 'A') {
                 return;
             }
             // Empêcher la propagation pour éviter de masquer la légende
