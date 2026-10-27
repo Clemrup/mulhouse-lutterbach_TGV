@@ -779,7 +779,7 @@ legend.onAdd = function(map) {
     
     div.innerHTML = legendHTML;
 
-    if (window.isMapPageOnly && layerControl && typeof layerControl.getContainer === 'function') {
+    if (layerControl && typeof layerControl.getContainer === 'function') {
         const controlsWrapper = L.DomUtil.create('div', 'legend-controls');
         controlsWrapper.appendChild(layerControl.getContainer());
         div.appendChild(controlsWrapper);
@@ -834,8 +834,8 @@ if (mapLegend) {
                 return;
             }
 
-            // Éviter d'ouvrir la modal si on clique sur un lien
-            if (e.target.tagName === 'A') {
+            // Éviter d'ouvrir la modal si on clique sur un contrôle interactif
+            if (e.target.closest('a, button, input, select')) {
                 return;
             }
             // Empêcher la propagation pour éviter de masquer la légende
