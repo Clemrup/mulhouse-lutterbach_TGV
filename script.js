@@ -689,7 +689,7 @@ stations.forEach(function(station) {
     marker.bindPopup(`<strong>${station.name}</strong><br>${station.desc}`);
 });
 
-layerControl.addOverlay(stationLayer, 'Stations');
+layerControl.addOverlay(stationLayer, 'Gares');
 
 // Ajouter un contrôle d'échelle
 L.control.scale({
