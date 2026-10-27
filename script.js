@@ -551,6 +551,13 @@ loadAllKMLLayers();
 // Toutes les gares extraites directement du fichier KML de QGIS
 const stations = [
     {
+        name: 'Lutterbach Gare',
+        lat: 47.75823730050314,
+        lng: 7.27699782134006,
+        desc: 'Gare existante'
+    },
+    
+    {
         name: 'Mulhouse-Lutterbach TGV',
         lat: 47.76944181370993,
         lng: 7.256109066861087,
@@ -563,10 +570,40 @@ const stations = [
         desc: 'Gare existante'
     },
     {
-        name: 'Lutterbach Gare',
-        lat: 47.75823730050314,
-        lng: 7.27699782134006,
-        desc: 'Gare existante réhabilitée'
+        name: 'Cernay',
+        lat: 47.80193411168679,
+        lng: 7.174072678830941,
+        desc: 'Gare existante'
+    },
+    {
+        name: 'Vieux-Thann ZI',
+        lat: 47.80211060859321,
+        lng: 7.133215624190292,
+        desc: 'Gare existante'
+    },
+    {
+        name: 'Vieux-Thann',
+        lat: 47.80576536668758,
+        lng: 7.119925679031059,
+        desc: 'Gare existante'
+    },
+    {
+        name: 'Thann Gare',
+        lat: 47.809210602284224,
+        lng: 7.107735041635592,
+        desc: 'Gare existante'
+    },
+    {
+        name: 'Thann Centre',
+        lat: 47.810004016642495,
+        lng: 7.101398869295936,
+        desc: 'Gare existante'
+    },
+    {
+        name: 'Thann St Jacques',
+        lat: 47.81339922645853,
+        lng: 7.0938648999934335,
+        desc: 'Gare existante'
     },
     {
         name: 'Richwiller',
