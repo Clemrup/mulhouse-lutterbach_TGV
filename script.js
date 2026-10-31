@@ -667,8 +667,8 @@ const stations = [
     },
     {
         name: 'Guebwiller Heissenstein',
-        lat: 47.917737510081224,
-        lng: 7.203332249402171,
+        lat: 47.91658176139836,
+        lng: 7.205671245992671,
         desc: 'Gare ancienne réhabilitée - terminus ligne Bollwiller-Guebwiller'
     }
 ];
