@@ -704,6 +704,9 @@ const legend = L.control({ position: 'bottomright' });
 legend.onAdd = function(map) {
     const div = L.DomUtil.create('div', 'map-legend');
     div.id = 'map-legend';
+    if (window.isMapPageOnly && mobileViewport.matches) {
+        div.classList.add('is-hidden');
+    }
     
     const legendHTML = `
         <div class="legend-content">
@@ -818,12 +821,6 @@ if (window.isMapPageOnly) {
 
     legendToggle.addTo(map);
 
-    if (mobileViewport.matches) {
-        const mapLegend = document.querySelector('.map-legend');
-        if (mapLegend) {
-            mapLegend.classList.add('is-hidden');
-        }
-    }
 }
 
 // Gérer la visibilité de la légende comme le mapInfo
