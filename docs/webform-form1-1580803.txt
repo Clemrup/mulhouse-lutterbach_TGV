@@ -328,24 +328,70 @@ Autre|Autre
       'weight' => '8',
       'page_num' => 2,
     ),
+    100 => 
+    array (
+      'nid' => 1580803,
+      'cid' => '100',
+      'pid' => '0',
+      'form_key' => 'new_1794476853370',
+      'name' => 'Où vous rendez-vous au moins une fois par mois, et pour quelle raison ?',
+      'type' => 'fieldset',
+      'value' => '',
+      'extra' => 
+      array (
+        'title_display' => 0,
+        'collapsible' => 0,
+        'collapsed' => 0,
+        'description' => '',
+        'description_above' => false,
+        'private' => 0,
+        'css_classes' => '',
+      ),
+      'required' => '0',
+      'weight' => '9',
+      'page_num' => 2,
+    ),
+    98 => 
+    array (
+      'nid' => 1580803,
+      'cid' => '98',
+      'pid' => '100',
+      'form_key' => 'new_1794475634310',
+      'name' => 'Nouveau champ "balisage"',
+      'type' => 'markup',
+      'value' => '<p>Il n\'est pas nécessaire de répondre pour les villes que vous ne fréquentez pas.
+
+Si vous avez sélectionné une ville par erreur, utilisez la colonne « Erreur de sélection » pour annuler votre choix.
+
+Si vous vous rendez dans une même ville pour plusieurs motifs, vous pourrez les préciser dans la zone de texte située sous le tableau.</p>',
+      'extra' => 
+      array (
+        'format' => 'wysiwyg_user',
+        'private' => false,
+        'display_on' => 'form',
+      ),
+      'required' => '0',
+      'weight' => '0',
+      'page_num' => 2,
+    ),
     24 => 
     array (
       'nid' => 1580803,
       'cid' => '24',
-      'pid' => '0',
+      'pid' => '100',
       'form_key' => 'new_1794245501697',
-      'name' => 'Où vous rendez-vous au moins une fois par mois, et pour quelle raison ?',
+      'name' => 'Grille où vous rendez-vous au moins une fois par mois, et pour quelle raison ?',
       'type' => 'grid',
       'value' => '',
       'extra' => 
       array (
         'options' => 'Travail|Travail
 Études|Études
+Domicile|Domicile
 Achats|Achats
 Loisirs|Loisirs
-Correspondances ferroviaires|Correspondances ferroviaires
-Aéroport|Aéroport
-1|oups...
+Correspondances ferroviaires|Correspondances avec transport quelconque
+0|Erreur de sélection
 ',
         'questions' => 'Altkirch|Altkirch
 Belfort|Belfort
@@ -379,19 +425,18 @@ Wittelsheim|Wittelsheim
         'optrand' => 0,
         'qrand' => 0,
         'unique' => 0,
-        'title_display' => 'before',
+        'title_display' => 'none',
         'custom_option_keys' => 1,
         'custom_question_keys' => 0,
         'sticky' => true,
-        'description' => ' Si vous avez sélectionné une ville par erreur, cliquez sur la colonne « Oups » pour corriger votre choix.
-| | | Si vous devez vous rendre dans une même ville pour plusieurs raisons, vous pouvez les préciser dans la zone de texte ci-dessous.',
+        'description' => '',
         'description_above' => false,
         'private' => 0,
         'analysis' => true,
         'wrapper_classes' => '',
       ),
       'required' => '0',
-      'weight' => '9',
+      'weight' => '1',
       'page_num' => 2,
     ),
     26 => 
@@ -422,7 +467,7 @@ Wittelsheim|Wittelsheim
         'wrapper_classes' => '',
       ),
       'required' => '0',
-      'weight' => '10',
+      'weight' => '12',
       'page_num' => 2,
     ),
     28 => 
@@ -441,7 +486,7 @@ Wittelsheim|Wittelsheim
         'prev_page_label' => '',
       ),
       'required' => '0',
-      'weight' => '11',
+      'weight' => '13',
       'page_num' => 3,
     ),
     87 => 
@@ -452,26 +497,7 @@ Wittelsheim|Wittelsheim
       'form_key' => 'new_1794326268486',
       'name' => 'Nouveau champ "balisage"',
       'type' => 'markup',
-      'value' => '
-<p>
-    Pour vous aider à remplir le(s) formulaire(s) suivant(s) et à identifier les lignes ferroviaires concernées, vous trouverez ci-dessous un schéma du réseau ainsi qu\'un lien vers une carte interactive.
-</p>
-
-<p><strong>Schéma des lignes ferroviaires :</strong></p>
-
-<p align="center">
-    <img
-        src="https://mulhouse-lutterbach-tgv.vercel.app/images/plan%20mulhouse-lutterbach-tgv.png"
-        alt="Schéma du réseau ferroviaire"
-        width="500"
-    >
-</p>
-
-<p>
-    <strong>Besoin de plus de détails ?</strong>
-    Consultez également notre <a href="https://mulhouse-lutterbach-tgv.vercel.app/carte.html" target="_blank"> carte interactive du réseau ferroviaire</a>
-</p>
-',
+      'value' => 'Pour vous aider à répondre aux questions suivantes, vous trouverez ci-dessous un schéma du réseau ainsi qu\'une carte interactive permettant de localiser précisément les nouvelles gares et dessertes proposées par le projet.',
       'extra' => 
       array (
         'format' => 'wysiwyg_user',
@@ -479,7 +505,7 @@ Wittelsheim|Wittelsheim
         'display_on' => 'form',
       ),
       'required' => '0',
-      'weight' => '12',
+      'weight' => '14',
       'page_num' => 3,
     ),
     55 => 
@@ -523,7 +549,7 @@ Wittelsheim|Wittelsheim
         'wrapper_classes' => '',
       ),
       'required' => '1',
-      'weight' => '13',
+      'weight' => '15',
       'page_num' => 3,
     ),
     57 => 
@@ -566,7 +592,7 @@ Wittelsheim|Wittelsheim
         'wrapper_classes' => '',
       ),
       'required' => '0',
-      'weight' => '14',
+      'weight' => '16',
       'page_num' => 3,
     ),
     59 => 
@@ -609,7 +635,7 @@ Wittelsheim|Wittelsheim
         'wrapper_classes' => '',
       ),
       'required' => '0',
-      'weight' => '15',
+      'weight' => '17',
       'page_num' => 3,
     ),
     61 => 
@@ -652,7 +678,7 @@ Wittelsheim|Wittelsheim
         'wrapper_classes' => '',
       ),
       'required' => '0',
-      'weight' => '16',
+      'weight' => '18',
       'page_num' => 3,
     ),
     63 => 
@@ -695,7 +721,7 @@ Wittelsheim|Wittelsheim
         'wrapper_classes' => '',
       ),
       'required' => '0',
-      'weight' => '17',
+      'weight' => '19',
       'page_num' => 3,
     ),
     65 => 
@@ -738,7 +764,7 @@ Wittelsheim|Wittelsheim
         'wrapper_classes' => '',
       ),
       'required' => '0',
-      'weight' => '18',
+      'weight' => '20',
       'page_num' => 3,
     ),
     67 => 
@@ -781,7 +807,7 @@ Wittelsheim|Wittelsheim
         'wrapper_classes' => '',
       ),
       'required' => '0',
-      'weight' => '19',
+      'weight' => '21',
       'page_num' => 3,
     ),
     69 => 
@@ -824,7 +850,7 @@ Wittelsheim|Wittelsheim
         'wrapper_classes' => '',
       ),
       'required' => '0',
-      'weight' => '20',
+      'weight' => '22',
       'page_num' => 3,
     ),
     71 => 
@@ -867,7 +893,7 @@ Wittelsheim|Wittelsheim
         'wrapper_classes' => '',
       ),
       'required' => '0',
-      'weight' => '21',
+      'weight' => '23',
       'page_num' => 3,
     ),
     73 => 
@@ -910,7 +936,7 @@ Wittelsheim|Wittelsheim
         'wrapper_classes' => '',
       ),
       'required' => '0',
-      'weight' => '22',
+      'weight' => '24',
       'page_num' => 3,
     ),
     75 => 
@@ -953,7 +979,7 @@ Wittelsheim|Wittelsheim
         'wrapper_classes' => '',
       ),
       'required' => '0',
-      'weight' => '23',
+      'weight' => '25',
       'page_num' => 3,
     ),
     77 => 
@@ -996,7 +1022,7 @@ Vieux-Thann|Vieux-Thann
         'wrapper_classes' => '',
       ),
       'required' => '0',
-      'weight' => '24',
+      'weight' => '26',
       'page_num' => 3,
     ),
     30 => 
@@ -1048,7 +1074,7 @@ Thann Gare|Thann Gare -- 30min
         'wrapper_classes' => '',
       ),
       'required' => '1',
-      'weight' => '25',
+      'weight' => '27',
       'page_num' => 3,
     ),
     32 => 
@@ -1095,7 +1121,7 @@ Guebwiller Heissenstein|Guebwiller Heissenstein -- 38 min
         'wrapper_classes' => '',
       ),
       'required' => '1',
-      'weight' => '26',
+      'weight' => '28',
       'page_num' => 3,
     ),
     35 => 
@@ -1142,7 +1168,7 @@ Guebwiller Heissenstein|Guebwiller Heissenstein --36 à 51min
         'wrapper_classes' => '',
       ),
       'required' => '1',
-      'weight' => '27',
+      'weight' => '29',
       'page_num' => 3,
     ),
     37 => 
@@ -1188,7 +1214,7 @@ Guebwiller Heissenstein|Guebwiller Heissenstein -- 22 à 33min
         'wrapper_classes' => '',
       ),
       'required' => '1',
-      'weight' => '28',
+      'weight' => '30',
       'page_num' => 3,
     ),
     39 => 
@@ -1241,7 +1267,7 @@ Gare Centrale|Gare Centrale TRAM (avec correspondance TER et TGV) -- 45 à 50min
         'wrapper_classes' => '',
       ),
       'required' => '1',
-      'weight' => '29',
+      'weight' => '31',
       'page_num' => 3,
     ),
     43 => 
@@ -1288,7 +1314,7 @@ Guebwiller Heissenstein|Guebwiller Heissenstein -- 32min
         'wrapper_classes' => '',
       ),
       'required' => '1',
-      'weight' => '30',
+      'weight' => '32',
       'page_num' => 3,
     ),
     45 => 
@@ -1344,7 +1370,7 @@ Guebwiller Heissenstein|Guebwiller Heissenstein -- 26min
         'wrapper_classes' => '',
       ),
       'required' => '1',
-      'weight' => '31',
+      'weight' => '33',
       'page_num' => 3,
     ),
     47 => 
@@ -1398,7 +1424,7 @@ Gare Centrale|Gare Centrale TRAM -- 38 à 44min
         'wrapper_classes' => '',
       ),
       'required' => '1',
-      'weight' => '32',
+      'weight' => '34',
       'page_num' => 3,
     ),
     49 => 
@@ -1451,7 +1477,7 @@ Thann Gare|Thann Gare -- 26min
         'wrapper_classes' => '',
       ),
       'required' => '1',
-      'weight' => '33',
+      'weight' => '35',
       'page_num' => 3,
     ),
     51 => 
@@ -1498,7 +1524,7 @@ Guebwiller Heissenstein|Guebwiller Heissenstein -- 45min
         'wrapper_classes' => '',
       ),
       'required' => '1',
-      'weight' => '34',
+      'weight' => '36',
       'page_num' => 3,
     ),
     53 => 
@@ -1545,7 +1571,7 @@ Guebwiller Heissenstein|Guebwiller Heissenstein -- 41 à 43min
         'wrapper_classes' => '',
       ),
       'required' => '1',
-      'weight' => '35',
+      'weight' => '37',
       'page_num' => 3,
     ),
     79 => 
@@ -1564,7 +1590,7 @@ Guebwiller Heissenstein|Guebwiller Heissenstein -- 41 à 43min
         'prev_page_label' => '',
       ),
       'required' => '0',
-      'weight' => '36',
+      'weight' => '38',
       'page_num' => 4,
     ),
     80 => 
@@ -1602,7 +1628,7 @@ Je n\'utilise pas de voiture|Je n\'utilise pas de voiture
         'wrapper_classes' => '',
       ),
       'required' => '1',
-      'weight' => '37',
+      'weight' => '39',
       'page_num' => 4,
     ),
     82 => 
@@ -1640,7 +1666,7 @@ Je n\'utilise pas de voiture|Je n\'utilise pas de voiture
         'wrapper_classes' => '',
       ),
       'required' => '1',
-      'weight' => '38',
+      'weight' => '40',
       'page_num' => 4,
     ),
     84 => 
@@ -1659,7 +1685,7 @@ Je n\'utilise pas de voiture|Je n\'utilise pas de voiture
         'prev_page_label' => '',
       ),
       'required' => '0',
-      'weight' => '39',
+      'weight' => '41',
       'page_num' => 5,
     ),
     85 => 
@@ -1717,7 +1743,7 @@ Je n\'utilise pas de voiture|Je n\'utilise pas de voiture
         'display_on' => 'form',
       ),
       'required' => '0',
-      'weight' => '40',
+      'weight' => '42',
       'page_num' => 5,
     ),
     89 => 
@@ -1754,7 +1780,7 @@ Je ne sais pas',
         'wrapper_classes' => '',
       ),
       'required' => '1',
-      'weight' => '41',
+      'weight' => '43',
       'page_num' => 5,
     ),
     90 => 
@@ -1798,7 +1824,7 @@ Autre|Autre
         'wrapper_classes' => '',
       ),
       'required' => '1',
-      'weight' => '42',
+      'weight' => '44',
       'page_num' => 5,
     ),
     92 => 
@@ -1832,7 +1858,7 @@ Autre|Autre
         'wrapper_classes' => '',
       ),
       'required' => '1',
-      'weight' => '43',
+      'weight' => '45',
       'page_num' => 5,
     ),
     94 => 
@@ -1889,7 +1915,7 @@ Exceptionnellement.',
         'wrapper_classes' => '',
       ),
       'required' => '1',
-      'weight' => '44',
+      'weight' => '46',
       'page_num' => 5,
     ),
   ),
@@ -2034,7 +2060,7 @@ Exceptionnellement.',
           'rgid' => '3',
           'aid' => '0',
           'target_type' => 'component',
-          'target' => '24',
+          'target' => '100',
           'invert' => '0',
           'action' => 'show',
           'argument' => '',

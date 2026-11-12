@@ -1250,6 +1250,29 @@ strong {
     display: none;
 }
 
+.legend-toggle {
+    display: none;
+    min-height: 36px;
+    margin: 10px;
+    padding: 0 12px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: rgba(16, 23, 34, 0.95);
+    color: var(--ink);
+    font: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.legend-toggle:hover,
+.legend-toggle:focus-visible {
+    background: var(--blue);
+    color: var(--white);
+    border-color: var(--blue);
+}
+
 .map-legend::-webkit-scrollbar {
     width: 6px;
     border-top-left-radius: 8px;
@@ -1895,6 +1918,10 @@ strong {
         height: 100dvh;
         scroll-padding-top: 112px;
         padding: 0 18px 88px;
+    }
+
+    body.carte-page .legend-toggle {
+        display: block;
     }
 
     .desktop-resizer {
