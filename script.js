@@ -841,8 +841,8 @@ function setLegendVisible(isVisible) {
 
 const mapLegend = document.querySelector('.map-legend');
 if (mapLegend) {
-    // Sur la page carte, la légende est toujours visible
-    if (window.isMapPageOnly) {
+    // Sur mobile, la légende reste repliée par défaut sur la page carte.
+    if (window.isMapPageOnly && !mobileViewport.matches) {
         mapLegend.classList.remove('is-hidden');
     } else {
         // Masquer la légende dès que l'utilisateur manipule la carte
