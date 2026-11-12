@@ -307,7 +307,7 @@ Marche|Marche
 Études|Études
 Achats|Achats
 Loisirs|Loisirs
-Correspondances ferroviaires|Correspondances Ferroviaires
+Correspondances ferroviaires|Correspondances ferroviaires
 Aéroport|Aéroport
 1|oups...
 ',
@@ -1189,7 +1189,7 @@ Vieux-Thann ZI|Vieux-Thann ZI -- 36 à 41min
 Vieux-Thann|Vieux-Thann -- 39 à 44min
 Porte Jeune|Porte Jeune TRAM -- 40 à 45min
 Thann Gare|Thann Gare -- 41 à 46min
-Gare Centrale|Gare Centrale TRAM (avec correspondance TERs/TGVs) -- 45 à 50min
+Gare Centrale|Gare Centrale TRAM (avec correspondance TER et TGV) -- 45 à 50min
 ',
         'optrand' => 0,
         'qrand' => 0,
@@ -1290,7 +1290,7 @@ Thann Gare|Thann Gare -- 20min
 Soultz ZI|Soultz ZI -- 20min
 Guebwiller – Storck|Guebwiller – Storck -- 21min
 Guebwiller Gare|Guebwiller Gare -- 22min
-Gare Centrale|Gare Centrale TRAM (avec correspondance TERs/TGVs) -- 24min
+Gare Centrale|Gare Centrale TRAM (avec correspondance TER et TGV) -- 24min
 Guebwiller Centre|Guebwiller Centre -- 24min
 Guebwiller Heissenstein|Guebwiller Heissenstein -- 26min
 ',
@@ -1537,7 +1537,7 @@ Guebwiller Heissenstein|Guebwiller Heissenstein -- 41 à 43min
       'cid' => '80',
       'pid' => '0',
       'form_key' => 'new_1794323924075',
-      'name' => 'Remplaceriez-vous certains de vos trajets actuel en voiture par le train ?',
+      'name' => 'Remplaceriez-vous certains de vos trajets actuels en voiture par le train ?',
       'type' => 'select',
       'value' => '',
       'extra' => 
@@ -1546,7 +1546,7 @@ Guebwiller Heissenstein|Guebwiller Heissenstein -- 41 à 43min
 Souvent|Oui, souvent
 Parfois|Oui, occasionnellement
 Non|Non
-Je n\'utilise pas de voiture
+Je n\'utilise pas de voiture|Je n\'utilise pas de voiture
 ',
         'multiple' => false,
         'aslist' => false,
@@ -2482,7 +2482,7 @@ Exceptionnellement.',
           'rgid' => '8',
           'rid' => '2',
           'source_type' => 'component',
-          'source' => '55',
+          'source' => '57',
           'operator' => 'equal',
           'value' => 'Guebwiller',
         ),
@@ -4179,7 +4179,7 @@ Exceptionnellement.',
           'rid' => '2',
           'source_type' => 'conditional_start',
           'source' => '0',
-          'operator' => 'or',
+          'operator' => 'and',
           'value' => NULL,
         ),
         3 => 
