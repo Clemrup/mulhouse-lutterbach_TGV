@@ -703,6 +703,10 @@ const legend = L.control({ position: 'bottomright' });
 
 legend.onAdd = function(map) {
     const div = L.DomUtil.create('div', 'map-legend');
+    div.id = 'map-legend';
+    if (window.isMapPageOnly && mobileViewport.matches) {
+        div.classList.add('is-hidden');
+    }
     
     const legendHTML = `
         <div class="legend-content">
@@ -790,6 +794,35 @@ legend.onAdd = function(map) {
 
 legend.addTo(map);
 
+// Ajouter un bouton pour replier la légende sur la page carte mobile
+if (window.isMapPageOnly) {
+    const legendToggle = L.control({ position: 'bottomright' });
+
+    legendToggle.onAdd = function() {
+        const button = L.DomUtil.create('button', 'legend-toggle');
+        button.type = 'button';
+        button.textContent = 'Afficher la légende';
+        button.setAttribute('aria-controls', 'map-legend');
+        button.setAttribute('aria-expanded', 'false');
+        L.DomEvent.disableClickPropagation(button);
+        L.DomEvent.on(button, 'click', () => {
+            const mapLegend = document.querySelector('.map-legend');
+            if (!mapLegend) {
+                return;
+            }
+
+            const isHidden = mapLegend.classList.toggle('is-hidden');
+            button.textContent = isHidden ? 'Afficher la légende' : 'Masquer la légende';
+            button.setAttribute('aria-expanded', String(!isHidden));
+        });
+
+        return button;
+    };
+
+    legendToggle.addTo(map);
+
+}
+
 // Gérer la visibilité de la légende comme le mapInfo
 function setLegendVisible(isVisible) {
     // Sur la page carte, la légende est toujours visible
@@ -808,8 +841,8 @@ function setLegendVisible(isVisible) {
 
 const mapLegend = document.querySelector('.map-legend');
 if (mapLegend) {
-    // Sur la page carte, la légende est toujours visible
-    if (window.isMapPageOnly) {
+    // Sur mobile, la légende reste repliée par défaut sur la page carte.
+    if (window.isMapPageOnly && !mobileViewport.matches) {
         mapLegend.classList.remove('is-hidden');
     } else {
         // Masquer la légende dès que l'utilisateur manipule la carte
