@@ -1,13 +1,13 @@
 $webform = array (
   'nid' => '1580803',
-  'next_serial' => '2',
+  'next_serial' => '12',
   'confirmation' => '',
   'confirmation_format' => 'wysiwyg_user',
   'redirect_url' => '<confirmation>',
   'status' => '1',
   'block' => '0',
-  'allow_draft' => '0',
-  'auto_save' => '0',
+  'allow_draft' => '1',
+  'auto_save' => '1',
   'submit_notice' => '1',
   'confidential' => '0',
   'submit_text' => '',
@@ -18,9 +18,9 @@ $webform = array (
   'progressbar_bar' => '1',
   'progressbar_page_number' => '0',
   'progressbar_percent' => '0',
-  'progressbar_pagebreak_labels' => '1',
+  'progressbar_pagebreak_labels' => '0',
   'progressbar_include_confirmation' => '1',
-  'progressbar_label_first' => 'Votre profil',
+  'progressbar_label_first' => 'Introduction',
   'progressbar_label_confirmation' => 'Terminé',
   'preview' => '1',
   'preview_next_button_label' => '',
@@ -44,6 +44,44 @@ $webform = array (
   ),
   'components' => 
   array (
+    101 => 
+    array (
+      'nid' => 1580803,
+      'cid' => '101',
+      'pid' => '0',
+      'form_key' => 'new_1794478880585',
+      'name' => 'Introduction',
+      'type' => 'markup',
+      'value' => '<div style="color: #000000; font-family: \'Segoe UI\',sans-serif; line-height: 1.6; max-width: 900px;"><p style="text-align: center;">&nbsp;</p><h2 style="color: #1d4f91;">Étude citoyenne sur les déplacements dans le bassin mulhousien</h2><p>Bonjour et merci de prendre quelques minutes pour répondre à cette enquête.</p><p>Cette étude a pour objectif de mieux comprendre les besoins de déplacement des habitants du Florival, de l\'agglomération mulhousienne et des territoires voisins.</p><p>Elle s\'intéresse aux déplacements quotidiens (travail, études, achats, loisirs, santé), mais également aux déplacements régionaux et longue distance (accès aux gares, correspondances ferroviaires et aéroports).</p><p>Les réponses sont entièrement anonymes et seront utilisées uniquement à des fins statistiques afin d\'identifier les besoins de mobilité du territoire.</p><p>Les résultats permettront d\'évaluer l\'intérêt potentiel de nouvelles dessertes ferroviaires et de nouvelles connexions de transport public dans le sud de l\'Alsace.</p><p style="text-align: center;">&nbsp;</p><div style="background: #f5f7fa; border-left: 4px solid #1d4f91; padding: 12px; margin-top: 15px;"><strong>Informations utiles :</strong><ul><li>⏱️ Temps de réponse estimé : 5 à 10 minutes</li><li>🔒 Aucune donnée personnelle nominative n\'est collectée</li><li>📊 Les résultats pourront être rendus publics sous forme statistique</li><li>🚆 Certaines questions présentent des temps de trajet issus de scénarios d\'étude ferroviaire</li></ul></div><h3 style="color: #1d4f91;">&nbsp;</h3><h3 style="color: #1d4f91;">&nbsp;</h3><h3 style="color: #1d4f91;">Pour en savoir plus</h3><p>Cette enquête s\'inscrit dans une réflexion citoyenne autour de l\'amélioration des mobilités dans le sud de l\'Alsace.</p><div style="font-family: \'Segoe UI\'; line-height: 20px;">Certaines questions présentent des gares nouvelles, réhabilitées ou des liaisons ferroviaires qui n\'existent pas aujourd\'hui. Afin de mieux comprendre leur emplacement, leurs correspondances et les temps de trajet proposés, vous pouvez consulter la carte interactive du projet.</div><div style="font-family: \'Segoe UI\'; line-height: 20px;">&nbsp;</div><p>🔗 Carte interactive du projet : <br /> <a href="https://mulhouse-lutterbach-tgv.vercel.app/carte.html" target="_blank"> https://mulhouse-lutterbach-tgv.vercel.app/carte.html</a></p><p>&nbsp;</p><p>📄 Dossier complet du projet : <br /> <a href="https://mulhouse-lutterbach-tgv.vercel.app/dossierOfficiel/Le_Projet.pdf" target="_blank"> Consulter le dossier officiel </a></p><p>La consultation du dossier officiel n\'est pas nécessaire pour répondre au questionnaire, mais&nbsp;<span style="font-family: \'Segoe UI\';">nous vous recommandons tout de même de consulter la carte interactive avant de répondre aux questions concernant les futures dessertes ferroviaires. Elle vous permettra de localiser les différentes gares proposées et mieux apprécier l\'intérêt potentiel de chaque liaison.</span></p></div>',
+      'extra' => 
+      array (
+        'format' => 'wysiwyg_user',
+        'private' => false,
+        'display_on' => 'form',
+      ),
+      'required' => '0',
+      'weight' => '0',
+      'page_num' => 1,
+    ),
+    102 => 
+    array (
+      'nid' => 1580803,
+      'cid' => '102',
+      'pid' => '0',
+      'form_key' => 'progressbar_label_first',
+      'name' => 'Votre profil',
+      'type' => 'pagebreak',
+      'value' => '',
+      'extra' => 
+      array (
+        'private' => false,
+        'next_page_label' => '',
+        'prev_page_label' => '',
+      ),
+      'required' => '0',
+      'weight' => '1',
+      'page_num' => 2,
+    ),
     2 => 
     array (
       'nid' => 1580803,
@@ -86,8 +124,8 @@ Autre|Autre
         'wrapper_classes' => '',
       ),
       'required' => '1',
-      'weight' => '1',
-      'page_num' => 1,
+      'weight' => '2',
+      'page_num' => 2,
     ),
     4 => 
     array (
@@ -120,8 +158,8 @@ Autre|Autre
         'wrapper_classes' => '',
       ),
       'required' => '1',
-      'weight' => '2',
-      'page_num' => 1,
+      'weight' => '3',
+      'page_num' => 2,
     ),
     6 => 
     array (
@@ -159,8 +197,8 @@ Autre|Autre
         'wrapper_classes' => '',
       ),
       'required' => '1',
-      'weight' => '3',
-      'page_num' => 1,
+      'weight' => '4',
+      'page_num' => 2,
     ),
     8 => 
     array (
@@ -198,8 +236,8 @@ Autre|Autre
         'wrapper_classes' => '',
       ),
       'required' => '1',
-      'weight' => '4',
-      'page_num' => 1,
+      'weight' => '5',
+      'page_num' => 2,
     ),
     41 => 
     array (
@@ -232,8 +270,8 @@ Autre|Autre
         'wrapper_classes' => '',
       ),
       'required' => '0',
-      'weight' => '5',
-      'page_num' => 1,
+      'weight' => '6',
+      'page_num' => 2,
     ),
     10 => 
     array (
@@ -251,8 +289,8 @@ Autre|Autre
         'prev_page_label' => '',
       ),
       'required' => '0',
-      'weight' => '6',
-      'page_num' => 2,
+      'weight' => '7',
+      'page_num' => 3,
     ),
     12 => 
     array (
@@ -291,8 +329,8 @@ Autre|Autre
         'wrapper_classes' => '',
       ),
       'required' => '1',
-      'weight' => '7',
-      'page_num' => 2,
+      'weight' => '8',
+      'page_num' => 3,
     ),
     96 => 
     array (
@@ -325,8 +363,8 @@ Autre|Autre
         'wrapper_classes' => '',
       ),
       'required' => '1',
-      'weight' => '8',
-      'page_num' => 2,
+      'weight' => '9',
+      'page_num' => 3,
     ),
     100 => 
     array (
@@ -348,8 +386,8 @@ Autre|Autre
         'css_classes' => '',
       ),
       'required' => '0',
-      'weight' => '9',
-      'page_num' => 2,
+      'weight' => '10',
+      'page_num' => 3,
     ),
     98 => 
     array (
@@ -372,7 +410,7 @@ Si vous vous rendez dans une même ville pour plusieurs motifs, vous pourrez les
       ),
       'required' => '0',
       'weight' => '0',
-      'page_num' => 2,
+      'page_num' => 3,
     ),
     24 => 
     array (
@@ -390,8 +428,9 @@ Si vous vous rendez dans une même ville pour plusieurs motifs, vous pourrez les
 Domicile|Domicile
 Achats|Achats
 Loisirs|Loisirs
-Correspondances ferroviaires|Correspondances avec transport quelconque
-0|Erreur de sélection
+Corresp. fer.|Correspondance ferroviaire
+Corresp. aer.|Correspondance aérienne
+Erreur|Erreur de sélection
 ',
         'questions' => 'Altkirch|Altkirch
 Belfort|Belfort
@@ -437,7 +476,7 @@ Wittelsheim|Wittelsheim
       ),
       'required' => '0',
       'weight' => '1',
-      'page_num' => 2,
+      'page_num' => 3,
     ),
     26 => 
     array (
@@ -467,8 +506,8 @@ Wittelsheim|Wittelsheim
         'wrapper_classes' => '',
       ),
       'required' => '0',
-      'weight' => '12',
-      'page_num' => 2,
+      'weight' => '11',
+      'page_num' => 3,
     ),
     28 => 
     array (
@@ -486,8 +525,8 @@ Wittelsheim|Wittelsheim
         'prev_page_label' => '',
       ),
       'required' => '0',
-      'weight' => '13',
-      'page_num' => 3,
+      'weight' => '12',
+      'page_num' => 4,
     ),
     87 => 
     array (
@@ -497,7 +536,26 @@ Wittelsheim|Wittelsheim
       'form_key' => 'new_1794326268486',
       'name' => 'Nouveau champ "balisage"',
       'type' => 'markup',
-      'value' => 'Pour vous aider à répondre aux questions suivantes, vous trouverez ci-dessous un schéma du réseau ainsi qu\'une carte interactive permettant de localiser précisément les nouvelles gares et dessertes proposées par le projet.',
+      'value' => 'Pour vous aider à répondre aux questions suivantes, vous trouverez ci-dessous un schéma du réseau ainsi qu\'une carte interactive permettant de localiser précisément les nouvelles gares et dessertes proposées par le projet.
+<p><strong>Schéma des lignes ferroviaires :</strong></p>
+
+<p align="center">
+    <img
+        src="https://mulhouse-lutterbach-tgv.vercel.app/images/plan%20mulhouse-lutterbach-tgv.png"
+        alt="Schéma du réseau ferroviaire"
+        width="500"
+    >
+</p>
+
+<p>
+    <strong>Pour découvrir le projet plus en détail :</strong>
+    Consultez également notre <a href="https://mulhouse-lutterbach-tgv.vercel.app/carte.html" target="_blank"> carte interactive du réseau ferroviaire</a>
+</p>
+<p>
+    <strong>Votre avis compte !</strong> Une réponse est obligatoire pour chacune des dessertes proposées afin de pouvoir passer à la suite du questionnaire.
+    Pour chaque desserte, sélectionnez une seule réponse parmi les cinq choix suivants :
+    « Très utile », « Plutôt utile », « Peu utile », « Inutile » ou « Je ne sais pas ».
+</p>',
       'extra' => 
       array (
         'format' => 'wysiwyg_user',
@@ -505,525 +563,8 @@ Wittelsheim|Wittelsheim
         'display_on' => 'form',
       ),
       'required' => '0',
-      'weight' => '14',
-      'page_num' => 3,
-    ),
-    55 => 
-    array (
-      'nid' => 1580803,
-      'cid' => '55',
-      'pid' => '0',
-      'form_key' => 'new_1794317265358',
-      'name' => 'Pour quelle(s) commune(s) souhaitez-vous évaluer les nouvelles dessertes ferroviaires proposées ?',
-      'type' => 'select',
-      'value' => '',
-      'extra' => 
-      array (
-        'items' => 'Bollwiller|Bollwiller
-Cernay|Cernay
-Guebwiller|Guebwiller
-Lutterbach|Lutterbach
-Mulhouse|Mulhouse
-Richwiller|Richwiller
-Soultz|Soultz
-Staffelfelden|Staffelfelden
-Thann|Thann
-Vieux-Thann|Vieux-Thann
-Wittelsheim|Wittelsheim
-',
-        'multiple' => true,
-        'aslist' => false,
-        'empty_option' => '',
-        'optrand' => 0,
-        'other_option' => NULL,
-        'other_text' => 'Autre...',
-        'title_display' => 'before',
-        'description' => 'Vous avez indiqué résider dans une commune qui n\'est pas directement concernée par le projet. Afin de poursuivre l\'enquête, veuillez sélectionner la ou les communes du projet que vous fréquentez le plus régulièrement (services, commerces, transports, études, travail ou loisirs).',
-        'description_above' => false,
-        'custom_keys' => 0,
-        'options_source' => '',
-        'private' => 0,
-        'analysis' => true,
-        'value' => '1,2',
-        'css_classes' => '',
-        'wrapper_classes' => '',
-      ),
-      'required' => '1',
-      'weight' => '15',
-      'page_num' => 3,
-    ),
-    57 => 
-    array (
-      'nid' => 1580803,
-      'cid' => '57',
-      'pid' => '0',
-      'form_key' => 'new_1794318741515',
-      'name' => 'Les questions concernant les nouvelles dessertes ferroviaires depuis Bollwiller vous seront automatiquement proposées.  Souhaitez-vous également évaluer les dessertes proposées depuis une ou plusieurs autres commune(s) concernée(s) par le projet ?',
-      'type' => 'select',
-      'value' => '',
-      'extra' => 
-      array (
-        'items' => 'Cernay|Cernay
-Guebwiller|Guebwiller
-Lutterbach|Lutterbach
-Mulhouse|Mulhouse
-Richwiller|Richwiller
-Soultz|Soultz
-Staffelfelden|Staffelfelden
-Thann|Thann
-Vieux-Thann|Vieux-Thann
-Wittelsheim|Wittelsheim
-',
-        'multiple' => true,
-        'aslist' => false,
-        'empty_option' => '',
-        'optrand' => 0,
-        'other_option' => NULL,
-        'other_text' => 'Autre...',
-        'title_display' => 'before',
-        'description' => '',
-        'description_above' => false,
-        'custom_keys' => 1,
-        'options_source' => '',
-        'private' => 0,
-        'analysis' => true,
-        'value' => '1,2',
-        'css_classes' => '',
-        'wrapper_classes' => '',
-      ),
-      'required' => '0',
-      'weight' => '16',
-      'page_num' => 3,
-    ),
-    59 => 
-    array (
-      'nid' => 1580803,
-      'cid' => '59',
-      'pid' => '0',
-      'form_key' => 'new_1794319462810',
-      'name' => 'Les questions concernant les nouvelles dessertes ferroviaires depuis Cernay vous seront automatiquement proposées.  Souhaitez-vous également évaluer les dessertes proposées depuis une ou plusieurs autres commune(s) concernée(s) par le projet ?',
-      'type' => 'select',
-      'value' => '',
-      'extra' => 
-      array (
-        'items' => 'Bollwiller|Bollwiller
-Guebwiller|Guebwiller
-Lutterbach|Lutterbach
-Mulhouse|Mulhouse
-Richwiller|Richwiller
-Soultz|Soultz
-Staffelfelden|Staffelfelden
-Thann|Thann
-Vieux-Thann|Vieux-Thann
-Wittelsheim|Wittelsheim
-',
-        'multiple' => true,
-        'aslist' => false,
-        'empty_option' => '',
-        'optrand' => 0,
-        'other_option' => NULL,
-        'other_text' => 'Autre...',
-        'title_display' => 'before',
-        'description' => '',
-        'description_above' => false,
-        'custom_keys' => 1,
-        'options_source' => '',
-        'private' => 0,
-        'analysis' => true,
-        'value' => '1,2',
-        'css_classes' => '',
-        'wrapper_classes' => '',
-      ),
-      'required' => '0',
-      'weight' => '17',
-      'page_num' => 3,
-    ),
-    61 => 
-    array (
-      'nid' => 1580803,
-      'cid' => '61',
-      'pid' => '0',
-      'form_key' => 'new_1794319625523',
-      'name' => 'Les questions concernant les nouvelles dessertes ferroviaires depuis Guebwiller vous seront automatiquement proposées.  Souhaitez-vous également évaluer les dessertes proposées depuis une ou plusieurs autres commune(s) concernée(s) par le projet ?',
-      'type' => 'select',
-      'value' => '',
-      'extra' => 
-      array (
-        'items' => 'Bollwiller|Bollwiller
-Cernay|Cernay
-Lutterbach|Lutterbach
-Mulhouse|Mulhouse
-Richwiller|Richwiller
-Soultz|Soultz
-Staffelfelden|Staffelfelden
-Thann|Thann
-Vieux-Thann|Vieux-Thann
-Wittelsheim|Wittelsheim
-',
-        'multiple' => true,
-        'aslist' => false,
-        'empty_option' => '',
-        'optrand' => 0,
-        'other_option' => NULL,
-        'other_text' => 'Autre...',
-        'title_display' => 'before',
-        'description' => '',
-        'description_above' => false,
-        'custom_keys' => 1,
-        'options_source' => '',
-        'private' => 0,
-        'analysis' => true,
-        'value' => '1,2',
-        'css_classes' => '',
-        'wrapper_classes' => '',
-      ),
-      'required' => '0',
-      'weight' => '18',
-      'page_num' => 3,
-    ),
-    63 => 
-    array (
-      'nid' => 1580803,
-      'cid' => '63',
-      'pid' => '0',
-      'form_key' => 'new_1794319854378',
-      'name' => 'Les questions concernant les nouvelles dessertes ferroviaires depuis Lutterbach vous seront automatiquement proposées.  Souhaitez-vous également évaluer les dessertes proposées depuis une ou plusieurs autres commune(s) concernée(s) par le projet ?',
-      'type' => 'select',
-      'value' => '',
-      'extra' => 
-      array (
-        'items' => 'Bollwiller|Bollwiller
-Cernay|Cernay
-Guebwiller|Guebwiller
-Mulhouse|Mulhouse
-Richwiller|Richwiller
-Soultz|Soultz
-Staffelfelden|Staffelfelden
-Thann|Thann
-Vieux-Thann|Vieux-Thann
-Wittelsheim|Wittelsheim
-',
-        'multiple' => true,
-        'aslist' => false,
-        'empty_option' => '',
-        'optrand' => 0,
-        'other_option' => NULL,
-        'other_text' => 'Autre...',
-        'title_display' => 'before',
-        'description' => '',
-        'description_above' => false,
-        'custom_keys' => 1,
-        'options_source' => '',
-        'private' => 0,
-        'analysis' => true,
-        'value' => '1,2',
-        'css_classes' => '',
-        'wrapper_classes' => '',
-      ),
-      'required' => '0',
-      'weight' => '19',
-      'page_num' => 3,
-    ),
-    65 => 
-    array (
-      'nid' => 1580803,
-      'cid' => '65',
-      'pid' => '0',
-      'form_key' => 'new_1794320038227',
-      'name' => 'Les questions concernant les nouvelles dessertes ferroviaires depuis Mulhouse vous seront automatiquement proposées.  Souhaitez-vous également évaluer les dessertes proposées depuis une ou plusieurs autres commune(s) concernée(s) par le projet ?',
-      'type' => 'select',
-      'value' => '',
-      'extra' => 
-      array (
-        'items' => 'Bollwiller|Bollwiller
-Cernay|Cernay
-Guebwiller|Guebwiller
-Lutterbach|Lutterbach
-Richwiller|Richwiller
-Soultz|Soultz
-Staffelfelden|Staffelfelden
-Thann|Thann
-Vieux-Thann|Vieux-Thann
-Wittelsheim|Wittelsheim
-',
-        'multiple' => true,
-        'aslist' => false,
-        'empty_option' => '',
-        'optrand' => 0,
-        'other_option' => NULL,
-        'other_text' => 'Autre...',
-        'title_display' => 'before',
-        'description' => '',
-        'description_above' => false,
-        'custom_keys' => 1,
-        'options_source' => '',
-        'private' => 0,
-        'analysis' => true,
-        'value' => '1,2',
-        'css_classes' => '',
-        'wrapper_classes' => '',
-      ),
-      'required' => '0',
-      'weight' => '20',
-      'page_num' => 3,
-    ),
-    67 => 
-    array (
-      'nid' => 1580803,
-      'cid' => '67',
-      'pid' => '0',
-      'form_key' => 'new_1794320176019',
-      'name' => 'Les questions concernant les nouvelles dessertes ferroviaires depuis Richwiller vous seront automatiquement proposées.  Souhaitez-vous également évaluer les dessertes proposées depuis une ou plusieurs autres commune(s) concernée(s) par le projet ?',
-      'type' => 'select',
-      'value' => '',
-      'extra' => 
-      array (
-        'items' => 'Bollwiller|Bollwiller
-Cernay|Cernay
-Guebwiller|Guebwiller
-Lutterbach|Lutterbach
-Mulhouse|Mulhouse
-Soultz|Soultz
-Staffelfelden|Staffelfelden
-Thann|Thann
-Vieux-Thann|Vieux-Thann
-Wittelsheim|Wittelsheim
-',
-        'multiple' => true,
-        'aslist' => false,
-        'empty_option' => '',
-        'optrand' => 0,
-        'other_option' => NULL,
-        'other_text' => 'Autre...',
-        'title_display' => 'before',
-        'description' => '',
-        'description_above' => false,
-        'custom_keys' => 1,
-        'options_source' => '',
-        'private' => 0,
-        'analysis' => true,
-        'value' => '1,2',
-        'css_classes' => '',
-        'wrapper_classes' => '',
-      ),
-      'required' => '0',
-      'weight' => '21',
-      'page_num' => 3,
-    ),
-    69 => 
-    array (
-      'nid' => 1580803,
-      'cid' => '69',
-      'pid' => '0',
-      'form_key' => 'new_1794320325659',
-      'name' => 'Les questions concernant les nouvelles dessertes ferroviaires depuis Soultz vous seront automatiquement proposées.  Souhaitez-vous également évaluer les dessertes proposées depuis une ou plusieurs autres commune(s) concernée(s) par le projet ?',
-      'type' => 'select',
-      'value' => '',
-      'extra' => 
-      array (
-        'items' => 'Bollwiller|Bollwiller
-Cernay|Cernay
-Guebwiller|Guebwiller
-Lutterbach|Lutterbach
-Mulhouse|Mulhouse
-Richwiller|Richwiller
-Staffelfelden|Staffelfelden
-Thann|Thann
-Vieux-Thann|Vieux-Thann
-Wittelsheim|Wittelsheim
-',
-        'multiple' => true,
-        'aslist' => false,
-        'empty_option' => '',
-        'optrand' => 0,
-        'other_option' => NULL,
-        'other_text' => 'Autre...',
-        'title_display' => 'before',
-        'description' => '',
-        'description_above' => false,
-        'custom_keys' => 1,
-        'options_source' => '',
-        'private' => 0,
-        'analysis' => true,
-        'value' => '1,2',
-        'css_classes' => '',
-        'wrapper_classes' => '',
-      ),
-      'required' => '0',
-      'weight' => '22',
-      'page_num' => 3,
-    ),
-    71 => 
-    array (
-      'nid' => 1580803,
-      'cid' => '71',
-      'pid' => '0',
-      'form_key' => 'new_1794320465899',
-      'name' => 'Les questions concernant les nouvelles dessertes ferroviaires depuis Staffelfelden vous seront automatiquement proposées.  Souhaitez-vous également évaluer les dessertes proposées depuis une ou plusieurs autres commune(s) concernée(s) par le projet ?',
-      'type' => 'select',
-      'value' => '',
-      'extra' => 
-      array (
-        'items' => 'Bollwiller|Bollwiller
-Cernay|Cernay
-Guebwiller|Guebwiller
-Lutterbach|Lutterbach
-Mulhouse|Mulhouse
-Richwiller|Richwiller
-Soultz|Soultz
-Thann|Thann
-Vieux-Thann|Vieux-Thann
-Wittelsheim|Wittelsheim
-',
-        'multiple' => true,
-        'aslist' => false,
-        'empty_option' => '',
-        'optrand' => 0,
-        'other_option' => NULL,
-        'other_text' => 'Autre...',
-        'title_display' => 'before',
-        'description' => '',
-        'description_above' => false,
-        'custom_keys' => 1,
-        'options_source' => '',
-        'private' => 0,
-        'analysis' => true,
-        'value' => '1,2',
-        'css_classes' => '',
-        'wrapper_classes' => '',
-      ),
-      'required' => '0',
-      'weight' => '23',
-      'page_num' => 3,
-    ),
-    73 => 
-    array (
-      'nid' => 1580803,
-      'cid' => '73',
-      'pid' => '0',
-      'form_key' => 'new_1794320597939',
-      'name' => 'Les questions concernant les nouvelles dessertes ferroviaires depuis Thann vous seront automatiquement proposées.  Souhaitez-vous également évaluer les dessertes proposées depuis une ou plusieurs autres commune(s) concernée(s) par le projet ?',
-      'type' => 'select',
-      'value' => '',
-      'extra' => 
-      array (
-        'items' => 'Bollwiller|Bollwiller
-Cernay|Cernay
-Guebwiller|Guebwiller
-Lutterbach|Lutterbach
-Mulhouse|Mulhouse
-Richwiller|Richwiller
-Soultz|Soultz
-Staffelfelden|Staffelfelden
-Vieux-Thann|Vieux-Thann
-Wittelsheim|Wittelsheim
-',
-        'multiple' => true,
-        'aslist' => false,
-        'empty_option' => '',
-        'optrand' => 0,
-        'other_option' => NULL,
-        'other_text' => 'Autre...',
-        'title_display' => 'before',
-        'description' => '',
-        'description_above' => false,
-        'custom_keys' => 1,
-        'options_source' => '',
-        'private' => 0,
-        'analysis' => true,
-        'value' => '1,2',
-        'css_classes' => '',
-        'wrapper_classes' => '',
-      ),
-      'required' => '0',
-      'weight' => '24',
-      'page_num' => 3,
-    ),
-    75 => 
-    array (
-      'nid' => 1580803,
-      'cid' => '75',
-      'pid' => '0',
-      'form_key' => 'new_1794320726506',
-      'name' => 'Les questions concernant les nouvelles dessertes ferroviaires depuis Vieux-Thann vous seront automatiquement proposées.  Souhaitez-vous également évaluer les dessertes proposées depuis une ou plusieurs autres commune(s) concernée(s) par le projet ?',
-      'type' => 'select',
-      'value' => '',
-      'extra' => 
-      array (
-        'items' => 'Bollwiller|Bollwiller
-Cernay|Cernay
-Guebwiller|Guebwiller
-Lutterbach|Lutterbach
-Mulhouse|Mulhouse
-Richwiller|Richwiller
-Soultz|Soultz
-Staffelfelden|Staffelfelden
-Thann|Thann
-Wittelsheim|Wittelsheim
-',
-        'multiple' => true,
-        'aslist' => false,
-        'empty_option' => '',
-        'optrand' => 0,
-        'other_option' => NULL,
-        'other_text' => 'Autre...',
-        'title_display' => 'before',
-        'description' => '',
-        'description_above' => false,
-        'custom_keys' => 1,
-        'options_source' => '',
-        'private' => 0,
-        'analysis' => true,
-        'value' => '1,2',
-        'css_classes' => '',
-        'wrapper_classes' => '',
-      ),
-      'required' => '0',
-      'weight' => '25',
-      'page_num' => 3,
-    ),
-    77 => 
-    array (
-      'nid' => 1580803,
-      'cid' => '77',
-      'pid' => '0',
-      'form_key' => 'new_1794320862738',
-      'name' => 'Les questions concernant les nouvelles dessertes ferroviaires depuis Wittelsheim vous seront automatiquement proposées.  Souhaitez-vous également évaluer les dessertes proposées depuis une ou plusieurs autres commune(s) concernée(s) par le projet ?',
-      'type' => 'select',
-      'value' => '',
-      'extra' => 
-      array (
-        'items' => 'Bollwiller|Bollwiller
-Cernay|Cernay
-Guebwiller|Guebwiller
-Lutterbach|Lutterbach
-Mulhouse|Mulhouse
-Richwiller|Richwiller
-Soultz|Soultz
-Staffelfelden|Staffelfelden
-Thann|Thann
-Vieux-Thann|Vieux-Thann
-',
-        'multiple' => true,
-        'aslist' => false,
-        'empty_option' => '',
-        'optrand' => 0,
-        'other_option' => NULL,
-        'other_text' => 'Autre...',
-        'title_display' => 'before',
-        'description' => '',
-        'description_above' => false,
-        'custom_keys' => 1,
-        'options_source' => '',
-        'private' => 0,
-        'analysis' => true,
-        'value' => '1,2',
-        'css_classes' => '',
-        'wrapper_classes' => '',
-      ),
-      'required' => '0',
-      'weight' => '26',
-      'page_num' => 3,
+      'weight' => '13',
+      'page_num' => 4,
     ),
     30 => 
     array (
@@ -1047,6 +588,7 @@ Soultz Centre|Soultz Centre -- 5min
 Wittelsheim|Wittelsheim (ancienne gare réhabilitée) -- 6min
 Soultz ZI|Soultz ZI -- 9min
 Richwiller|Richwiller (ancienne gare réhabilitée) -- 10min
+Guebwiller – Storck|Guebwiller – Storck -- 10min
 Guebwiller Gare|Guebwiller Gare -- 11min
 Lutterbach TGV|Lutterbach TGV (avec correspondance TGV) -- 12min
 Guebwiller Centre|Guebwiller Centre -- 13min
@@ -1065,7 +607,7 @@ Thann Gare|Thann Gare -- 30min
         'unique' => 0,
         'title_display' => 'before',
         'custom_option_keys' => 1,
-        'custom_question_keys' => 0,
+        'custom_question_keys' => 1,
         'sticky' => true,
         'description' => 'Les temps indiqués ci-dessus correspondent respectivement aux trajets depuis la gare de Bollwiller.',
         'description_above' => false,
@@ -1074,8 +616,8 @@ Thann Gare|Thann Gare -- 30min
         'wrapper_classes' => '',
       ),
       'required' => '1',
-      'weight' => '27',
-      'page_num' => 3,
+      'weight' => '14',
+      'page_num' => 4,
     ),
     32 => 
     array (
@@ -1121,8 +663,8 @@ Guebwiller Heissenstein|Guebwiller Heissenstein -- 38 min
         'wrapper_classes' => '',
       ),
       'required' => '1',
-      'weight' => '28',
-      'page_num' => 3,
+      'weight' => '15',
+      'page_num' => 4,
     ),
     35 => 
     array (
@@ -1168,8 +710,8 @@ Guebwiller Heissenstein|Guebwiller Heissenstein --36 à 51min
         'wrapper_classes' => '',
       ),
       'required' => '1',
-      'weight' => '29',
-      'page_num' => 3,
+      'weight' => '16',
+      'page_num' => 4,
     ),
     37 => 
     array (
@@ -1214,8 +756,8 @@ Guebwiller Heissenstein|Guebwiller Heissenstein -- 22 à 33min
         'wrapper_classes' => '',
       ),
       'required' => '1',
-      'weight' => '30',
-      'page_num' => 3,
+      'weight' => '17',
+      'page_num' => 4,
     ),
     39 => 
     array (
@@ -1267,8 +809,8 @@ Gare Centrale|Gare Centrale TRAM (avec correspondance TER et TGV) -- 45 à 50min
         'wrapper_classes' => '',
       ),
       'required' => '1',
-      'weight' => '31',
-      'page_num' => 3,
+      'weight' => '18',
+      'page_num' => 4,
     ),
     43 => 
     array (
@@ -1314,8 +856,8 @@ Guebwiller Heissenstein|Guebwiller Heissenstein -- 32min
         'wrapper_classes' => '',
       ),
       'required' => '1',
-      'weight' => '32',
-      'page_num' => 3,
+      'weight' => '19',
+      'page_num' => 4,
     ),
     45 => 
     array (
@@ -1370,8 +912,8 @@ Guebwiller Heissenstein|Guebwiller Heissenstein -- 26min
         'wrapper_classes' => '',
       ),
       'required' => '1',
-      'weight' => '33',
-      'page_num' => 3,
+      'weight' => '20',
+      'page_num' => 4,
     ),
     47 => 
     array (
@@ -1424,8 +966,8 @@ Gare Centrale|Gare Centrale TRAM -- 38 à 44min
         'wrapper_classes' => '',
       ),
       'required' => '1',
-      'weight' => '34',
-      'page_num' => 3,
+      'weight' => '21',
+      'page_num' => 4,
     ),
     49 => 
     array (
@@ -1477,8 +1019,8 @@ Thann Gare|Thann Gare -- 26min
         'wrapper_classes' => '',
       ),
       'required' => '1',
-      'weight' => '35',
-      'page_num' => 3,
+      'weight' => '22',
+      'page_num' => 4,
     ),
     51 => 
     array (
@@ -1524,8 +1066,8 @@ Guebwiller Heissenstein|Guebwiller Heissenstein -- 45min
         'wrapper_classes' => '',
       ),
       'required' => '1',
-      'weight' => '36',
-      'page_num' => 3,
+      'weight' => '23',
+      'page_num' => 4,
     ),
     53 => 
     array (
@@ -1571,8 +1113,586 @@ Guebwiller Heissenstein|Guebwiller Heissenstein -- 41 à 43min
         'wrapper_classes' => '',
       ),
       'required' => '1',
+      'weight' => '24',
+      'page_num' => 4,
+    ),
+    106 => 
+    array (
+      'nid' => 1580803,
+      'cid' => '106',
+      'pid' => '0',
+      'form_key' => 'new_1794851330298',
+      'name' => 'Pour quelle(s) commune(s) souhaitez-vous évaluer les nouvelles dessertes ferroviaires proposées ?',
+      'type' => 'fieldset',
+      'value' => '',
+      'extra' => 
+      array (
+        'title_display' => 0,
+        'collapsible' => 0,
+        'collapsed' => 0,
+        'description' => '',
+        'description_above' => false,
+        'private' => 0,
+        'css_classes' => '',
+      ),
+      'required' => '0',
+      'weight' => '26',
+      'page_num' => 4,
+    ),
+    107 => 
+    array (
+      'nid' => 1580803,
+      'cid' => '107',
+      'pid' => '106',
+      'form_key' => 'new_1794851304048',
+      'name' => 'Nouveau champ "balisage"',
+      'type' => 'markup',
+      'value' => '<p>Vous avez indiqué résider dans une commune qui n\'est pas directement concernée par le projet. Afin de poursuivre l\'enquête, veuillez sélectionner la ou les communes du projet que vous fréquentez le plus régulièrement (services, commerces, transports, études, travail ou loisirs).</p>',
+      'extra' => 
+      array (
+        'format' => 'wysiwyg_user',
+        'private' => false,
+        'display_on' => 'form',
+      ),
+      'required' => '0',
+      'weight' => '0',
+      'page_num' => 4,
+    ),
+    55 => 
+    array (
+      'nid' => 1580803,
+      'cid' => '55',
+      'pid' => '106',
+      'form_key' => 'new_1794317265358',
+      'name' => 'choix réponse',
+      'type' => 'select',
+      'value' => '',
+      'extra' => 
+      array (
+        'items' => 'Bollwiller|Bollwiller
+Cernay|Cernay
+Guebwiller|Guebwiller
+Lutterbach|Lutterbach
+Mulhouse|Mulhouse
+Richwiller|Richwiller
+Soultz|Soultz
+Staffelfelden|Staffelfelden
+Thann|Thann
+Vieux-Thann|Vieux-Thann
+Wittelsheim|Wittelsheim
+',
+        'multiple' => true,
+        'aslist' => false,
+        'empty_option' => '',
+        'optrand' => 0,
+        'other_option' => NULL,
+        'other_text' => 'Autre...',
+        'title_display' => 'none',
+        'description' => '',
+        'description_above' => false,
+        'custom_keys' => 0,
+        'options_source' => '',
+        'private' => 0,
+        'analysis' => true,
+        'value' => '1,2',
+        'css_classes' => '',
+        'wrapper_classes' => '',
+      ),
+      'required' => '1',
+      'weight' => '1',
+      'page_num' => 4,
+    ),
+    57 => 
+    array (
+      'nid' => 1580803,
+      'cid' => '57',
+      'pid' => '0',
+      'form_key' => 'new_1794318741515',
+      'name' => 'Les questions concernant les nouvelles dessertes ferroviaires depuis Bollwiller vous ont automatiquement été proposées.  Souhaitez-vous également évaluer les dessertes proposées depuis une ou plusieurs autres commune(s) concernée(s) par le projet ?',
+      'type' => 'select',
+      'value' => '',
+      'extra' => 
+      array (
+        'items' => 'Cernay|Cernay
+Guebwiller|Guebwiller
+Lutterbach|Lutterbach
+Mulhouse|Mulhouse
+Richwiller|Richwiller
+Soultz|Soultz
+Staffelfelden|Staffelfelden
+Thann|Thann
+Vieux-Thann|Vieux-Thann
+Wittelsheim|Wittelsheim
+',
+        'multiple' => true,
+        'aslist' => false,
+        'empty_option' => '',
+        'optrand' => 0,
+        'other_option' => NULL,
+        'other_text' => 'Autre...',
+        'title_display' => 'before',
+        'description' => '',
+        'description_above' => false,
+        'custom_keys' => 1,
+        'options_source' => '',
+        'private' => 0,
+        'analysis' => true,
+        'value' => '1,2',
+        'css_classes' => '',
+        'wrapper_classes' => '',
+      ),
+      'required' => '0',
+      'weight' => '28',
+      'page_num' => 4,
+    ),
+    59 => 
+    array (
+      'nid' => 1580803,
+      'cid' => '59',
+      'pid' => '0',
+      'form_key' => 'new_1794319462810',
+      'name' => 'Les questions concernant les nouvelles dessertes ferroviaires depuis Cernay vous ont automatiquement été proposées. Souhaitez-vous également évaluer les dessertes proposées depuis une ou plusieurs autres commune(s) concernée(s) par le projet ?',
+      'type' => 'select',
+      'value' => '',
+      'extra' => 
+      array (
+        'items' => 'Bollwiller|Bollwiller
+Guebwiller|Guebwiller
+Lutterbach|Lutterbach
+Mulhouse|Mulhouse
+Richwiller|Richwiller
+Soultz|Soultz
+Staffelfelden|Staffelfelden
+Thann|Thann
+Vieux-Thann|Vieux-Thann
+Wittelsheim|Wittelsheim
+',
+        'multiple' => true,
+        'aslist' => false,
+        'empty_option' => '',
+        'optrand' => 0,
+        'other_option' => NULL,
+        'other_text' => 'Autre...',
+        'title_display' => 'before',
+        'description' => '',
+        'description_above' => false,
+        'custom_keys' => 1,
+        'options_source' => '',
+        'private' => 0,
+        'analysis' => true,
+        'value' => '1,2',
+        'css_classes' => '',
+        'wrapper_classes' => '',
+      ),
+      'required' => '0',
+      'weight' => '29',
+      'page_num' => 4,
+    ),
+    61 => 
+    array (
+      'nid' => 1580803,
+      'cid' => '61',
+      'pid' => '0',
+      'form_key' => 'new_1794319625523',
+      'name' => 'Les questions concernant les nouvelles dessertes ferroviaires depuis Guebwiller vous ont automatiquement été proposées.  Souhaitez-vous également évaluer les dessertes proposées depuis une ou plusieurs autres commune(s) concernée(s) par le projet ?',
+      'type' => 'select',
+      'value' => '',
+      'extra' => 
+      array (
+        'items' => 'Bollwiller|Bollwiller
+Cernay|Cernay
+Lutterbach|Lutterbach
+Mulhouse|Mulhouse
+Richwiller|Richwiller
+Soultz|Soultz
+Staffelfelden|Staffelfelden
+Thann|Thann
+Vieux-Thann|Vieux-Thann
+Wittelsheim|Wittelsheim
+',
+        'multiple' => true,
+        'aslist' => false,
+        'empty_option' => '',
+        'optrand' => 0,
+        'other_option' => NULL,
+        'other_text' => 'Autre...',
+        'title_display' => 'before',
+        'description' => '',
+        'description_above' => false,
+        'custom_keys' => 1,
+        'options_source' => '',
+        'private' => 0,
+        'analysis' => true,
+        'value' => '1,2',
+        'css_classes' => '',
+        'wrapper_classes' => '',
+      ),
+      'required' => '0',
+      'weight' => '30',
+      'page_num' => 4,
+    ),
+    63 => 
+    array (
+      'nid' => 1580803,
+      'cid' => '63',
+      'pid' => '0',
+      'form_key' => 'new_1794319854378',
+      'name' => 'Les questions concernant les nouvelles dessertes ferroviaires depuis Lutterbach vous ont automatiquement été proposées. Souhaitez-vous également évaluer les dessertes proposées depuis une ou plusieurs autres commune(s) concernée(s) par le projet ?',
+      'type' => 'select',
+      'value' => '',
+      'extra' => 
+      array (
+        'items' => 'Bollwiller|Bollwiller
+Cernay|Cernay
+Guebwiller|Guebwiller
+Mulhouse|Mulhouse
+Richwiller|Richwiller
+Soultz|Soultz
+Staffelfelden|Staffelfelden
+Thann|Thann
+Vieux-Thann|Vieux-Thann
+Wittelsheim|Wittelsheim
+',
+        'multiple' => true,
+        'aslist' => false,
+        'empty_option' => '',
+        'optrand' => 0,
+        'other_option' => NULL,
+        'other_text' => 'Autre...',
+        'title_display' => 'before',
+        'description' => '',
+        'description_above' => false,
+        'custom_keys' => 1,
+        'options_source' => '',
+        'private' => 0,
+        'analysis' => true,
+        'value' => '1,2',
+        'css_classes' => '',
+        'wrapper_classes' => '',
+      ),
+      'required' => '0',
+      'weight' => '31',
+      'page_num' => 4,
+    ),
+    65 => 
+    array (
+      'nid' => 1580803,
+      'cid' => '65',
+      'pid' => '0',
+      'form_key' => 'new_1794320038227',
+      'name' => 'Les questions concernant les nouvelles dessertes ferroviaires depuis Mulhouse vous ont automatiquement été proposées. Souhaitez-vous également évaluer les dessertes proposées depuis une ou plusieurs autres commune(s) concernée(s) par le projet ?',
+      'type' => 'select',
+      'value' => '',
+      'extra' => 
+      array (
+        'items' => 'Bollwiller|Bollwiller
+Cernay|Cernay
+Guebwiller|Guebwiller
+Lutterbach|Lutterbach
+Richwiller|Richwiller
+Soultz|Soultz
+Staffelfelden|Staffelfelden
+Thann|Thann
+Vieux-Thann|Vieux-Thann
+Wittelsheim|Wittelsheim
+',
+        'multiple' => true,
+        'aslist' => false,
+        'empty_option' => '',
+        'optrand' => 0,
+        'other_option' => NULL,
+        'other_text' => 'Autre...',
+        'title_display' => 'before',
+        'description' => '',
+        'description_above' => false,
+        'custom_keys' => 1,
+        'options_source' => '',
+        'private' => 0,
+        'analysis' => true,
+        'value' => '1,2',
+        'css_classes' => '',
+        'wrapper_classes' => '',
+      ),
+      'required' => '0',
+      'weight' => '32',
+      'page_num' => 4,
+    ),
+    67 => 
+    array (
+      'nid' => 1580803,
+      'cid' => '67',
+      'pid' => '0',
+      'form_key' => 'new_1794320176019',
+      'name' => 'Les questions concernant les nouvelles dessertes ferroviaires depuis Richwiller vous ont automatiquement été proposées. Souhaitez-vous également évaluer les dessertes proposées depuis une ou plusieurs autres commune(s) concernée(s) par le projet ?',
+      'type' => 'select',
+      'value' => '',
+      'extra' => 
+      array (
+        'items' => 'Bollwiller|Bollwiller
+Cernay|Cernay
+Guebwiller|Guebwiller
+Lutterbach|Lutterbach
+Mulhouse|Mulhouse
+Soultz|Soultz
+Staffelfelden|Staffelfelden
+Thann|Thann
+Vieux-Thann|Vieux-Thann
+Wittelsheim|Wittelsheim
+',
+        'multiple' => true,
+        'aslist' => false,
+        'empty_option' => '',
+        'optrand' => 0,
+        'other_option' => NULL,
+        'other_text' => 'Autre...',
+        'title_display' => 'before',
+        'description' => '',
+        'description_above' => false,
+        'custom_keys' => 1,
+        'options_source' => '',
+        'private' => 0,
+        'analysis' => true,
+        'value' => '1,2',
+        'css_classes' => '',
+        'wrapper_classes' => '',
+      ),
+      'required' => '0',
+      'weight' => '33',
+      'page_num' => 4,
+    ),
+    69 => 
+    array (
+      'nid' => 1580803,
+      'cid' => '69',
+      'pid' => '0',
+      'form_key' => 'new_1794320325659',
+      'name' => 'Les questions concernant les nouvelles dessertes ferroviaires depuis Soultz vous ont automatiquement été proposées. Souhaitez-vous également évaluer les dessertes proposées depuis une ou plusieurs autres commune(s) concernée(s) par le projet ?',
+      'type' => 'select',
+      'value' => '',
+      'extra' => 
+      array (
+        'items' => 'Bollwiller|Bollwiller
+Cernay|Cernay
+Guebwiller|Guebwiller
+Lutterbach|Lutterbach
+Mulhouse|Mulhouse
+Richwiller|Richwiller
+Staffelfelden|Staffelfelden
+Thann|Thann
+Vieux-Thann|Vieux-Thann
+Wittelsheim|Wittelsheim
+',
+        'multiple' => true,
+        'aslist' => false,
+        'empty_option' => '',
+        'optrand' => 0,
+        'other_option' => NULL,
+        'other_text' => 'Autre...',
+        'title_display' => 'before',
+        'description' => '',
+        'description_above' => false,
+        'custom_keys' => 1,
+        'options_source' => '',
+        'private' => 0,
+        'analysis' => true,
+        'value' => '1,2',
+        'css_classes' => '',
+        'wrapper_classes' => '',
+      ),
+      'required' => '0',
+      'weight' => '34',
+      'page_num' => 4,
+    ),
+    71 => 
+    array (
+      'nid' => 1580803,
+      'cid' => '71',
+      'pid' => '0',
+      'form_key' => 'new_1794320465899',
+      'name' => 'Les questions concernant les nouvelles dessertes ferroviaires depuis Staffelfelden vous ont automatiquement été proposées. Souhaitez-vous également évaluer les dessertes proposées depuis une ou plusieurs autres commune(s) concernée(s) par le projet ?',
+      'type' => 'select',
+      'value' => '',
+      'extra' => 
+      array (
+        'items' => 'Bollwiller|Bollwiller
+Cernay|Cernay
+Guebwiller|Guebwiller
+Lutterbach|Lutterbach
+Mulhouse|Mulhouse
+Richwiller|Richwiller
+Soultz|Soultz
+Thann|Thann
+Vieux-Thann|Vieux-Thann
+Wittelsheim|Wittelsheim
+',
+        'multiple' => true,
+        'aslist' => false,
+        'empty_option' => '',
+        'optrand' => 0,
+        'other_option' => NULL,
+        'other_text' => 'Autre...',
+        'title_display' => 'before',
+        'description' => '',
+        'description_above' => false,
+        'custom_keys' => 1,
+        'options_source' => '',
+        'private' => 0,
+        'analysis' => true,
+        'value' => '1,2',
+        'css_classes' => '',
+        'wrapper_classes' => '',
+      ),
+      'required' => '0',
+      'weight' => '35',
+      'page_num' => 4,
+    ),
+    73 => 
+    array (
+      'nid' => 1580803,
+      'cid' => '73',
+      'pid' => '0',
+      'form_key' => 'new_1794320597939',
+      'name' => 'Les questions concernant les nouvelles dessertes ferroviaires depuis Thann vous ont automatiquement été proposées. Souhaitez-vous également évaluer les dessertes proposées depuis une ou plusieurs autres commune(s) concernée(s) par le projet ?',
+      'type' => 'select',
+      'value' => '',
+      'extra' => 
+      array (
+        'items' => 'Bollwiller|Bollwiller
+Cernay|Cernay
+Guebwiller|Guebwiller
+Lutterbach|Lutterbach
+Mulhouse|Mulhouse
+Richwiller|Richwiller
+Soultz|Soultz
+Staffelfelden|Staffelfelden
+Vieux-Thann|Vieux-Thann
+Wittelsheim|Wittelsheim
+',
+        'multiple' => true,
+        'aslist' => false,
+        'empty_option' => '',
+        'optrand' => 0,
+        'other_option' => NULL,
+        'other_text' => 'Autre...',
+        'title_display' => 'before',
+        'description' => '',
+        'description_above' => false,
+        'custom_keys' => 1,
+        'options_source' => '',
+        'private' => 0,
+        'analysis' => true,
+        'value' => '1,2',
+        'css_classes' => '',
+        'wrapper_classes' => '',
+      ),
+      'required' => '0',
+      'weight' => '36',
+      'page_num' => 4,
+    ),
+    75 => 
+    array (
+      'nid' => 1580803,
+      'cid' => '75',
+      'pid' => '0',
+      'form_key' => 'new_1794320726506',
+      'name' => 'Les questions concernant les nouvelles dessertes ferroviaires depuis Vieux-Thann vous ont automatiquement été proposées. Souhaitez-vous également évaluer les dessertes proposées depuis une ou plusieurs autres commune(s) concernée(s) par le projet ?',
+      'type' => 'select',
+      'value' => '',
+      'extra' => 
+      array (
+        'items' => 'Bollwiller|Bollwiller
+Cernay|Cernay
+Guebwiller|Guebwiller
+Lutterbach|Lutterbach
+Mulhouse|Mulhouse
+Richwiller|Richwiller
+Soultz|Soultz
+Staffelfelden|Staffelfelden
+Thann|Thann
+Wittelsheim|Wittelsheim
+',
+        'multiple' => true,
+        'aslist' => false,
+        'empty_option' => '',
+        'optrand' => 0,
+        'other_option' => NULL,
+        'other_text' => 'Autre...',
+        'title_display' => 'before',
+        'description' => '',
+        'description_above' => false,
+        'custom_keys' => 1,
+        'options_source' => '',
+        'private' => 0,
+        'analysis' => true,
+        'value' => '1,2',
+        'css_classes' => '',
+        'wrapper_classes' => '',
+      ),
+      'required' => '0',
       'weight' => '37',
-      'page_num' => 3,
+      'page_num' => 4,
+    ),
+    77 => 
+    array (
+      'nid' => 1580803,
+      'cid' => '77',
+      'pid' => '0',
+      'form_key' => 'new_1794320862738',
+      'name' => 'Les questions concernant les nouvelles dessertes ferroviaires depuis Wittelsheim vous ont automatiquement été proposées. Souhaitez-vous également évaluer les dessertes proposées depuis une ou plusieurs autres commune(s) concernée(s) par le projet ?',
+      'type' => 'select',
+      'value' => '',
+      'extra' => 
+      array (
+        'items' => 'Bollwiller|Bollwiller
+Cernay|Cernay
+Guebwiller|Guebwiller
+Lutterbach|Lutterbach
+Mulhouse|Mulhouse
+Richwiller|Richwiller
+Soultz|Soultz
+Staffelfelden|Staffelfelden
+Thann|Thann
+Vieux-Thann|Vieux-Thann
+',
+        'multiple' => true,
+        'aslist' => false,
+        'empty_option' => '',
+        'optrand' => 0,
+        'other_option' => NULL,
+        'other_text' => 'Autre...',
+        'title_display' => 'before',
+        'description' => '',
+        'description_above' => false,
+        'custom_keys' => 1,
+        'options_source' => '',
+        'private' => 0,
+        'analysis' => true,
+        'value' => '1,2',
+        'css_classes' => '',
+        'wrapper_classes' => '',
+      ),
+      'required' => '0',
+      'weight' => '38',
+      'page_num' => 4,
+    ),
+    103 => 
+    array (
+      'nid' => 1580803,
+      'cid' => '103',
+      'pid' => '0',
+      'form_key' => 'new_1794565759555',
+      'name' => 'Nouveau champ "balisage"',
+      'type' => 'markup',
+      'value' => '<p>La sélection d\'une ville affichera une nouvelle grille dédiée plus haut sur la page.</p>',
+      'extra' => 
+      array (
+        'format' => 'wysiwyg_user',
+        'private' => false,
+        'display_on' => 'form',
+      ),
+      'required' => '0',
+      'weight' => '39',
+      'page_num' => 4,
     ),
     79 => 
     array (
@@ -1590,8 +1710,8 @@ Guebwiller Heissenstein|Guebwiller Heissenstein -- 41 à 43min
         'prev_page_label' => '',
       ),
       'required' => '0',
-      'weight' => '38',
-      'page_num' => 4,
+      'weight' => '40',
+      'page_num' => 5,
     ),
     80 => 
     array (
@@ -1628,8 +1748,8 @@ Je n\'utilise pas de voiture|Je n\'utilise pas de voiture
         'wrapper_classes' => '',
       ),
       'required' => '1',
-      'weight' => '39',
-      'page_num' => 4,
+      'weight' => '41',
+      'page_num' => 5,
     ),
     82 => 
     array (
@@ -1666,8 +1786,8 @@ Je n\'utilise pas de voiture|Je n\'utilise pas de voiture
         'wrapper_classes' => '',
       ),
       'required' => '1',
-      'weight' => '40',
-      'page_num' => 4,
+      'weight' => '42',
+      'page_num' => 5,
     ),
     84 => 
     array (
@@ -1685,8 +1805,8 @@ Je n\'utilise pas de voiture|Je n\'utilise pas de voiture
         'prev_page_label' => '',
       ),
       'required' => '0',
-      'weight' => '41',
-      'page_num' => 5,
+      'weight' => '43',
+      'page_num' => 6,
     ),
     85 => 
     array (
@@ -1697,11 +1817,11 @@ Je n\'utilise pas de voiture|Je n\'utilise pas de voiture
       'name' => 'Description Gare',
       'type' => 'markup',
       'value' => '<p>
-    La gare <strong>Mulhouse-Lutterbach-TGV</strong> serait principalement destinée à accueillir les TGV reliant le nord-est de la France et les pays voisins (Strasbourg, Nancy, Metz, Luxembourg, Francfort, etc.) au sud de la France (Lyon, Marseille, Montpellier, Nice, etc.).
+    La gare <strong>Mulhouse-Lutterbach-TGV</strong> serait principalement destinée à accueillir les TGV reliant le nord-est de la France et les pays voisins (Strasbourg, Nancy, Metz, Luxembourg, Francfort, etc.) au sud de la France (Lyon, Marseille, Montpellier, Nice, etc.). Cette nouvelle desserte permettrait un <strong>gain de temps estimé entre 25 et 30 minutes </strong> sur ces relations.
 </p>
 
 <p>
-    Les TGV à destination de Paris et de la Suisse continueraient, quant à eux, à desservir la gare de <strong>Mulhouse-Ville</strong>.
+    Les TGV à destination de Paris et de la Suisse continueraient, quant à eux, à desservir la gare de <strong>Mulhouse-Ville</strong>, tout en bénéficiant d\'un <strong>gain de temps estimé à une dizaine de minutes</strong>.
 </p>
 
 <table>
@@ -1743,8 +1863,8 @@ Je n\'utilise pas de voiture|Je n\'utilise pas de voiture
         'display_on' => 'form',
       ),
       'required' => '0',
-      'weight' => '42',
-      'page_num' => 5,
+      'weight' => '44',
+      'page_num' => 6,
     ),
     89 => 
     array (
@@ -1780,8 +1900,8 @@ Je ne sais pas',
         'wrapper_classes' => '',
       ),
       'required' => '1',
-      'weight' => '43',
-      'page_num' => 5,
+      'weight' => '45',
+      'page_num' => 6,
     ),
     90 => 
     array (
@@ -1824,8 +1944,8 @@ Autre|Autre
         'wrapper_classes' => '',
       ),
       'required' => '1',
-      'weight' => '44',
-      'page_num' => 5,
+      'weight' => '46',
+      'page_num' => 6,
     ),
     92 => 
     array (
@@ -1858,8 +1978,8 @@ Autre|Autre
         'wrapper_classes' => '',
       ),
       'required' => '1',
-      'weight' => '45',
-      'page_num' => 5,
+      'weight' => '47',
+      'page_num' => 6,
     ),
     94 => 
     array (
@@ -1915,8 +2035,58 @@ Exceptionnellement.',
         'wrapper_classes' => '',
       ),
       'required' => '1',
-      'weight' => '46',
-      'page_num' => 5,
+      'weight' => '48',
+      'page_num' => 6,
+    ),
+    104 => 
+    array (
+      'nid' => 1580803,
+      'cid' => '104',
+      'pid' => '0',
+      'form_key' => 'new_1794850839389',
+      'name' => 'Remarques',
+      'type' => 'pagebreak',
+      'value' => '',
+      'extra' => 
+      array (
+        'private' => false,
+        'next_page_label' => '',
+        'prev_page_label' => '',
+      ),
+      'required' => '0',
+      'weight' => '49',
+      'page_num' => 7,
+    ),
+    105 => 
+    array (
+      'nid' => 1580803,
+      'cid' => '105',
+      'pid' => '0',
+      'form_key' => 'new_1794850853259',
+      'name' => 'Avez-vous des remarques ?',
+      'type' => 'textarea',
+      'value' => '',
+      'extra' => 
+      array (
+        'cols' => '',
+        'rows' => '',
+        'title_display' => 'before',
+        'resizable' => 1,
+        'disabled' => 0,
+        'description' => '',
+        'description_above' => false,
+        'placeholder' => '',
+        'attributes' => 
+        array (
+        ),
+        'private' => 0,
+        'analysis' => false,
+        'css_classes' => '',
+        'wrapper_classes' => '',
+      ),
+      'required' => '0',
+      'weight' => '50',
+      'page_num' => 7,
     ),
   ),
   'conditionals' => 
@@ -3723,7 +3893,7 @@ Exceptionnellement.',
           'rgid' => '16',
           'aid' => '0',
           'target_type' => 'component',
-          'target' => '55',
+          'target' => '106',
           'invert' => '0',
           'action' => 'show',
           'argument' => '',
